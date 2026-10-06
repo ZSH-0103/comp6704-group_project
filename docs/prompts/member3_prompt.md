@@ -23,7 +23,7 @@
 - 公共配置：`configs/shared_protocol.json`
 - 个人配置：`configs/member3.json`
 
-以下代码路径均相对于仓库根目录 `comp6704-optimizer-study/`。报告在 `report/`，成员 Prompt 在 `docs/prompts/`，课程要求摘要在 `docs/COURSE_REQUIREMENTS.md`。请从仓库根目录执行命令。
+以下代码路径均相对于仓库根目录 `comp6704-group_project/`。报告在 `report/`，成员 Prompt 在 `docs/prompts/`，课程要求摘要在 `docs/COURSE_REQUIREMENTS.md`。请从仓库根目录执行命令。
 
 ## 必须参考的论文
 

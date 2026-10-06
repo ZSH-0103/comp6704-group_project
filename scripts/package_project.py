@@ -6,7 +6,7 @@ from pathlib import Path
 import zipfile
 
 ROOT = Path(__file__).resolve().parents[1]
-PREFIX = 'comp6704-optimizer-study'
+PREFIX = 'comp6704-group_project'
 SKIP_DIRS = {'.git', '.venv', '__pycache__', 'build', 'dist', 'checkpoints', 'node_modules'}
 SKIP_SUFFIXES = {'.pyc', '.pyo', '.zip', '.pt', '.pth', '.aux', '.log', '.bbl', '.blg', '.fls', '.fdb_latexmk', '.synctex.gz'}
 
@@ -21,7 +21,7 @@ def eligible(p, base):
 
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument('--output', type=Path, default=ROOT/'dist'/'comp6704_project_scaffold.zip')
+    parser.add_argument('--output', type=Path, default=ROOT/'dist'/'comp6704-group_project_scaffold.zip')
     parser.add_argument('--report-dir', type=Path)
     args = parser.parse_args()
     report = args.report_dir or ROOT/'report'

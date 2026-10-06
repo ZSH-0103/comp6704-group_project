@@ -35,7 +35,7 @@ in requirements-lock.txt and each run's environment.json. A GPU is not required.
 ## Layout
 
 ```text
-comp6704-optimizer-study/
+comp6704-group_project/
   README.md
   requirements.in
   configs/shared_protocol.json
@@ -71,7 +71,7 @@ LaTeX auxiliaries stay under `report/build/`; `report/main.pdf` is the final cop
 python3 scripts/package_project.py
 ```
 
-Default output is dist/comp6704_project_scaffold.zip. Use --output for another destination.
+Default output is dist/comp6704-group_project_scaffold.zip. Use --output for another destination.
 The packager includes report source/PDF, configs, measured logs if later present, tables, figures,
 docs and code; excludes raw datasets, model checkpoints, private environment files, .git and build.
 It records SHA-256 hashes in ARCHIVE_MANIFEST.json and checks archive integrity.
