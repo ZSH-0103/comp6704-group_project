@@ -1,0 +1,14 @@
+\subsection{Controlled diagnostics}
+\owner{Member 2 integrates; each member supplies the exact design of their diagnostic.}
+The diagnostics test mechanisms rather than adding a larger benchmark. Each must state the
+varied factor, held-fixed conditions, measured quantity, and interpretation limits.
+\begin{table}[H]\centering\small
+\caption{Planned diagnostic factors; each row is completed by its named member.}\label{tab:diagnostic-plan}
+\begin{tabularx}{\linewidth}{lXX}\toprule
+Pair (writer) & Varied factor & Required control\\\midrule
+SGD / DoG (M1) & Quadratic condition number and objective scale & Fix optimum, initialization and gradient oracle\\
+SGDM / SF-SGD (M2) & Actual horizon relative to planned $T$ & Declare schedules; include a horizon-aware tuned reference\\
+RMSProp / ADOPT-0 (M3) & $\beta_2$ and specified gradient randomness & Same oracle draws; disclose clipping and epsilon\\
+Adam / AdEMAMix (M4) & Training length and slow-EMA contribution & Match other hyperparameters; record state overhead\\\bottomrule
+\end{tabularx}\end{table}
+\fillin{Each member: freeze numerical factor levels and diagnostic budget in their own configuration.}

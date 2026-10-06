@@ -1,0 +1,27 @@
+\subsection{Training and tuning protocol}
+\owner{Member 1 integrates; each member records pair-specific configurations.}
+The proposed main experiment uses seeds 1, 2 and 3, paired initial parameters, and matched
+mini-batch orders. This gives 18 main runs per member and 72 across the team, excluding tuning
+and diagnostics. A separate tuning seed and validation set select method-specific settings.
+Equal learning rates are not required; comparable search budgets and documented ranges are.
+Data splits, optimizer hyperparameters, target-loss thresholds and update budgets must be
+frozen before the final test evaluation. No test curves are used for model selection.
+
+A CPU pilot will set the common per-task budget. Each pair is timed on the same machine;
+absolute timings from different members' Macs will not be used to rank all eight optimizers.
+Weight decay is zero. Failed runs remain in the run manifest. A method that fails to reach a
+target is marked as unreached instead of receiving a zero time.
+\begin{table}[H]\centering\small
+\caption{Training protocol to complete before main experiments. Parentheses identify the writer.}
+\label{tab:protocol}
+\begin{tabularx}{\linewidth}{lX}\toprule
+Item & Frozen specification and writer\\\midrule
+Splits and model hash & \tbd\ (Member 3)\\
+Per-task batch size / updates / evaluation interval & \tbd\ (Member 1, with all members)\\
+Seeds and tuning budget & Main: 1, 2, 3; tuning seed and trial count: \tbd\ (Member 1)\\
+SGD / DoG settings & \tbd\ (Member 1)\\
+SGDM / SF-SGD settings and schedules & \tbd\ (Member 2)\\
+RMSProp / ADOPT-0 settings & \tbd\ (Member 3)\\
+Adam / AdEMAMix settings & \tbd\ (Member 4)\\
+Target losses and timing boundary & \tbd\ (Member 4, with all members)\\\bottomrule
+\end{tabularx}\end{table}

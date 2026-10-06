@@ -1,0 +1,6 @@
+# Proposed training dependencies; members must record tested versions in requirements-lock.txt.
+# The scaffold planner and ZIP builder use only the Python standard library.
+torch
+torchvision
+numpy
+matplotlib

@@ -1,0 +1,34 @@
+\subsection{RMSProp versus momentum-free ADOPT}\label{sec:results-m3}
+\owner{Member 3; all cells, figures and analysis in this subsection.}
+\paragraph{Hypothesis.} Normalization stability will be assessed using the three common tasks and the
+pre-specified diagnostic. \fillin{Member 3: state the falsifiable hypothesis before interpreting results.}
+\begin{table}[H]\centering\small
+\caption{M3-MAIN: paired primary results (Member 3 fills all entries). Report mean $\pm$ sample
+SD and successful-run count out of 3. Test quality is accuracy (\%) for Fashion/CIFAR and CE
+(nats/character) for Text. Train and validation columns are CE. No measured values yet.}
+\label{tab:m3-main}
+\begin{tabularx}{\linewidth}{lXccccc}\toprule
+Task & Optimizer (M3) & Train CE & Val CE & Test quality & Time (s) & $n/3$\\\midrule
+Fashion & RMSProp & \tbd & \tbd & \tbd & \tbd & \tbd\\
+Fashion & ADOPT-0 & \tbd & \tbd & \tbd & \tbd & \tbd\\
+CIFAR & RMSProp & \tbd & \tbd & \tbd & \tbd & \tbd\\
+CIFAR & ADOPT-0 & \tbd & \tbd & \tbd & \tbd & \tbd\\
+Text & RMSProp & \tbd & \tbd & \tbd & \tbd & \tbd\\
+Text & ADOPT-0 & \tbd & \tbd & \tbd & \tbd & \tbd\\
+\bottomrule\end{tabularx}\end{table}
+\begin{table}[H]\centering\small
+\caption{M3-DIAG: stochastic normalization diagnostic (Member 3). Specify the objective, oracle and
+final metric (objective value or a known-optimum gap) before running. Report mean $\pm$ SD and failure counts.}
+\label{tab:m3-diag}
+\begin{tabularx}{\linewidth}{Xlll}\toprule
+$\beta_2$ / oracle (M3) & RMSProp metric & ADOPT-0 metric & Failures / runs\\\midrule
+\fillin{Low value} & \tbd & \tbd & \tbd\\
+\fillin{Medium value} & \tbd & \tbd & \tbd\\
+\fillin{High value} & \tbd & \tbd & \tbd\\
+\bottomrule\end{tabularx}\end{table}
+\resultfigure{member3_overview.pdf}{Member 3: multi-panel loss-versus-update, loss-versus-time,
+and mechanism plot. State seed count, uncertainty and diagnostic conditions.}
+\paragraph{Analysis and limitations.}\fillin{Member 3: quantify the paired difference, report failures,
+time-to-target and state storage from the accompanying CSVs, explain whether the diagnostic supports
+the mechanism, and identify an alternative explanation. Do not infer a universal ranking.}
+\FloatBarrier

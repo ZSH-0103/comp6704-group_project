@@ -1,0 +1,54 @@
+\documentclass{article}
+\usepackage[preprint]{neurips_2025}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{amsmath,amssymb,booktabs,tabularx,graphicx,xcolor,float,placeins,hyperref}
+\hypersetup{colorlinks=true,linkcolor=blue,urlcolor=blue,citecolor=blue}
+\makeatletter
+\renewcommand{\@noticestring}{COMP6704: Advanced Topics in Optimization --- Fall 2026.}
+\makeatother
+\newcommand{\owner}[1]{\textcolor{blue!55!black}{\textbf{(#1)}}}
+\newcommand{\fillin}[1]{\textcolor{blue!60!black}{\textit{[#1]}}}
+\newcommand{\tbd}{\textcolor{blue!60!black}{TBD}}
+\newcommand{\resultfigure}[2]{\begin{figure}[H]\centering
+\IfFileExists{figures/#1}{\includegraphics[width=0.96\linewidth]{figures/#1}}{
+\fbox{\parbox{0.92\linewidth}{\centering\vspace{9pt}No measured results yet.\\
+\texttt{\detokenize{#1}}\\\vspace{9pt}#2}}}
+\caption{#2}\end{figure}}
+\title{Classical and Recent Optimizers for Neural Network Training:\\
+A Controlled Study of Convergence, Stability, and Computational Cost}
+\input{sections/frontmatter_member1}
+\begin{document}
+\maketitle
+\input{sections/abstract_member4}
+\section{Introduction and Related Work}
+\input{sections/section1_introduction_member1}
+\section{Problem Formulation and Methodology}
+\input{sections/section2_formulation_member2}
+\input{sections/section2_methodology_member1}
+\input{sections/section2_methodology_member2}
+\input{sections/section2_methodology_member3}
+\input{sections/section2_methodology_member4}
+\input{sections/section2_comparison_member2}
+\section{Experimental Setup}
+\input{sections/section3_datasets_models_member3}
+\input{sections/section3_protocol_member1}
+\input{sections/section3_diagnostics_member2}
+\input{sections/section3_metrics_member4}
+\FloatBarrier
+\section{Experimental Results and Analysis}
+\input{sections/section4_experiments_member1}
+\input{sections/section4_experiments_member2}
+\input{sections/section4_experiments_member3}
+\input{sections/section4_experiments_member4}
+\input{sections/section4_synthesis_member1}
+\section{Discussion and Conclusions}
+\input{sections/section5_discussion_member3}
+\input{sections/section5_limitations_member2}
+\input{sections/section5_conclusions_member4}
+\input{sections/reproducibility_member4}
+\input{sections/contributions_member1}
+\paragraph{Reference maintenance.}\owner{Member 1 integrates; Members 1--4 verify their sources.}
+\bibliographystyle{plainnat}
+\bibliography{references}
+\end{document}

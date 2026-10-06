@@ -1,0 +1,22 @@
+\subsection{Metrics and computing environment}
+\owner{Member 4 integrates; every member supplies their machine record.}
+Cross-entropy (CE) is measured using natural logarithms. Image tasks additionally report final
+test accuracy in percent; the text task reports held-out CE in nats per predicted character.
+Final training and validation losses are evaluated at the end of the fixed budget, at the
+appropriate evaluation point for each optimizer. Loss curves are plotted against updates and
+elapsed time. Report mean and sample standard deviation across seeds, the count of successful
+runs, and the number reaching the target. Three seeds support only a limited variability estimate.
+
+Record elapsed training time including scheduled evaluations but excluding download and
+one-off dataset preparation; separately record optimizer-step time if profiling it. State
+storage in bytes must be distinguished from whole-process peak memory. Relative time ratios
+are computed only within a pair on one machine.
+\begin{table}[H]\centering\small
+\caption{Environment records; each member fills their row.}\label{tab:hardware}
+\begin{tabularx}{\linewidth}{lXXX}\toprule
+Writer & CPU / RAM / macOS & Python / libraries / threads & Environment record\\\midrule
+(Member 1) & \tbd & \tbd & M1 environment.json\\
+(Member 2) & \tbd & \tbd & M2 environment.json\\
+(Member 3) & \tbd & \tbd & M3 environment.json\\
+(Member 4) & \tbd & \tbd & M4 environment.json\\\bottomrule
+\end{tabularx}\end{table}

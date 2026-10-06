@@ -1,0 +1,34 @@
+\subsection{Momentum versus Schedule-Free SGD}\label{sec:results-m2}
+\owner{Member 2; all cells, figures and analysis in this subsection.}
+\paragraph{Hypothesis.} Training-horizon dependence will be assessed using the three common tasks and the
+pre-specified diagnostic. \fillin{Member 2: state the falsifiable hypothesis before interpreting results.}
+\begin{table}[H]\centering\small
+\caption{M2-MAIN: paired primary results (Member 2 fills all entries). Report mean $\pm$ sample
+SD and successful-run count out of 3. Test quality is accuracy (\%) for Fashion/CIFAR and CE
+(nats/character) for Text. Train and validation columns are CE. No measured values yet.}
+\label{tab:m2-main}
+\begin{tabularx}{\linewidth}{lXccccc}\toprule
+Task & Optimizer (M2) & Train CE & Val CE & Test quality & Time (s) & $n/3$\\\midrule
+Fashion & SGDM & \tbd & \tbd & \tbd & \tbd & \tbd\\
+Fashion & SF-SGD & \tbd & \tbd & \tbd & \tbd & \tbd\\
+CIFAR & SGDM & \tbd & \tbd & \tbd & \tbd & \tbd\\
+CIFAR & SF-SGD & \tbd & \tbd & \tbd & \tbd & \tbd\\
+Text & SGDM & \tbd & \tbd & \tbd & \tbd & \tbd\\
+Text & SF-SGD & \tbd & \tbd & \tbd & \tbd & \tbd\\
+\bottomrule\end{tabularx}\end{table}
+\begin{table}[H]\centering\small
+\caption{M2-DIAG: validation CE at the actual horizon (Member 2). ``Planned'' uses the original $T$ schedule;
+``oracle'' uses a schedule designed for the actual horizon. Define behavior after $T$. Report mean $\pm$ SD.}
+\label{tab:m2-diag}
+\begin{tabularx}{\linewidth}{Xlll}\toprule
+Actual horizon (M2) & SGDM planned & SGDM oracle & SF-SGD\\\midrule
+$T/2$ & \tbd & \tbd & \tbd\\
+$T$ & \tbd & \tbd & \tbd\\
+$2T$ & \tbd & \tbd & \tbd\\
+\bottomrule\end{tabularx}\end{table}
+\resultfigure{member2_overview.pdf}{Member 2: multi-panel loss-versus-update, loss-versus-time,
+and mechanism plot. State seed count, uncertainty and diagnostic conditions.}
+\paragraph{Analysis and limitations.}\fillin{Member 2: quantify the paired difference, report failures,
+time-to-target and state storage from the accompanying CSVs, explain whether the diagnostic supports
+the mechanism, and identify an alternative explanation. Do not infer a universal ranking.}
+\FloatBarrier

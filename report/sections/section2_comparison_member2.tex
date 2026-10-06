@@ -1,0 +1,19 @@
+\subsection{Mechanisms, assumptions, and implementation cost}
+\owner{Member 2 integrates; each member completes their row.}
+All methods use first-order gradients, but retain different optimizer states and perform
+different scalar or coordinate-wise operations. Complexity should distinguish the gradient
+calculation from the optimizer update. Record actual persistent state tensors rather than
+only giving an $O(d)$ label.
+\begin{table}[H]\centering\small
+\caption{Method comparison and ownership. Complete cost and theorem details after implementation.}
+\label{tab:methods}
+\begin{tabularx}{\linewidth}{lXXl}\toprule
+Pair & Main change & Assumptions and additional state & Writer\\\midrule
+SGD / DoG & Dynamic scalar step & \tbd & (Member 1)\\
+SGDM / SF-SGD & Averaging and interpolation & \tbd & (Member 2)\\
+RMSProp / ADOPT-0 & Previous-moment normalization & \tbd & (Member 3)\\
+Adam / AdEMAMix & Fast and slow gradient history & \tbd & (Member 4)\\\bottomrule
+\end{tabularx}\end{table}
+Each implementation will be checked on a small deterministic problem or fixed gradient
+sequence against an independent calculation or trusted reference. Record discrepancies,
+version choices, numerical tolerances and any intentional deviations.

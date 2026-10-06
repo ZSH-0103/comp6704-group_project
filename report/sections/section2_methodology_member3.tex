@@ -1,0 +1,14 @@
+\subsection{RMSProp and momentum-free ADOPT}\label{sec:method-m3}
+\owner{Member 3}
+
+A non-centered RMSProp baseline with no momentum maintains
+$v_t=\beta_2v_{t-1}+(1-\beta_2)g_t^{\odot2}$ and updates using coordinate-wise
+$g_t/(\sqrt{v_t}+\epsilon)$ \citep{hintonrmsprop}. We select ADOPT with
+$\beta_1=0$ to study a related normalization mechanism: excluding the current gradient
+from the second-moment estimate used to normalize that gradient \citep{taniguchi2024adopt}.
+This is a declared setting of ADOPT, not a separately published RMSProp algorithm.
+The normalization convention and initialization differ and must be documented. Theoretical
+convergence under specified assumptions does not guarantee success for every neural-network
+setting or every learning rate.
+
+\fillin{Member 3: Write the precise previous-moment update, first-step behavior, epsilon placement and clipping choice. Explain the pairing using Section 3.1 of ADOPT. Define the unconstrained stochastic diagnostic and distinguish a counterexample from a general guarantee.}

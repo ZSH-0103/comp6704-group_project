@@ -1,0 +1,29 @@
+\owner{Member 1 integrates; Members 2--4 supply pair-specific literature notes.}
+\subsection{Motivation}
+Training a neural network requires minimizing an empirical loss over its parameters.
+Stochastic gradients make this feasible, but the trajectory depends on step sizes, gradient
+scaling, and the information retained from earlier updates \citep{bottou2018}.
+A comparison based only on final classification accuracy can miss slow optimization,
+unstable updates, or a large tuning cost. Our objective is therefore to connect differences
+in training behavior to specific algorithmic mechanisms.
+
+A familiar dataset is useful when the experiment isolates a meaningful factor.
+For example, \citet{zhang2024hessian} investigate block heterogeneity using quadratic problems
+and neural networks, while \citet{xie2025geometry} examine the effect of coordinate geometry.
+These studies motivate controlled diagnostics alongside real tasks; they do not imply that
+classification difficulty alone measures poor conditioning.
+\subsection{Related work}
+We organize the literature around four modifications: dynamic distance-based step sizes
+\citep{ivgi2023dog}, the relationship between scheduling and iterate averaging
+\citep{defazio2024schedule}, changes to adaptive normalization \citep{taniguchi2024adopt},
+and the use of two gradient moving averages \citep{pagliardini2025ademamix}.
+Each modification addresses a different question, so each is paired with an appropriate
+classical baseline. Our study uses small networks and CPU budgets; it does not reproduce
+the scale of the original papers or claim that all four modifications solve the same problem.
+\subsection{Research questions and scope}
+We ask: (RQ1) Does each modification improve loss reduction or reduce tuning dependence
+under a shared budget? (RQ2) Does a targeted diagnostic support the proposed mechanism?
+(RQ3) Do observations persist across image classification and character prediction, and at
+what cost? Each member will independently implement and evaluate one pair. The planned
+contribution is a reproducible empirical comparison and an explanation of observed trade-offs,
+not a new optimizer. \fillin{Member 1: update scope to match the completed experiments.}

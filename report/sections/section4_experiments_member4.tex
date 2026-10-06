@@ -1,0 +1,34 @@
+\subsection{Adam versus AdEMAMix}\label{sec:results-m4}
+\owner{Member 4; all cells, figures and analysis in this subsection.}
+\paragraph{Hypothesis.} Gradient-history length will be assessed using the three common tasks and the
+pre-specified diagnostic. \fillin{Member 4: state the falsifiable hypothesis before interpreting results.}
+\begin{table}[H]\centering\small
+\caption{M4-MAIN: paired primary results (Member 4 fills all entries). Report mean $\pm$ sample
+SD and successful-run count out of 3. Test quality is accuracy (\%) for Fashion/CIFAR and CE
+(nats/character) for Text. Train and validation columns are CE. No measured values yet.}
+\label{tab:m4-main}
+\begin{tabularx}{\linewidth}{lXccccc}\toprule
+Task & Optimizer (M4) & Train CE & Val CE & Test quality & Time (s) & $n/3$\\\midrule
+Fashion & Adam & \tbd & \tbd & \tbd & \tbd & \tbd\\
+Fashion & AdEMAMix & \tbd & \tbd & \tbd & \tbd & \tbd\\
+CIFAR & Adam & \tbd & \tbd & \tbd & \tbd & \tbd\\
+CIFAR & AdEMAMix & \tbd & \tbd & \tbd & \tbd & \tbd\\
+Text & Adam & \tbd & \tbd & \tbd & \tbd & \tbd\\
+Text & AdEMAMix & \tbd & \tbd & \tbd & \tbd & \tbd\\
+\bottomrule\end{tabularx}\end{table}
+\begin{table}[H]\centering\small
+\caption{M4-DIAG: validation CE and persistent optimizer-state cost (Member 4). The ablation removes
+the slow EMA while matching other settings; document whether it is equivalent to Adam. Report mean $\pm$ SD.}
+\label{tab:m4-diag}
+\begin{tabularx}{\linewidth}{Xlll}\toprule
+Condition (M4) & Adam & AdEMAMix & No slow EMA\\\midrule
+Short horizon: CE & \tbd & \tbd & \tbd\\
+Longer horizon: CE & \tbd & \tbd & \tbd\\
+Optimizer state (bytes) & \tbd & \tbd & \tbd\\
+\bottomrule\end{tabularx}\end{table}
+\resultfigure{member4_overview.pdf}{Member 4: multi-panel loss-versus-update, loss-versus-time,
+and mechanism plot. State seed count, uncertainty and diagnostic conditions.}
+\paragraph{Analysis and limitations.}\fillin{Member 4: quantify the paired difference, report failures,
+time-to-target and state storage from the accompanying CSVs, explain whether the diagnostic supports
+the mechanism, and identify an alternative explanation. Do not infer a universal ranking.}
+\FloatBarrier

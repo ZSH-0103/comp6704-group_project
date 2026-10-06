@@ -1,0 +1,13 @@
+\subsection{Adam and AdEMAMix}\label{sec:method-m4}
+\owner{Member 4}
+
+Adam keeps moving averages of gradients and squared gradients, applies bias correction,
+and uses the resulting coordinate-wise update \citep{kingma2015adam}.
+AdEMAMix adds a slower gradient moving average to retain longer history alongside the
+fast moving average \citep{pagliardini2025ademamix}.
+We will test whether the additional history helps at the relatively short training horizons
+feasible on CPUs. The comparison uses zero weight decay for both methods. This isolates the
+history mechanism from differences between Adam and AdamW regularization. A no-slow-EMA
+ablation will use otherwise matched settings.
+
+\fillin{Member 4: Give both complete updates, warm-up rules, beta values, mixing coefficient and bias corrections. Verify the ablation configuration rather than assuming it is exactly Adam. Measure optimizer-state bytes and explain short-horizon limitations.}

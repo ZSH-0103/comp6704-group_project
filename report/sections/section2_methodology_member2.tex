@@ -1,0 +1,13 @@
+\subsection{Momentum and Schedule-Free SGD}\label{sec:method-m2}
+\owner{Member 2}
+
+For the convention used here, momentum SGD has $u_{t+1}=\mu u_t+g_t$ and
+$\theta_{t+1}=\theta_t-\eta_tu_{t+1}$, with zero initial velocity.
+Schedule-Free SGD combines interpolation and iterate averaging to avoid a decay schedule
+that requires a predetermined stopping horizon \citep{defazio2024schedule}.
+The base learning rate still requires selection. We will compare it with tuned momentum
+SGD using a documented cosine schedule and evaluate both early stopping and extended training.
+Evaluation must use the intended averaged point; the optimizer's train/eval state is distinct
+from the model's train/eval state.
+
+\fillin{Member 2: Give all iterate definitions, averaging weights, initialization and train/eval transformations. Define the planned-horizon and oracle-horizon baselines. Check behavior against the official implementation and state the assumptions of the relevant theorem.}

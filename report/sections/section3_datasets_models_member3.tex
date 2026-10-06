@@ -1,0 +1,27 @@
+\subsection{Datasets and preprocessing}
+\owner{Member 3 maintains the shared specification; all members use the same manifest.}
+The planned tasks combine two image problems and one sequence problem (Table~\ref{tab:data}).
+Official image training data are split into training and validation partitions using saved
+indices; official test sets are reserved for final evaluation. The CIFAR-10 training subset
+will be stratified and selected only from the training partition. Text is split into contiguous
+training, validation and test regions before constructing next-character windows, preventing
+windows from crossing split boundaries. Preprocessing is fitted using training data only.
+\begin{table}[H]\centering\small
+\caption{Shared data and architecture proposal (Member 3 fills every row). Values are pilot starting points.}
+\label{tab:data}
+\begin{tabularx}{\linewidth}{lXX}\toprule
+Task (writer) & Architecture proposal & Split and size to freeze\\\midrule
+Fashion-MNIST (M3) & MLP: $784\!\to\!128\!\to\!64\!\to\!10$ & Training/validation counts and index hash: \tbd\\
+CIFAR-10 (M3) & Two-block small CNN & About 10,000 training images; exact counts and index hash: \tbd\\
+Tiny Shakespeare (M3) & Character GRU, one layer, hidden size 64 & Contiguous split, vocabulary, window length: \tbd\\\bottomrule
+\end{tabularx}\end{table}
+Sources: Fashion-MNIST \citep{xiao2017fashion}, CIFAR-10 \citep{krizhevsky2009},
+and the Tiny Shakespeare text distributed with char-rnn \citep{karpathychar}.
+MNIST may be used for implementation checks but is not a fourth primary task.
+\subsection{Model definitions}
+\owner{Member 3; each member verifies the shared model fingerprint.}
+Within each task, both optimizers and all four members use the same architecture and loss.
+The initial proposal avoids batch normalization and dropout to simplify evaluation-point
+handling and reproducibility. Model widths, activation functions, initialization, vocabulary
+and parameter counts will be frozen after a short CPU pilot. \fillin{Member 3: replace proposals
+with the exact architecture, parameter count and preprocessing configuration actually used.}

@@ -1,0 +1,25 @@
+{
+  "member": 2,
+  "optimizers": [
+    "momentum",
+    "schedule_free_sgd"
+  ],
+  "tasks": [
+    "fashion_mnist",
+    "cifar10",
+    "tiny_shakespeare"
+  ],
+  "shared_protocol": "configs/shared_protocol.json",
+  "hyperparameters": {
+    "momentum": null,
+    "schedule_free_sgd": null
+  },
+  "learning_rate_search": {
+    "momentum": null,
+    "schedule_free_sgd": null
+  },
+  "diagnostic": "training_horizon",
+  "diagnostic_levels": null,
+  "status": "DRAFT",
+  "output_root": "results/member2"
+}

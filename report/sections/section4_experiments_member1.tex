@@ -1,0 +1,34 @@
+\subsection{SGD versus DoG}\label{sec:results-m1}
+\owner{Member 1; all cells, figures and analysis in this subsection.}
+\paragraph{Hypothesis.} Step-size adaptation will be assessed using the three common tasks and the
+pre-specified diagnostic. \fillin{Member 1: state the falsifiable hypothesis before interpreting results.}
+\begin{table}[H]\centering\small
+\caption{M1-MAIN: paired primary results (Member 1 fills all entries). Report mean $\pm$ sample
+SD and successful-run count out of 3. Test quality is accuracy (\%) for Fashion/CIFAR and CE
+(nats/character) for Text. Train and validation columns are CE. No measured values yet.}
+\label{tab:m1-main}
+\begin{tabularx}{\linewidth}{lXccccc}\toprule
+Task & Optimizer (M1) & Train CE & Val CE & Test quality & Time (s) & $n/3$\\\midrule
+Fashion & SGD & \tbd & \tbd & \tbd & \tbd & \tbd\\
+Fashion & DoG & \tbd & \tbd & \tbd & \tbd & \tbd\\
+CIFAR & SGD & \tbd & \tbd & \tbd & \tbd & \tbd\\
+CIFAR & DoG & \tbd & \tbd & \tbd & \tbd & \tbd\\
+Text & SGD & \tbd & \tbd & \tbd & \tbd & \tbd\\
+Text & DoG & \tbd & \tbd & \tbd & \tbd & \tbd\\
+\bottomrule\end{tabularx}\end{table}
+\begin{table}[H]\centering\small
+\caption{M1-DIAG: quadratic final objective gap, mean $\pm$ SD (Member 1). Replace the factor placeholders
+with frozen levels, expand rows as needed, and record tuning cost and reached counts in the companion CSV.}
+\label{tab:m1-diag}
+\begin{tabularx}{\linewidth}{Xlll}\toprule
+Factor / level (M1) & SGD gap & DoG gap & $n$\\\midrule
+Condition number: [level] & \tbd & \tbd & \tbd\\
+Objective scale: [level] & \tbd & \tbd & \tbd\\
+Reference setting & \tbd & \tbd & \tbd\\
+\bottomrule\end{tabularx}\end{table}
+\resultfigure{member1_overview.pdf}{Member 1: multi-panel loss-versus-update, loss-versus-time,
+and mechanism plot. State seed count, uncertainty and diagnostic conditions.}
+\paragraph{Analysis and limitations.}\fillin{Member 1: quantify the paired difference, report failures,
+time-to-target and state storage from the accompanying CSVs, explain whether the diagnostic supports
+the mechanism, and identify an alternative explanation. Do not infer a universal ranking.}
+\FloatBarrier

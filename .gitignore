@@ -1,0 +1,17 @@
+build/
+__pycache__/
+*.py[cod]
+.venv/
+.DS_Store
+.env
+.env.*
+data/raw/*
+!data/raw/.gitkeep
+checkpoints/
+dist/
+*.zip
+*.pt
+*.pth
+
+# Course handout is retained locally, not published.
+docs/COMP6704_Optimization_Group_Project_2026_Fall-1.pdf

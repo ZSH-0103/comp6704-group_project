@@ -1,0 +1,75 @@
+{
+  "schema_version": 1,
+  "status": "DRAFT_REQUIRES_CPU_PILOT",
+  "device": "cpu",
+  "weight_decay": 0,
+  "main_seeds": [
+    1,
+    2,
+    3
+  ],
+  "tuning_seed": 11,
+  "split_seed": 6704,
+  "same_initialization_and_data_order_within_pair": true,
+  "batch_norm": false,
+  "dropout": 0,
+  "loss": "cross_entropy_natural_log",
+  "time_scope": "training_and_scheduled_eval_excluding_data_preparation",
+  "tasks": {
+    "fashion_mnist": {
+      "model": "mlp",
+      "widths": [
+        784,
+        128,
+        64,
+        10
+      ],
+      "activation": "relu",
+      "train_count": null,
+      "validation_count": null,
+      "batch_size": null,
+      "max_updates": null,
+      "eval_interval": null,
+      "target_val_ce": null
+    },
+    "cifar10": {
+      "model": "small_cnn",
+      "conv_channels": [
+        16,
+        32
+      ],
+      "kernel_size": 3,
+      "pool": "2x2_after_each_conv",
+      "classifier": "flatten_then_linear_10",
+      "train_count_proposal": 10000,
+      "train_count": null,
+      "validation_count": null,
+      "batch_size": null,
+      "max_updates": null,
+      "eval_interval": null,
+      "target_val_ce": null
+    },
+    "tiny_shakespeare": {
+      "model": "char_gru",
+      "embedding_dim": 32,
+      "hidden_size": 64,
+      "layers": 1,
+      "sequence_length_proposal": 64,
+      "sequence_length": null,
+      "train_fraction_proposal": 0.8,
+      "validation_fraction_proposal": 0.1,
+      "split_boundaries": null,
+      "batch_size": null,
+      "max_updates": null,
+      "eval_interval": null,
+      "target_val_ce": null
+    }
+  },
+  "freeze_required": [
+    "dataset checksums and split indices",
+    "complete model configuration and initialization",
+    "CPU pilot and shared budgets",
+    "validation tuning policy and target thresholds"
+  ],
+  "note": "Architectures and seeds are draft implementation defaults, not measured optimal settings. Freeze before main runs."
+}

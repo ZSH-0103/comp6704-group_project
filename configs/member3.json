@@ -1,0 +1,25 @@
+{
+  "member": 3,
+  "optimizers": [
+    "rmsprop",
+    "adopt_no_momentum"
+  ],
+  "tasks": [
+    "fashion_mnist",
+    "cifar10",
+    "tiny_shakespeare"
+  ],
+  "shared_protocol": "configs/shared_protocol.json",
+  "hyperparameters": {
+    "rmsprop": null,
+    "adopt_no_momentum": null
+  },
+  "learning_rate_search": {
+    "rmsprop": null,
+    "adopt_no_momentum": null
+  },
+  "diagnostic": "normalization_beta2",
+  "diagnostic_levels": null,
+  "status": "DRAFT",
+  "output_root": "results/member3"
+}

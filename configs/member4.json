@@ -1,0 +1,25 @@
+{
+  "member": 4,
+  "optimizers": [
+    "adam",
+    "ademamix"
+  ],
+  "tasks": [
+    "fashion_mnist",
+    "cifar10",
+    "tiny_shakespeare"
+  ],
+  "shared_protocol": "configs/shared_protocol.json",
+  "hyperparameters": {
+    "adam": null,
+    "ademamix": null
+  },
+  "learning_rate_search": {
+    "adam": null,
+    "ademamix": null
+  },
+  "diagnostic": "history_ablation",
+  "diagnostic_levels": null,
+  "status": "DRAFT",
+  "output_root": "results/member4"
+}

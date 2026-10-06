@@ -1,0 +1,12 @@
+\subsection{SGD and DoG}\label{sec:method-m1}
+\owner{Member 1}
+
+Plain SGD uses $\theta_{t+1}=\theta_t-\eta_tg_t$. Its learning rate must balance progress
+and stability. DoG instead constructs a scalar step size from distance traveled from the
+initial point and accumulated gradient norms \citep{ivgi2023dog}.
+We will test whether this reduces sensitivity to an externally selected learning rate.
+The paper's stochastic convex guarantee concerns a specified variant and its assumptions;
+it is not a guarantee for arbitrary nonconvex training. Conditioning diagnostics probe the
+limits of the mechanism rather than assuming that scalar adaptation removes anisotropy.
+
+\fillin{Member 1: Write the exact DoG update and initialization, distinguish it from the theoretical variant, and specify the chosen distance floor. Compare with tuned SGD. Report the parameter-state count, tuning evaluations, and correctness checks.}

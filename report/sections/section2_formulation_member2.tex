@@ -1,0 +1,20 @@
+\subsection{Problem formulation}
+\owner{Member 2; Member 3 verifies the data and model definitions.}
+For a training set $\mathcal D=\{(x_i,y_i)\}_{i=1}^N$, let $h_\theta$ denote a network
+with parameters $\theta\in\mathbb R^d$. We consider
+\begin{equation}\label{eq:objective}
+\min_{\theta\in\mathbb R^d} F(\theta),\qquad
+F(\theta)=\frac1N\sum_{i=1}^N\ell(h_\theta(x_i),y_i),\qquad
+g_t=\frac1{|B_t|}\sum_{i\in B_t}\nabla_\theta\ell(h_{\theta_t}(x_i),y_i).
+\end{equation}
+There are no explicit constraints on $\theta$. The neural network objectives are generally
+nonconvex. Image tasks use class cross-entropy; the language task averages next-character
+cross-entropy over predicted tokens. Weight decay is zero in the primary mechanism comparisons.
+The mini-batch $B_t$, parameter initialization, and training budget are matched within each pair.
+
+For a controlled quadratic, we can use $q(\theta)=\frac12(\theta-\theta^\star)^\top
+H(\theta-\theta^\star)$ with symmetric positive definite $H$ and condition number
+$\kappa=\lambda_{\max}(H)/\lambda_{\min}(H)$. A stochastic oracle, if used, must be defined
+separately. The known optimum allows an objective gap on this problem; neural-network training
+loss is not a measured gap to a global optimum.
+\fillin{Member 2: verify dimensions and the precise assumptions of each cited theorem.}

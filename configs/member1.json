@@ -1,0 +1,25 @@
+{
+  "member": 1,
+  "optimizers": [
+    "sgd",
+    "dog"
+  ],
+  "tasks": [
+    "fashion_mnist",
+    "cifar10",
+    "tiny_shakespeare"
+  ],
+  "shared_protocol": "configs/shared_protocol.json",
+  "hyperparameters": {
+    "sgd": null,
+    "dog": null
+  },
+  "learning_rate_search": {
+    "sgd": null,
+    "dog": null
+  },
+  "diagnostic": "conditioning_scale",
+  "diagnostic_levels": null,
+  "status": "DRAFT",
+  "output_root": "results/member1"
+}
