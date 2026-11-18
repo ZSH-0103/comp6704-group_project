@@ -11,15 +11,34 @@
   ],
   "shared_protocol": "configs/shared_protocol.json",
   "hyperparameters": {
-    "adam": null,
-    "ademamix": null
+    "adam": {"lr": 0.001, "betas": [0.9, 0.999], "eps": 1e-8, "weight_decay": 0},
+    "ademamix": {"lr": 0.001, "betas": [0.9, 0.999, 0.9999], "alpha": 2.0,
+      "alpha_warmup_fraction": 0.5, "beta3_warmup_fraction": 0.5, "eps": 1e-8, "weight_decay": 0}
   },
   "learning_rate_search": {
-    "adam": null,
-    "ademamix": null
+    "adam": [0.0003, 0.001, 0.003],
+    "ademamix": [0.0003, 0.001, 0.003]
   },
   "diagnostic": "history_ablation",
-  "diagnostic_levels": null,
-  "status": "DRAFT",
+  "diagnostic_levels": {"task": "fashion_mnist", "horizons": [100, 400], "seeds": [1, 2, 3]},
+  "tune_updates": 100,
+  "selected_hyperparameters": {
+    "fashion_mnist": {
+      "adam": {"lr": 0.003, "betas": [0.9, 0.999], "eps": 1e-8, "weight_decay": 0},
+      "ademamix": {"lr": 0.003, "betas": [0.9, 0.999, 0.9999], "alpha": 2.0,
+        "alpha_warmup_fraction": 0.5, "beta3_warmup_fraction": 0.5, "eps": 1e-8, "weight_decay": 0}
+    },
+    "cifar10": {
+      "adam": {"lr": 0.003, "betas": [0.9, 0.999], "eps": 1e-8, "weight_decay": 0},
+      "ademamix": {"lr": 0.003, "betas": [0.9, 0.999, 0.9999], "alpha": 2.0,
+        "alpha_warmup_fraction": 0.5, "beta3_warmup_fraction": 0.5, "eps": 1e-8, "weight_decay": 0}
+    },
+    "tiny_shakespeare": {
+      "adam": {"lr": 0.003, "betas": [0.9, 0.999], "eps": 1e-8, "weight_decay": 0},
+      "ademamix": {"lr": 0.003, "betas": [0.9, 0.999, 0.9999], "alpha": 2.0,
+        "alpha_warmup_fraction": 0.5, "beta3_warmup_fraction": 0.5, "eps": 1e-8, "weight_decay": 0}
+    }
+  },
+  "status": "FROZEN",
   "output_root": "results/member4"
 }

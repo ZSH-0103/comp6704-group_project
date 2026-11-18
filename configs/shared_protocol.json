@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "status": "DRAFT_REQUIRES_CPU_PILOT",
+  "status": "FROZEN",
   "device": "cpu",
   "weight_decay": 0,
   "main_seeds": [
@@ -25,12 +25,13 @@
         10
       ],
       "activation": "relu",
-      "train_count": null,
-      "validation_count": null,
-      "batch_size": null,
-      "max_updates": null,
-      "eval_interval": null,
-      "target_val_ce": null
+      "train_count": 6000,
+      "validation_count": 1000,
+      "test_count": 1000,
+      "batch_size": 64,
+      "max_updates": 300,
+      "eval_interval": 50,
+      "target_val_ce": 0.75
     },
     "cifar10": {
       "model": "small_cnn",
@@ -42,12 +43,13 @@
       "pool": "2x2_after_each_conv",
       "classifier": "flatten_then_linear_10",
       "train_count_proposal": 10000,
-      "train_count": null,
-      "validation_count": null,
-      "batch_size": null,
-      "max_updates": null,
-      "eval_interval": null,
-      "target_val_ce": null
+      "train_count": 5000,
+      "validation_count": 1000,
+      "test_count": 1000,
+      "batch_size": 64,
+      "max_updates": 300,
+      "eval_interval": 50,
+      "target_val_ce": 1.8
     },
     "tiny_shakespeare": {
       "model": "char_gru",
@@ -55,14 +57,14 @@
       "hidden_size": 64,
       "layers": 1,
       "sequence_length_proposal": 64,
-      "sequence_length": null,
+      "sequence_length": 64,
       "train_fraction_proposal": 0.8,
       "validation_fraction_proposal": 0.1,
-      "split_boundaries": null,
-      "batch_size": null,
-      "max_updates": null,
-      "eval_interval": null,
-      "target_val_ce": null
+      "split_boundaries": [892312, 1003851],
+      "batch_size": 32,
+      "max_updates": 300,
+      "eval_interval": 50,
+      "target_val_ce": 2.2
     }
   },
   "freeze_required": [
@@ -71,5 +73,5 @@
     "CPU pilot and shared budgets",
     "validation tuning policy and target thresholds"
   ],
-  "note": "Architectures and seeds are draft implementation defaults, not measured optimal settings. Freeze before main runs."
+  "note": "Frozen after successful CPU smoke tests on all three tasks on 9 October 2026."
 }

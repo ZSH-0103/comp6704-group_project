@@ -7,17 +7,18 @@ The tasks are Fashion-MNIST (MLP), CIFAR-10 subset (CNN), Tiny Shakespeare (char
 ## What is ready
 
 - Member ownership, report draft/template, paper references and individual prompts.
-- Shared draft configurations, experiment phases and output schema.
+- A frozen shared protocol, experiment phases and output schema.
+- Member 4's complete Adam/AdEMAMix implementation, including shared data, model and training modules.
 - A runnable plan/dispatch command and portable ZIP packager.
 
-The optimizer implementations, shared data/model/training modules, actual experiment runs and
-result export logic remain member work. `src/members/memberN.py` deliberately raises
-NotImplementedError. Do not describe this scaffold as a finished reproducible experiment.
+Members 1--3 remain scaffold implementations. Member 4 can run the implementation check,
+tuning, main experiment, diagnostic and result aggregation phases through the shared dispatcher.
 
 ## Start
 
 ```sh
 python3 scripts/run_member.py --member 1 --phase plan
+python3 scripts/run_member.py --member 4 --phase check
 ```
 
 Read [team assignments](docs/分工3.0.md), [experiment contracts](docs/EXPERIMENT_CONTRACT.md), and your member prompt:
@@ -40,7 +41,7 @@ comp6704-group_project/
   requirements.in
   configs/shared_protocol.json
   configs/member1.json ... member4.json
-  src/common/                 shared interface specification; implementations to follow
+  src/common/                 shared data, model and training implementations
   src/members/member1.py ... member4.py
   scripts/run_member.py       planner and phase dispatcher
   scripts/package_project.py ZIP builder
@@ -76,4 +77,4 @@ The packager includes report source/PDF, configs, measured logs if later present
 docs and code; excludes raw datasets, model checkpoints, private environment files, .git and build.
 It records SHA-256 hashes in ARCHIVE_MANIFEST.json and checks archive integrity.
 It creates a local archive only, never a remote repository or commit.
-Before a final release, update completion status and include actual tested reproduction instructions.
+Before a final release, complete Members 1--3 and update the tested reproduction instructions.
