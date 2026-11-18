@@ -1,0 +1,45 @@
+{
+  "fashion_mnist": {
+    "sizes": {
+      "train": 6000,
+      "validation": 1000,
+      "test": 1000
+    },
+    "parameters": 109386,
+    "split_hash": "bf18ba99ef0e7d5332d2871fcbb85ab0cbb57dcd76c6cdf49d143804477133c0",
+    "seed1_model_hash": "51cff0fd58562d5a970b55d964947dcad050f014a81759499934e3d346d115f5",
+    "metadata": {
+      "classes": 10,
+      "normalization": "mean=0.2860,std=0.3530"
+    }
+  },
+  "cifar10": {
+    "sizes": {
+      "train": 5000,
+      "validation": 1000,
+      "test": 1000
+    },
+    "parameters": 25578,
+    "split_hash": "7a2b04d57e459357b36a2cd6700bed67655c8e5163b9effcabab2e75e6a85186",
+    "seed1_model_hash": "0342f5d6f2d903c196d7c8b4f14292041ccbca7f2e4849969ae3bdfab4e623a3",
+    "metadata": {
+      "classes": 10,
+      "normalization": "standard CIFAR-10 channel statistics"
+    }
+  },
+  "tiny_shakespeare": {
+    "sizes": {
+      "train": 892248,
+      "validation": 111475,
+      "test": 111479
+    },
+    "parameters": 25121,
+    "split_hash": "afcb56c577aeafe1f641f56392e6b23f779650e1d84c2e0498e6fb1775ed7eb5",
+    "seed1_model_hash": "70590f2bb1f611cec8ddfbc7b0ee3079db4c1f654a0db340a109c89412291482",
+    "metadata": {
+      "vocab_size": 65,
+      "vocab": "\n !$&',-.3:;?ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz",
+      "source_sha256": "86c4e6aa9db7c042ec79f339dcb96d42b0075e16b8fc2e86bf0ca57e2dc565ed"
+    }
+  }
+}

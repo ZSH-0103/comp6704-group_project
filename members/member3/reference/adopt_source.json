@@ -1,0 +1,12 @@
+{
+  "repository": "https://github.com/iShohei220/ADOPT",
+  "commit": "6468572b4b3688a2f056b796b071da540568520e",
+  "source_path": "src/adopt/adopt.py",
+  "sha256": "b951aa5d12a6ff55cf64b86fc50ada4e6ea3469415cde78b79887a41795935ed",
+  "pinned_source_verified_by_cmp": true,
+  "license": "Apache-2.0; see ADOPT_LICENSE",
+  "beta1": 0,
+  "beta2": 0.999,
+  "epsilon": 1e-08,
+  "departures_from_reference_defaults": "Reference defaults beta1=.9 beta2=.9999 eps=1e-6. Our controlled setting removes momentum and aligns beta2/eps with Member4."
+}

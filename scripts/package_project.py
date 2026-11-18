@@ -7,7 +7,7 @@ import zipfile
 
 ROOT = Path(__file__).resolve().parents[1]
 PREFIX = 'comp6704-group_project'
-SKIP_DIRS = {'.git', '.venv', '__pycache__', 'build', 'dist', 'checkpoints', 'node_modules'}
+SKIP_DIRS = {'.git', '.venv', '__pycache__', 'build', 'dist', 'checkpoints', 'node_modules', '.pytest_cache', 'deliverables'}
 SKIP_SUFFIXES = {'.pyc', '.pyo', '.zip', '.pt', '.pth', '.aux', '.log', '.bbl', '.blg', '.fls', '.fdb_latexmk', '.synctex.gz'}
 
 def eligible(p, base):
@@ -17,7 +17,8 @@ def eligible(p, base):
         and p.name != '.DS_Store' and not p.name.startswith('.env')
         and p.name != 'COMP6704_Optimization_Group_Project_2026_Fall-1.pdf'
         and p.suffix not in SKIP_SUFFIXES
-        and not (rel.parts[:2] == ('data','raw') and p.name != '.gitkeep'))
+        and not (any(rel.parts[i:i+2] == ('data', 'raw') for i in range(len(rel.parts)-1)) and p.name != '.gitkeep')
+        and not any(rel.parts[i:i+2] == ('reference', 'papers') for i in range(len(rel.parts)-1)))
 
 def main():
     parser = argparse.ArgumentParser(description=__doc__)

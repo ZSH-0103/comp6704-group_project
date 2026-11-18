@@ -1,0 +1,7 @@
+task,optimizer,n_expected,n_completed,n_target_reached,target_val_ce,target_steps_mean_reached,target_time_s_mean_reached,optimizer_state_bytes,tuning_trials,tuning_elapsed_s,gradient_calls,parameter_updates
+fashion_mnist,rmsprop,3,3,3,1.0,50,0.4325311806751415,437544,3,2.3455493340734392,300,300
+fashion_mnist,adopt_no_momentum,3,3,3,1.0,50,0.4244503329973668,437544,3,2.2808614160167053,300,299
+cifar10,rmsprop,3,3,3,2.0,50,1.8617405833598848,102312,3,10.079609666136093,300,300
+cifar10,adopt_no_momentum,3,3,3,2.0,50,1.8666849166620523,102312,3,10.033516124007292,300,299
+tiny_shakespeare,rmsprop,3,3,3,3.0,50,0.9256179307121783,100484,3,4.825587666011415,300,300
+tiny_shakespeare,adopt_no_momentum,3,3,3,3.0,50,0.9415043197417011,100484,3,4.835537833045237,300,299
