@@ -1,0 +1,53 @@
+{
+  "member": 3,
+  "status": "TUNING_PENDING",
+  "optimizers": [
+    "rmsprop",
+    "adopt_no_momentum"
+  ],
+  "beta2": 0.999,
+  "epsilon": 1e-08,
+  "adopt_clip": "(gradient_call-1)^0.25 after first-call accumulator initialization",
+  "selected_learning_rates": {},
+  "diagnostic": {
+    "objective": "log(cosh(theta))",
+    "oracle": "tanh(theta)+noise, noise=-1 with p=.9 and +9 with p=.1",
+    "initial_theta": 2.0,
+    "beta2": [
+      0.9,
+      0.99,
+      0.999
+    ],
+    "learning_rate": 0.01,
+    "gradient_calls": 10000,
+    "seeds": [
+      101,
+      102,
+      103,
+      104,
+      105,
+      106,
+      107,
+      108,
+      109,
+      110,
+      111,
+      112,
+      113,
+      114,
+      115,
+      116,
+      117,
+      118,
+      119,
+      120
+    ],
+    "tail_window": 1000,
+    "variants": [
+      "rmsprop",
+      "adopt_no_momentum",
+      "current_moment_matched_clip",
+      "adopt_no_clip"
+    ]
+  }
+}

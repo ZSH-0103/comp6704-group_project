@@ -1,0 +1,12 @@
+{
+  "status": "passed",
+  "implementation_tests": 15,
+  "smoke_runs": 6,
+  "tuning_runs": 18,
+  "main_runs": 18,
+  "diagnostic_trajectories": 240,
+  "paired_hash_checks": 9,
+  "source_sha256": "8b746efae4ac889d86e761a8d48ec057af17b64e090ef85585b6388792807855",
+  "report_pdf_sha256": "46fad312f9e2515d5eb7296616e7cf4c5feb2c831b67164a7ded3d37c56efb6f",
+  "checks": "counts, frozen-before-main, test isolation, source/config hashes, pairing, mean/SD recomputation, diagnostic completeness, report figures"
+}

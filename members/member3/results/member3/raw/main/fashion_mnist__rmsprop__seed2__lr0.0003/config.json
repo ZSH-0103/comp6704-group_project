@@ -1,0 +1,104 @@
+{
+  "member": 3,
+  "phase": "main",
+  "task": "fashion_mnist",
+  "seed": 2,
+  "shared_protocol": {
+    "schema_version": 1,
+    "status": "FROZEN_SHARED_FROM_MEMBER4",
+    "device": "cpu",
+    "threads": 4,
+    "weight_decay": 0,
+    "main_seeds": [
+      1,
+      2,
+      3
+    ],
+    "tuning_seed": 11,
+    "split_seed": 6704,
+    "main_updates": 300,
+    "tuning_updates": 100,
+    "eval_interval": 50,
+    "eval_examples": 1024,
+    "eval_batch_size": 128,
+    "lr_candidates": [
+      0.0003,
+      0.001,
+      0.003
+    ],
+    "beta2": 0.999,
+    "epsilon": 1e-08,
+    "dropout": 0,
+    "batch_norm": false,
+    "sampling": "torch.randint with replacement, generator seed=training_seed+100000",
+    "tasks": {
+      "fashion_mnist": {
+        "model": "mlp",
+        "widths": [
+          784,
+          128,
+          64,
+          10
+        ],
+        "train_count": 6000,
+        "validation_count": 1000,
+        "test_count": 1000,
+        "batch_size": 64,
+        "max_updates": 300,
+        "eval_interval": 50,
+        "target_val_ce": 1.0
+      },
+      "cifar10": {
+        "model": "small_cnn",
+        "conv_channels": [
+          16,
+          32
+        ],
+        "train_count": 5000,
+        "validation_count": 1000,
+        "test_count": 1000,
+        "batch_size": 64,
+        "max_updates": 300,
+        "eval_interval": 50,
+        "target_val_ce": 2.0
+      },
+      "tiny_shakespeare": {
+        "model": "char_gru",
+        "embedding_dim": 32,
+        "hidden_size": 64,
+        "layers": 1,
+        "sequence_length": 64,
+        "split_boundaries": [
+          892312,
+          1003851
+        ],
+        "batch_size": 32,
+        "max_updates": 300,
+        "eval_interval": 50,
+        "target_val_ce": 3.0
+      }
+    },
+    "alignment_limits": {
+      "eval_examples": "1024 uses supplied train.py default; Member4 call-site override not supplied",
+      "target_val_ce": "1/2/3 fixed by Member3 before runs; not claimed equal to Member4 thresholds",
+      "framework_version": "Member4 Python bytecode was 3.12; exact torch/torchvision versions and actual manifests were not supplied",
+      "timing": "Member4 source includes final test evaluation in elapsed_s despite prose mentioning training/validation only; both total and pre-test time will be saved"
+    }
+  },
+  "optimizer": {
+    "name": "rmsprop",
+    "learning_rate": 0.0003,
+    "beta1": 0,
+    "beta2": 0.999,
+    "epsilon": 1e-08,
+    "weight_decay": 0,
+    "clip": false
+  },
+  "gradient_call_budget": 300,
+  "split_hash": "bf18ba99ef0e7d5332d2871fcbb85ab0cbb57dcd76c6cdf49d143804477133c0",
+  "initialization_hash": "2c48e1848ccdcd0c4b0d2f034460f88755b83ef840c68d54602b6ae775e279ff",
+  "implementation_sha256": "8b746efae4ac889d86e761a8d48ec057af17b64e090ef85585b6388792807855",
+  "test_evaluation": true,
+  "config_hash": "2a7e8a6665f36c48ad7860ff516b8432de993b28b4e54ff92c47802a961376b8",
+  "canonical_id": "m3__main__fashion_mnist__rmsprop__seed2__lr0.0003__2a7e8a6665f3"
+}

@@ -1,0 +1,11 @@
+.venv/
+build/
+**/build/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+data/raw/
+results/member3/raw/main/*/final_model.pt
+deliverables/
+reference/papers/
+.DS_Store

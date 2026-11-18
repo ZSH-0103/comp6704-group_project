@@ -1,0 +1,16 @@
+\subsection{When do the modifications help?}
+\owner{Member 3; this paragraph integrates the available Member 3 evidence.}
+Tables~\ref{tab:m3-main} and~\ref{tab:m3-diag} distinguish a mechanism benefit from a
+practical win. Using a previous second moment reduces the bias observed in the asymmetric-noise
+diagnostic at $\beta_2=.9$, including against a control with matched clipping. At the main
+setting $\beta_2=.999$, the diagnostic gap is small and ADOPT-0 does not improve held-out
+quality on any tested task. Initialization, clipping and transient dynamics provide alternative
+explanations for the short-training results; the neural experiments do not isolate these factors.
+There is no reduction in tuning effort: both methods receive the same three trials per task.
+
+These conclusions apply to the tested momentum-free specialization, small models, narrow
+learning-rate grid and short budget. Image subsets are small; text evaluation covers overlapping
+prefix windows; only three main seeds are used. The full paper's default ADOPT, larger models,
+longer horizons and complete held-out text regions could behave differently. Results from
+Members 1, 2 and 4 must be added before drawing a conclusion across all eight optimizers;
+Member 4 supplied configuration and shared code, not measured results for that comparison.
