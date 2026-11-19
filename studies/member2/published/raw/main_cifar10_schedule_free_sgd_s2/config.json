@@ -1,0 +1,152 @@
+{
+  "phase": "main",
+  "candidates": [
+    0.03,
+    0.1,
+    0.3
+  ],
+  "tuning_seed": 11,
+  "tuning_updates": 100,
+  "schedule_horizon": null,
+  "warmup_steps": 10,
+  "optimizer": "schedule_free_sgd",
+  "stability_seeds": [
+    1,
+    2,
+    3
+  ],
+  "stability_updates": 300,
+  "selection_rule": "minimum final validation CE; ties prefer smaller LR",
+  "momentum": 0.9,
+  "weight_decay": 0,
+  "batch_size": 64,
+  "eval_interval": 50,
+  "eval_examples": 1024,
+  "eval_batch_size": 128,
+  "test_evaluated": true,
+  "original_experiments": "results/member2/experiments_20261012T122713Z_fd94e6c4",
+  "shared_snapshot": {
+    "schema_version": 1,
+    "status": "DRAFT_REQUIRES_CPU_PILOT",
+    "device": "cpu",
+    "weight_decay": 0,
+    "main_seeds": [
+      1,
+      2,
+      3
+    ],
+    "tuning_seed": 11,
+    "split_seed": 6704,
+    "same_initialization_and_data_order_within_pair": true,
+    "batch_norm": false,
+    "dropout": 0,
+    "loss": "cross_entropy_natural_log",
+    "time_scope": "training_and_scheduled_eval_excluding_data_preparation",
+    "tasks": {
+      "fashion_mnist": {
+        "model": "mlp",
+        "widths": [
+          784,
+          128,
+          64,
+          10
+        ],
+        "activation": "relu",
+        "train_count": 6000,
+        "validation_count": 1000,
+        "batch_size": 64,
+        "max_updates": 300,
+        "eval_interval": 50,
+        "target_val_ce": null,
+        "test_count": 1000
+      },
+      "cifar10": {
+        "model": "small_cnn",
+        "conv_channels": [
+          16,
+          32
+        ],
+        "kernel_size": 3,
+        "pool": "2x2_after_each_conv",
+        "classifier": "flatten_then_linear_10",
+        "train_count": 5000,
+        "validation_count": 1000,
+        "batch_size": 64,
+        "max_updates": 300,
+        "eval_interval": 50,
+        "target_val_ce": null,
+        "test_count": 1000,
+        "padding": 1,
+        "activation": "relu",
+        "classifier_in_features": 2048,
+        "classifier_out_features": 10
+      },
+      "tiny_shakespeare": {
+        "model": "char_gru",
+        "embedding_dim": 32,
+        "hidden_size": 64,
+        "layers": 1,
+        "sequence_length": 64,
+        "split_boundaries": [
+          892312,
+          1003851
+        ],
+        "batch_size": 32,
+        "max_updates": 300,
+        "eval_interval": 50,
+        "target_val_ce": null,
+        "output_layer": "linear_hidden_size_to_vocab_size"
+      }
+    },
+    "freeze_required": [
+      "dataset checksums and split indices",
+      "complete model configuration and initialization",
+      "CPU pilot and shared budgets",
+      "validation tuning policy and target thresholds"
+    ],
+    "note": "Shared architecture, sample counts and budgets populated from Member 4. Status remains DRAFT_REQUIRES_CPU_PILOT until pending items are resolved; no target thresholds or optimizer-specific learning rates are inferred.",
+    "torch_threads": 4,
+    "tuning_policy": {
+      "seed": 11,
+      "max_updates": 100,
+      "selection_metric": "validation_cross_entropy",
+      "selection_direction": "minimize",
+      "test_during_tuning": false,
+      "learning_rate_candidates": "defined_per_member_and_optimizer"
+    },
+    "test_policy": {
+      "after_hyperparameters_frozen": true,
+      "evaluations_per_main_run": 1
+    },
+    "provenance": {
+      "settings_source": "Member4_实验配置说明.md, sections 2–3; tuning budget and selection rule from section 1",
+      "scope": "Shared task settings only; Adam/AdEMAMix hyperparameters and Member 4 history ablation are not shared settings.",
+      "reference_implementation": "member4归档/data.py, models.py, train.py",
+      "local_dataset_manifest": "data/download-manifest.json"
+    },
+    "pending_items": [
+      "target_val_ce remains null for every task: no shared thresholds are specified by Member 4.",
+      "Confirm evaluation sample scope: archived train.py defaults to batch_size=128, max_examples=1024 and uses the first dataset entries; this means 1000 image validation/test samples and 1024 overlapping text windows. This default is not stated in the configuration document.",
+      "Six local 5-update real-data library-optimizer smoke runs passed. Full-budget CPU pilot, optimizer-specific tuning and final evaluation/threshold decisions are still required before freezing."
+    ],
+    "local_validation": {
+      "status": "SMOKE_PASSED_NOT_FROZEN",
+      "working_directory": "group_projects/code",
+      "report": "integration-check.json",
+      "split_manifests": "data/manifests",
+      "smoke_results": "results/member2/smoke_20261012T112746Z_1c4bed21",
+      "paired_initialization_verified": true,
+      "timing_fix": "Local src/common/train.py excludes final test evaluation from elapsed_s."
+    }
+  },
+  "note": "Validation-only refinement of Schedule-Free base learning rate; warmup and all other settings fixed. Original results retained.",
+  "run_phase": "main",
+  "seed": 2,
+  "learning_rate": 0.3,
+  "updates": 300,
+  "initialization_hash": "1c04712311d1e6ef715c132abd0e443d3ebe47665e1d7bb96f9fcda143065800",
+  "split_hash": "7a2b04d57e459357b36a2cd6700bed67655c8e5163b9effcabab2e75e6a85186",
+  "batch_generator_seed": 100002,
+  "task": "cifar10",
+  "replay_source": "results/member2/cifar_sf_search_20261013T030633Z_4db7db22/stability_s2_lr0.3"
+}

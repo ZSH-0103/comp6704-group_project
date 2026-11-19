@@ -11,7 +11,7 @@ The tasks are Fashion-MNIST (MLP), CIFAR-10 subset (CNN), Tiny Shakespeare (char
 - Member 4's complete Adam/AdEMAMix implementation, including shared data, model and training modules.
 - A runnable plan/dispatch command and portable ZIP packager.
 
-Members 1--3 remain scaffold implementations. Member 4 can run the implementation check,
+Member 2 final Momentum/Schedule-Free reproduction is available in [studies/member2](studies/member2/README.md), with frozen settings, 45 measured run records and figure/table export. Members 1 and 3 are not integrated into this main branch yet. Member 4 can run the implementation check,
 tuning, main experiment, diagnostic and result aggregation phases through the shared dispatcher.
 
 ## Start
@@ -77,4 +77,4 @@ The packager includes report source/PDF, configs, measured logs if later present
 docs and code; excludes raw datasets, model checkpoints, private environment files, .git and build.
 It records SHA-256 hashes in ARCHIVE_MANIFEST.json and checks archive integrity.
 It creates a local archive only, never a remote repository or commit.
-Before a final release, complete Members 1--3 and update the tested reproduction instructions.
+Before a final release, integrate the remaining member submissions and update their tested reproduction instructions.

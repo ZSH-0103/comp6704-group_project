@@ -1,0 +1,13 @@
+{"step": 0, "elapsed_s": 0.04347058304119855, "train_ce": 2.3025559782981873, "val_ce": 2.3077999114990235, "val_accuracy_pct": 5.1, "learning_rate": 0.1}
+{"step": 50, "elapsed_s": 0.17451283300761133, "train_ce": 0.6987231075763702, "val_ce": 0.7247858352661133, "val_accuracy_pct": 72.5, "learning_rate": 0.09330127018922194}
+{"step": 100, "elapsed_s": 0.3049871660768986, "train_ce": 0.7019946724176407, "val_ce": 0.7067636260986329, "val_accuracy_pct": 73.3, "learning_rate": 0.07500000000000001}
+{"step": 150, "elapsed_s": 0.43738854106049985, "train_ce": 0.4897175133228302, "val_ce": 0.5205585746765137, "val_accuracy_pct": 79.9, "learning_rate": 0.05}
+{"step": 200, "elapsed_s": 0.5679360000649467, "train_ce": 0.46091867610812187, "val_ce": 0.5209659309387207, "val_accuracy_pct": 79.6, "learning_rate": 0.02499999999999999}
+{"step": 250, "elapsed_s": 0.6979155000299215, "train_ce": 0.3449375443160534, "val_ce": 0.4314797554016113, "val_accuracy_pct": 83.6, "learning_rate": 0.006698729810778076}
+{"step": 300, "elapsed_s": 0.8283164580352604, "train_ce": 0.3417416214942932, "val_ce": 0.4287230224609375, "val_accuracy_pct": 83.8, "learning_rate": 0.0}
+{"step": 350, "elapsed_s": 0.9728044579969719, "train_ce": 0.3417416214942932, "val_ce": 0.4287230224609375, "val_accuracy_pct": 83.8, "learning_rate": 0.0}
+{"step": 400, "elapsed_s": 1.1064967080019414, "train_ce": 0.3417416214942932, "val_ce": 0.4287230224609375, "val_accuracy_pct": 83.8, "learning_rate": 0.0}
+{"step": 450, "elapsed_s": 1.2393702910048887, "train_ce": 0.3417416214942932, "val_ce": 0.4287230224609375, "val_accuracy_pct": 83.8, "learning_rate": 0.0}
+{"step": 500, "elapsed_s": 1.3715481250546873, "train_ce": 0.3417416214942932, "val_ce": 0.4287230224609375, "val_accuracy_pct": 83.8, "learning_rate": 0.0}
+{"step": 550, "elapsed_s": 1.503082750015892, "train_ce": 0.3417416214942932, "val_ce": 0.4287230224609375, "val_accuracy_pct": 83.8, "learning_rate": 0.0}
+{"step": 600, "elapsed_s": 1.6338853330817074, "train_ce": 0.3417416214942932, "val_ce": 0.4287230224609375, "val_accuracy_pct": 83.8, "learning_rate": 0.0}

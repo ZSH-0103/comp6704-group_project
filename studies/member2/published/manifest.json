@@ -1,0 +1,680 @@
+{
+  "scope": "18 final main runs + 27 horizon diagnostics; excludes pilots, tuning and superseded main runs",
+  "runs": [
+    {
+      "directory": "raw/main_cifar10_momentum_s1",
+      "phase": "main",
+      "task": "cifar10",
+      "optimizer": "momentum",
+      "seed": 1,
+      "updates": 300,
+      "source": "results/member2/cifar_final_20261013T063657Z_7d5f5a73/main_cifar10_momentum_s1",
+      "sha256": {
+        "summary.json": "e63d5513b80b495c4bb286245853e6928e66274fe81c1dea13b3abe9ec2e0bed",
+        "config.json": "f9b4690395030e6de41c8ef1018218944d941ec344c3b9a676285ccf915f42aa",
+        "metrics.jsonl": "9db84f02054e7ce4fb4a5e94b2338c8ec5f606e2d72e8a0ef08c2a8e8d83536a",
+        "environment.json": "132425dccf10f53300210951092c26465d3a27276d619d76d9910760c86accb6"
+      }
+    },
+    {
+      "directory": "raw/main_cifar10_momentum_s2",
+      "phase": "main",
+      "task": "cifar10",
+      "optimizer": "momentum",
+      "seed": 2,
+      "updates": 300,
+      "source": "results/member2/cifar_final_20261013T063657Z_7d5f5a73/main_cifar10_momentum_s2",
+      "sha256": {
+        "summary.json": "ecc25f51328693a3880bcf7a48c314309c2b10b8355c3b22d4fe6c6496373b68",
+        "config.json": "3baa12d63e0eef5fbfc9df490a89d5dd38973b9495e8743f1c6c2534b8e681fd",
+        "metrics.jsonl": "bc0b8bc58ed557598a6ca4376fbae85922c2ff9454b88a725a2f15a456bf0422",
+        "environment.json": "132425dccf10f53300210951092c26465d3a27276d619d76d9910760c86accb6"
+      }
+    },
+    {
+      "directory": "raw/main_cifar10_momentum_s3",
+      "phase": "main",
+      "task": "cifar10",
+      "optimizer": "momentum",
+      "seed": 3,
+      "updates": 300,
+      "source": "results/member2/cifar_final_20261013T063657Z_7d5f5a73/main_cifar10_momentum_s3",
+      "sha256": {
+        "summary.json": "1a40980caf4121550a0483134e624bccad80163b94dcf3ff1d1a68edabe5730b",
+        "config.json": "a66ec0e34c167a0287737625c449ecd46ce772d8aca25cd3c15924b5c7910b33",
+        "metrics.jsonl": "ecab66e7e5f5fa8c6e50ecc573ab885005216e4bc3aaa8f06d11d1763b854527",
+        "environment.json": "132425dccf10f53300210951092c26465d3a27276d619d76d9910760c86accb6"
+      }
+    },
+    {
+      "directory": "raw/main_cifar10_schedule_free_sgd_s1",
+      "phase": "main",
+      "task": "cifar10",
+      "optimizer": "schedule_free_sgd",
+      "seed": 1,
+      "updates": 300,
+      "source": "results/member2/cifar_final_20261013T063657Z_7d5f5a73/main_cifar10_schedule_free_sgd_s1",
+      "sha256": {
+        "summary.json": "7b2e8c69038c3dea32790ba36bb6d66b8e768103af0fb855e87fcebfa2607342",
+        "config.json": "0547381659fb2cfc22e57676273d7e3d53492393514abc0e5877d7fa706b377a",
+        "metrics.jsonl": "363feacbff9b4f2c4218db036f403ff32295acbb849afb8b4fbb987e6387927e",
+        "environment.json": "132425dccf10f53300210951092c26465d3a27276d619d76d9910760c86accb6"
+      }
+    },
+    {
+      "directory": "raw/main_cifar10_schedule_free_sgd_s2",
+      "phase": "main",
+      "task": "cifar10",
+      "optimizer": "schedule_free_sgd",
+      "seed": 2,
+      "updates": 300,
+      "source": "results/member2/cifar_final_20261013T063657Z_7d5f5a73/main_cifar10_schedule_free_sgd_s2",
+      "sha256": {
+        "summary.json": "70dbe93cd3cad97c9e30973be7ee87372c4fc9800e413bbe4816c5d73164c37c",
+        "config.json": "0e36fea9110a88d1d958889830e09120d0db01e8ebd042c536bcb418c0fa1752",
+        "metrics.jsonl": "193ab8d55ed6cd8cb0bc5a5e9cca45e70b9d31ca61734b58e1aaae76b419d900",
+        "environment.json": "132425dccf10f53300210951092c26465d3a27276d619d76d9910760c86accb6"
+      }
+    },
+    {
+      "directory": "raw/main_cifar10_schedule_free_sgd_s3",
+      "phase": "main",
+      "task": "cifar10",
+      "optimizer": "schedule_free_sgd",
+      "seed": 3,
+      "updates": 300,
+      "source": "results/member2/cifar_final_20261013T063657Z_7d5f5a73/main_cifar10_schedule_free_sgd_s3",
+      "sha256": {
+        "summary.json": "94daa537cec44325cefd06f2247e71ecea9465eb6372736d39332721bba9955b",
+        "config.json": "c9c044c936439f6a26aa141edbf0b196d3f75081fd0f8edb6054e2d90a97a8a1",
+        "metrics.jsonl": "09411ee2c65c3378808d2979425cc0dd163ffaf88c34c2a12f6153022f7a5a84",
+        "environment.json": "132425dccf10f53300210951092c26465d3a27276d619d76d9910760c86accb6"
+      }
+    },
+    {
+      "directory": "raw/diagnostic_fashion_mnist_momentum_fixed_T_s1_h150_909046d2",
+      "phase": "diagnostic",
+      "task": "fashion_mnist",
+      "optimizer": "momentum_fixed_T",
+      "seed": 1,
+      "updates": 150,
+      "source": "results/member2/experiments_20261012T122713Z_fd94e6c4/raw/diagnostic_fashion_mnist_momentum_fixed_T_s1_h150_909046d2",
+      "sha256": {
+        "summary.json": "fedd6175f9912c8bfffc68abde2737009681cd481c3c8ae3e87e469d53469ff3",
+        "config.json": "b7a937035fbe212bfa1e3d543a58732c057c6e3f3c3e010093741986b5279c2b",
+        "metrics.jsonl": "645899fc8a13ae30f6ac3f48dec7b6c2ab495094a67255535de9113c0c72d3ed",
+        "environment.json": "c4b336b9316420a3d0936b9b9c75ec2e8fb3d20b6cbae7067ec0dfda26b8ddd7"
+      }
+    },
+    {
+      "directory": "raw/diagnostic_fashion_mnist_momentum_fixed_T_s1_h300_a68e1733",
+      "phase": "diagnostic",
+      "task": "fashion_mnist",
+      "optimizer": "momentum_fixed_T",
+      "seed": 1,
+      "updates": 300,
+      "source": "results/member2/experiments_20261012T122713Z_fd94e6c4/raw/diagnostic_fashion_mnist_momentum_fixed_T_s1_h300_a68e1733",
+      "sha256": {
+        "summary.json": "e0789bfcab1b7f986471f631fd1a3e38f23f74d08e0d78125d5c472ce6ffb696",
+        "config.json": "f8e37307b5751462bbb63c378d585e0e716fd823713aa7c94a3cf50a1fd5e554",
+        "metrics.jsonl": "967839f35e376a48d4bb0ddebfa644cda434d8a5ea710955071416fd957e5c99",
+        "environment.json": "c4b336b9316420a3d0936b9b9c75ec2e8fb3d20b6cbae7067ec0dfda26b8ddd7"
+      }
+    },
+    {
+      "directory": "raw/diagnostic_fashion_mnist_momentum_fixed_T_s1_h600_0b377fb5",
+      "phase": "diagnostic",
+      "task": "fashion_mnist",
+      "optimizer": "momentum_fixed_T",
+      "seed": 1,
+      "updates": 600,
+      "source": "results/member2/experiments_20261012T122713Z_fd94e6c4/raw/diagnostic_fashion_mnist_momentum_fixed_T_s1_h600_0b377fb5",
+      "sha256": {
+        "summary.json": "d3d1497271d790eacae9a5cfd389717057508979e5330b2b31b951f5e533ca77",
+        "config.json": "e1957f876013559538808b43d0c05b5fb5b4810024e975c83d56f29bf1927700",
+        "metrics.jsonl": "2628286092dc09bb90494bf90645d4ffc2ce076fe3a696bfdd948cdc2030e7f1",
+        "environment.json": "c4b336b9316420a3d0936b9b9c75ec2e8fb3d20b6cbae7067ec0dfda26b8ddd7"
+      }
+    },
+    {
+      "directory": "raw/diagnostic_fashion_mnist_momentum_fixed_T_s2_h150_ebb84a64",
+      "phase": "diagnostic",
+      "task": "fashion_mnist",
+      "optimizer": "momentum_fixed_T",
+      "seed": 2,
+      "updates": 150,
+      "source": "results/member2/experiments_20261012T122713Z_fd94e6c4/raw/diagnostic_fashion_mnist_momentum_fixed_T_s2_h150_ebb84a64",
+      "sha256": {
+        "summary.json": "ee2c851e57fe589f7ddc432b204c35db8972084b03d656cbd840cead43b9d621",
+        "config.json": "d9e7f5c35a5c27fc7d64b4523ce4659bd740663625fc66f2520c5a92d3b03c7e",
+        "metrics.jsonl": "214440ec6ab08f33172bbb3656ea0a1cb8d5ac5374eb5381a640d5445dbcba80",
+        "environment.json": "c4b336b9316420a3d0936b9b9c75ec2e8fb3d20b6cbae7067ec0dfda26b8ddd7"
+      }
+    },
+    {
+      "directory": "raw/diagnostic_fashion_mnist_momentum_fixed_T_s2_h300_ce096de2",
+      "phase": "diagnostic",
+      "task": "fashion_mnist",
+      "optimizer": "momentum_fixed_T",
+      "seed": 2,
+      "updates": 300,
+      "source": "results/member2/experiments_20261012T122713Z_fd94e6c4/raw/diagnostic_fashion_mnist_momentum_fixed_T_s2_h300_ce096de2",
+      "sha256": {
+        "summary.json": "6a3a23a9b8f32d589322af5da2f6a7f3babcabda309c8051250d5577ed53fea0",
+        "config.json": "d4d17cfe9e55cd9d3e3572f32960fbca64a8a9b9e517fffc2c48506e799c72e5",
+        "metrics.jsonl": "f87a33c1dfe27a6ca2fcddbd13d9012e0e38bef5eed65253bf703c35d166e08b",
+        "environment.json": "c4b336b9316420a3d0936b9b9c75ec2e8fb3d20b6cbae7067ec0dfda26b8ddd7"
+      }
+    },
+    {
+      "directory": "raw/diagnostic_fashion_mnist_momentum_fixed_T_s2_h600_431ed9e9",
+      "phase": "diagnostic",
+      "task": "fashion_mnist",
+      "optimizer": "momentum_fixed_T",
+      "seed": 2,
+      "updates": 600,
+      "source": "results/member2/experiments_20261012T122713Z_fd94e6c4/raw/diagnostic_fashion_mnist_momentum_fixed_T_s2_h600_431ed9e9",
+      "sha256": {
+        "summary.json": "0c328d78d594edbb61d6c24195809f20ba98570116c00e66b40707527c003da4",
+        "config.json": "26d00d566ce020206d8e13087ae7c787ad245cf26b6869d4a538a02dc68e65d8",
+        "metrics.jsonl": "90c8aace61ea8a55cc7a27b384417bc15cfd490a59a68d00743d1772c1b838dd",
+        "environment.json": "c4b336b9316420a3d0936b9b9c75ec2e8fb3d20b6cbae7067ec0dfda26b8ddd7"
+      }
+    },
+    {
+      "directory": "raw/diagnostic_fashion_mnist_momentum_fixed_T_s3_h150_a36d56e6",
+      "phase": "diagnostic",
+      "task": "fashion_mnist",
+      "optimizer": "momentum_fixed_T",
+      "seed": 3,
+      "updates": 150,
+      "source": "results/member2/experiments_20261012T122713Z_fd94e6c4/raw/diagnostic_fashion_mnist_momentum_fixed_T_s3_h150_a36d56e6",
+      "sha256": {
+        "summary.json": "ba694628a7676af24275348cf1a3863b684bc2b5ef2f9e16a151942e41aab178",
+        "config.json": "0a9de8c2a5b2678089635faa65b9dc97a8231bc0d9a8221161966f3e5c9fda17",
+        "metrics.jsonl": "64e6480ff09953cd83c28bc30daa0acd8a6aafade3851d0f8459c2df24cbaa0d",
+        "environment.json": "c4b336b9316420a3d0936b9b9c75ec2e8fb3d20b6cbae7067ec0dfda26b8ddd7"
+      }
+    },
+    {
+      "directory": "raw/diagnostic_fashion_mnist_momentum_fixed_T_s3_h300_aacc04fd",
+      "phase": "diagnostic",
+      "task": "fashion_mnist",
+      "optimizer": "momentum_fixed_T",
+      "seed": 3,
+      "updates": 300,
+      "source": "results/member2/experiments_20261012T122713Z_fd94e6c4/raw/diagnostic_fashion_mnist_momentum_fixed_T_s3_h300_aacc04fd",
+      "sha256": {
+        "summary.json": "2ffb6932e885a3ac3cfbc8e1bba224eb99719b92e14baaa937fb9406a7c72fd2",
+        "config.json": "ecca42fe6d3c165e4f7287077564c2af77328c57e2b9cd90cbaf0edf5b7ca7d0",
+        "metrics.jsonl": "239ab366c8136b86d65b30eca63ddbeb484464ea470409d7704846fbea00586b",
+        "environment.json": "c4b336b9316420a3d0936b9b9c75ec2e8fb3d20b6cbae7067ec0dfda26b8ddd7"
+      }
+    },
+    {
+      "directory": "raw/diagnostic_fashion_mnist_momentum_fixed_T_s3_h600_05342f11",
+      "phase": "diagnostic",
+      "task": "fashion_mnist",
+      "optimizer": "momentum_fixed_T",
+      "seed": 3,
+      "updates": 600,
+      "source": "results/member2/experiments_20261012T122713Z_fd94e6c4/raw/diagnostic_fashion_mnist_momentum_fixed_T_s3_h600_05342f11",
+      "sha256": {
+        "summary.json": "78099218a0b01f8f1f9f576fe3275aee61d72cd12a0f4c3a41e8387515b2065d",
+        "config.json": "dafb8449029607f07aa47d95f52af6a19a1ea9b0229eb975cc347774103b2553",
+        "metrics.jsonl": "e133874ab9bdf86ba393d67515250db566e8d13c32d63c3281056e9cf97a7af4",
+        "environment.json": "c4b336b9316420a3d0936b9b9c75ec2e8fb3d20b6cbae7067ec0dfda26b8ddd7"
+      }
+    },
+    {
+      "directory": "raw/diagnostic_fashion_mnist_momentum_horizon_aware_s1_h150_332bbfa8",
+      "phase": "diagnostic",
+      "task": "fashion_mnist",
+      "optimizer": "momentum_horizon_aware",
+      "seed": 1,
+      "updates": 150,
+      "source": "results/member2/experiments_20261012T122713Z_fd94e6c4/raw/diagnostic_fashion_mnist_momentum_horizon_aware_s1_h150_332bbfa8",
+      "sha256": {
+        "summary.json": "80583ec01eb45cf22c4691715652dfe7cf1b479a07e03f592eeeeecea9eb4c78",
+        "config.json": "a4d33702990c917c42deda96989af9a1741d9474e225f301c86b560a296a4e6a",
+        "metrics.jsonl": "7d2c15c3499818408be6a8052ff213423267d6bebbb3243f03404611c60b1959",
+        "environment.json": "c4b336b9316420a3d0936b9b9c75ec2e8fb3d20b6cbae7067ec0dfda26b8ddd7"
+      }
+    },
+    {
+      "directory": "raw/diagnostic_fashion_mnist_momentum_horizon_aware_s1_h300_bdb9d2a6",
+      "phase": "diagnostic",
+      "task": "fashion_mnist",
+      "optimizer": "momentum_horizon_aware",
+      "seed": 1,
+      "updates": 300,
+      "source": "results/member2/experiments_20261012T122713Z_fd94e6c4/raw/diagnostic_fashion_mnist_momentum_horizon_aware_s1_h300_bdb9d2a6",
+      "sha256": {
+        "summary.json": "e07ab0ae25effcfcea4c80600800e66fb2cc887a2301e83a4a3133cff68e1e52",
+        "config.json": "b41e0ed8c3ddd2a87af968110b29676e2ec32741db974e369efa3b5a9481d9f6",
+        "metrics.jsonl": "2f86b1f425b442bf6de608c0fd5b0705ae676e75467f344276cf066a3686a51c",
+        "environment.json": "c4b336b9316420a3d0936b9b9c75ec2e8fb3d20b6cbae7067ec0dfda26b8ddd7"
+      }
+    },
+    {
+      "directory": "raw/diagnostic_fashion_mnist_momentum_horizon_aware_s1_h600_72e57be7",
+      "phase": "diagnostic",
+      "task": "fashion_mnist",
+      "optimizer": "momentum_horizon_aware",
+      "seed": 1,
+      "updates": 600,
+      "source": "results/member2/experiments_20261012T122713Z_fd94e6c4/raw/diagnostic_fashion_mnist_momentum_horizon_aware_s1_h600_72e57be7",
+      "sha256": {
+        "summary.json": "ee2098b47c9427521c850362015b810b2e8ce69357e3c389f2e0216cc909d339",
+        "config.json": "a16a6a1b7fad90c14b05c8ef81b1b269da787464b8ead00bee1503deeb4d3e2f",
+        "metrics.jsonl": "56c85836281803174666b6e86cbf6eff1304e1e303a051dca962498c69bd0636",
+        "environment.json": "c4b336b9316420a3d0936b9b9c75ec2e8fb3d20b6cbae7067ec0dfda26b8ddd7"
+      }
+    },
+    {
+      "directory": "raw/diagnostic_fashion_mnist_momentum_horizon_aware_s2_h150_b613652b",
+      "phase": "diagnostic",
+      "task": "fashion_mnist",
+      "optimizer": "momentum_horizon_aware",
+      "seed": 2,
+      "updates": 150,
+      "source": "results/member2/experiments_20261012T122713Z_fd94e6c4/raw/diagnostic_fashion_mnist_momentum_horizon_aware_s2_h150_b613652b",
+      "sha256": {
+        "summary.json": "e34a39c21ac059d41b6c2d418a09c589e427360bacf54a79a933546cbbff0fc7",
+        "config.json": "72cca8d6d4fc123a748b609d7499838fdb783c3c975433819e7a206bb65df0d9",
+        "metrics.jsonl": "0656c7fd277a742e36bdfd2fda325be2d493ee994ce2ab0d91558533b43f9817",
+        "environment.json": "c4b336b9316420a3d0936b9b9c75ec2e8fb3d20b6cbae7067ec0dfda26b8ddd7"
+      }
+    },
+    {
+      "directory": "raw/diagnostic_fashion_mnist_momentum_horizon_aware_s2_h300_ea1f0aa8",
+      "phase": "diagnostic",
+      "task": "fashion_mnist",
+      "optimizer": "momentum_horizon_aware",
+      "seed": 2,
+      "updates": 300,
+      "source": "results/member2/experiments_20261012T122713Z_fd94e6c4/raw/diagnostic_fashion_mnist_momentum_horizon_aware_s2_h300_ea1f0aa8",
+      "sha256": {
+        "summary.json": "087e297734600f588fddc14556a8b1264901b39d33cc5ff0d4f90a72e7cb89cd",
+        "config.json": "7255a97147436894ff6d47299efd685d39dd18736def31d896e01a642e159824",
+        "metrics.jsonl": "ce40039f5a1c20e5c3d4c2c290feffec980fcab291182f7568e44dd3aaed1073",
+        "environment.json": "c4b336b9316420a3d0936b9b9c75ec2e8fb3d20b6cbae7067ec0dfda26b8ddd7"
+      }
+    },
+    {
+      "directory": "raw/diagnostic_fashion_mnist_momentum_horizon_aware_s2_h600_e83202dc",
+      "phase": "diagnostic",
+      "task": "fashion_mnist",
+      "optimizer": "momentum_horizon_aware",
+      "seed": 2,
+      "updates": 600,
+      "source": "results/member2/experiments_20261012T122713Z_fd94e6c4/raw/diagnostic_fashion_mnist_momentum_horizon_aware_s2_h600_e83202dc",
+      "sha256": {
+        "summary.json": "02bee7970cc5e2912302f653c9245b3a1a5e88fa5e9b65515e0798009294bc11",
+        "config.json": "fee98ba211573a5f2b9ea57935f0e3aec4152ed3ca907ec2c28bd889a38a94d5",
+        "metrics.jsonl": "b9d840f369af4745e140cef41c97e1ddd775ecad2c48ca2f202f776a8d40fec1",
+        "environment.json": "c4b336b9316420a3d0936b9b9c75ec2e8fb3d20b6cbae7067ec0dfda26b8ddd7"
+      }
+    },
+    {
+      "directory": "raw/diagnostic_fashion_mnist_momentum_horizon_aware_s3_h150_fa430e4a",
+      "phase": "diagnostic",
+      "task": "fashion_mnist",
+      "optimizer": "momentum_horizon_aware",
+      "seed": 3,
+      "updates": 150,
+      "source": "results/member2/experiments_20261012T122713Z_fd94e6c4/raw/diagnostic_fashion_mnist_momentum_horizon_aware_s3_h150_fa430e4a",
+      "sha256": {
+        "summary.json": "39ca5d0fd57ffa77e8d2960e01a0040a0f5dbc92a6f33987e51aa5d2a9fb00c7",
+        "config.json": "b99e2a23f092dfe2babdd811b24ebe156388e44549df322d1e507ae44aa4d0b8",
+        "metrics.jsonl": "1b64a029568c9ad3b2f57d3fe56f6da9600b19e8db26102871f15e1dfa68a70b",
+        "environment.json": "c4b336b9316420a3d0936b9b9c75ec2e8fb3d20b6cbae7067ec0dfda26b8ddd7"
+      }
+    },
+    {
+      "directory": "raw/diagnostic_fashion_mnist_momentum_horizon_aware_s3_h300_bf74eb57",
+      "phase": "diagnostic",
+      "task": "fashion_mnist",
+      "optimizer": "momentum_horizon_aware",
+      "seed": 3,
+      "updates": 300,
+      "source": "results/member2/experiments_20261012T122713Z_fd94e6c4/raw/diagnostic_fashion_mnist_momentum_horizon_aware_s3_h300_bf74eb57",
+      "sha256": {
+        "summary.json": "69ba316a60f87ae7a13c27f66a4c1cac3e2d572cfb492d53673181a3bda53b7a",
+        "config.json": "2ca93fa28195662845a695548d989587c2137cbc21065581d55c8a88c9356952",
+        "metrics.jsonl": "4b0eebb16404b9de86216e8b9a05c6e43e8566144206d0981139498f4158c283",
+        "environment.json": "c4b336b9316420a3d0936b9b9c75ec2e8fb3d20b6cbae7067ec0dfda26b8ddd7"
+      }
+    },
+    {
+      "directory": "raw/diagnostic_fashion_mnist_momentum_horizon_aware_s3_h600_78269a6c",
+      "phase": "diagnostic",
+      "task": "fashion_mnist",
+      "optimizer": "momentum_horizon_aware",
+      "seed": 3,
+      "updates": 600,
+      "source": "results/member2/experiments_20261012T122713Z_fd94e6c4/raw/diagnostic_fashion_mnist_momentum_horizon_aware_s3_h600_78269a6c",
+      "sha256": {
+        "summary.json": "ac5ce9f5a65cc8c394aeaf877b99ce982df67e274f4196a8359bfbfc891f20aa",
+        "config.json": "9498a0abda618601da8e1deb3c5f778aa2052c5fb1a5819262bd29be1701d836",
+        "metrics.jsonl": "6c382ea4e61b73cad7e3486cb3ddfab897c5ba562d382ee24c566faea57be8af",
+        "environment.json": "c4b336b9316420a3d0936b9b9c75ec2e8fb3d20b6cbae7067ec0dfda26b8ddd7"
+      }
+    },
+    {
+      "directory": "raw/diagnostic_fashion_mnist_schedule_free_sgd_s1_h150_ee98ab4b",
+      "phase": "diagnostic",
+      "task": "fashion_mnist",
+      "optimizer": "schedule_free_sgd",
+      "seed": 1,
+      "updates": 150,
+      "source": "results/member2/experiments_20261012T122713Z_fd94e6c4/raw/diagnostic_fashion_mnist_schedule_free_sgd_s1_h150_ee98ab4b",
+      "sha256": {
+        "summary.json": "fb543e0b780cd0746c20475e0b5982ebe6dd0b430cb85d52b3b80351b986deff",
+        "config.json": "4ffc693a5ba6c2ceb0ed2c57de1f6455a4213fd45693f5fd5c8c5469958b1b57",
+        "metrics.jsonl": "454f86124a21b9b66fc7dde113d94fcf30e05585adbad102a4de6d97ddf8552c",
+        "environment.json": "c4b336b9316420a3d0936b9b9c75ec2e8fb3d20b6cbae7067ec0dfda26b8ddd7"
+      }
+    },
+    {
+      "directory": "raw/diagnostic_fashion_mnist_schedule_free_sgd_s1_h300_a801a01e",
+      "phase": "diagnostic",
+      "task": "fashion_mnist",
+      "optimizer": "schedule_free_sgd",
+      "seed": 1,
+      "updates": 300,
+      "source": "results/member2/experiments_20261012T122713Z_fd94e6c4/raw/diagnostic_fashion_mnist_schedule_free_sgd_s1_h300_a801a01e",
+      "sha256": {
+        "summary.json": "92347e8c68c1bfab03763420011d5fcd01504f56700adfbe14f32142dfc5efa5",
+        "config.json": "608455f667bdad573989aba336728c21047e384b2f901486a4b20ed67ec9a5ec",
+        "metrics.jsonl": "2729960b2824ec72c6127e3ec2c646ad67dee859a5f2aa24de42499456585f3e",
+        "environment.json": "c4b336b9316420a3d0936b9b9c75ec2e8fb3d20b6cbae7067ec0dfda26b8ddd7"
+      }
+    },
+    {
+      "directory": "raw/diagnostic_fashion_mnist_schedule_free_sgd_s1_h600_f29ec9a6",
+      "phase": "diagnostic",
+      "task": "fashion_mnist",
+      "optimizer": "schedule_free_sgd",
+      "seed": 1,
+      "updates": 600,
+      "source": "results/member2/experiments_20261012T122713Z_fd94e6c4/raw/diagnostic_fashion_mnist_schedule_free_sgd_s1_h600_f29ec9a6",
+      "sha256": {
+        "summary.json": "4c4235b5574b4eb68d0610bbbab8b725229edb2a59b5d61327e066b7fe381e6e",
+        "config.json": "e6b392ebd2a1cb75d9710c99d32591dada639beb859b075990274c1b37ae3afe",
+        "metrics.jsonl": "781bee454571ba14a9532855a2d2d34941e2e39153aae300317d17c41ac622d5",
+        "environment.json": "c4b336b9316420a3d0936b9b9c75ec2e8fb3d20b6cbae7067ec0dfda26b8ddd7"
+      }
+    },
+    {
+      "directory": "raw/diagnostic_fashion_mnist_schedule_free_sgd_s2_h150_3968495c",
+      "phase": "diagnostic",
+      "task": "fashion_mnist",
+      "optimizer": "schedule_free_sgd",
+      "seed": 2,
+      "updates": 150,
+      "source": "results/member2/experiments_20261012T122713Z_fd94e6c4/raw/diagnostic_fashion_mnist_schedule_free_sgd_s2_h150_3968495c",
+      "sha256": {
+        "summary.json": "34cd533f6713b7d80504c511fe473531bd80c24426231c0285028866a5eee3ce",
+        "config.json": "69a7ed8d71ccaafaab5261c48deac09ffe904f9b82d16805ec844a88635b34e7",
+        "metrics.jsonl": "76355268579ff360b55ec68a53475d399a14ed62dfb1277d4ee31f18d04e061d",
+        "environment.json": "c4b336b9316420a3d0936b9b9c75ec2e8fb3d20b6cbae7067ec0dfda26b8ddd7"
+      }
+    },
+    {
+      "directory": "raw/diagnostic_fashion_mnist_schedule_free_sgd_s2_h300_5151f0e5",
+      "phase": "diagnostic",
+      "task": "fashion_mnist",
+      "optimizer": "schedule_free_sgd",
+      "seed": 2,
+      "updates": 300,
+      "source": "results/member2/experiments_20261012T122713Z_fd94e6c4/raw/diagnostic_fashion_mnist_schedule_free_sgd_s2_h300_5151f0e5",
+      "sha256": {
+        "summary.json": "cb4428ee5ddf70eecc8840a51b98cf7179552e358d83388c818953f9e7d220dc",
+        "config.json": "198e69ba5a48997b10f51f9c2df13a872104eaa71e0c120e613a357ce0e204dd",
+        "metrics.jsonl": "39e1b73767ff487b3f07dc8e409918501ec3447752a529d78cbffce9a07a54d0",
+        "environment.json": "c4b336b9316420a3d0936b9b9c75ec2e8fb3d20b6cbae7067ec0dfda26b8ddd7"
+      }
+    },
+    {
+      "directory": "raw/diagnostic_fashion_mnist_schedule_free_sgd_s2_h600_c72d73f1",
+      "phase": "diagnostic",
+      "task": "fashion_mnist",
+      "optimizer": "schedule_free_sgd",
+      "seed": 2,
+      "updates": 600,
+      "source": "results/member2/experiments_20261012T122713Z_fd94e6c4/raw/diagnostic_fashion_mnist_schedule_free_sgd_s2_h600_c72d73f1",
+      "sha256": {
+        "summary.json": "d54937d09b8de8cb9a427001f448e8fd5e8d395cc758a163f11bedf7fa7a45d9",
+        "config.json": "ab8b64b218cdbd4b03b8aea4c29ce8dd6cbce15fd7323763165091199295a1d6",
+        "metrics.jsonl": "fe1808cc3dc6955c861dba100e89d76e763cebdf667aa5465d9d5c0f602bfc92",
+        "environment.json": "c4b336b9316420a3d0936b9b9c75ec2e8fb3d20b6cbae7067ec0dfda26b8ddd7"
+      }
+    },
+    {
+      "directory": "raw/diagnostic_fashion_mnist_schedule_free_sgd_s3_h150_a7aede01",
+      "phase": "diagnostic",
+      "task": "fashion_mnist",
+      "optimizer": "schedule_free_sgd",
+      "seed": 3,
+      "updates": 150,
+      "source": "results/member2/experiments_20261012T122713Z_fd94e6c4/raw/diagnostic_fashion_mnist_schedule_free_sgd_s3_h150_a7aede01",
+      "sha256": {
+        "summary.json": "467ad0409c087c259139f7680449d7a8d2d67cf10f323c5ad23eac639e8d3053",
+        "config.json": "4605fb6e759ce0d95e3c95e7913be701d7f770fd13d0859767b24e35d7621216",
+        "metrics.jsonl": "d27fc5d63eef841a74278522585a6034253a52bf698aafcbf09a584692fdf174",
+        "environment.json": "c4b336b9316420a3d0936b9b9c75ec2e8fb3d20b6cbae7067ec0dfda26b8ddd7"
+      }
+    },
+    {
+      "directory": "raw/diagnostic_fashion_mnist_schedule_free_sgd_s3_h300_80327fd8",
+      "phase": "diagnostic",
+      "task": "fashion_mnist",
+      "optimizer": "schedule_free_sgd",
+      "seed": 3,
+      "updates": 300,
+      "source": "results/member2/experiments_20261012T122713Z_fd94e6c4/raw/diagnostic_fashion_mnist_schedule_free_sgd_s3_h300_80327fd8",
+      "sha256": {
+        "summary.json": "5af1ddd9bd4543a29c1253ca819d5f552e21908a5e5d05cb6bc0c2e48f9fe30a",
+        "config.json": "c7ae55e34c4d7a34ac63f2d24772e3b673f08e7d06ca8e058084870a4e330880",
+        "metrics.jsonl": "39455509fec4dbb2060275192356b4aee82dbee2bf1e2fbb8fc24c6b982f8eeb",
+        "environment.json": "c4b336b9316420a3d0936b9b9c75ec2e8fb3d20b6cbae7067ec0dfda26b8ddd7"
+      }
+    },
+    {
+      "directory": "raw/diagnostic_fashion_mnist_schedule_free_sgd_s3_h600_e312b3dc",
+      "phase": "diagnostic",
+      "task": "fashion_mnist",
+      "optimizer": "schedule_free_sgd",
+      "seed": 3,
+      "updates": 600,
+      "source": "results/member2/experiments_20261012T122713Z_fd94e6c4/raw/diagnostic_fashion_mnist_schedule_free_sgd_s3_h600_e312b3dc",
+      "sha256": {
+        "summary.json": "7b8c958f29efd8905f9100fc572b8df8925ffc846fcc9a5314aba7a05830c16c",
+        "config.json": "dcc8a0d3a8583a79ddf28ad3e3ef2594f33a5d349c2edfbb992363247c8bc7da",
+        "metrics.jsonl": "e804d38e603cce21be4f36804f0f78779a7707f943bd6c643fc68a766071d3a5",
+        "environment.json": "c4b336b9316420a3d0936b9b9c75ec2e8fb3d20b6cbae7067ec0dfda26b8ddd7"
+      }
+    },
+    {
+      "directory": "raw/main_fashion_mnist_momentum_s1_h300_36796885",
+      "phase": "main",
+      "task": "fashion_mnist",
+      "optimizer": "momentum",
+      "seed": 1,
+      "updates": 300,
+      "source": "results/member2/experiments_20261012T122713Z_fd94e6c4/raw/main_fashion_mnist_momentum_s1_h300_36796885",
+      "sha256": {
+        "summary.json": "20df65773fb0d43ce7ba03786b97f5c67213be2d0e56d5b70ec51e9162925300",
+        "config.json": "fb343ae9a5edb2d415101f8512688751f9e4cd94c2110c39022586aa62c760b1",
+        "metrics.jsonl": "14025c20fb6c188509ad2fe7c11e97bcf1b883da18d040202aba55c71b74f8c1",
+        "environment.json": "c4b336b9316420a3d0936b9b9c75ec2e8fb3d20b6cbae7067ec0dfda26b8ddd7"
+      }
+    },
+    {
+      "directory": "raw/main_fashion_mnist_momentum_s2_h300_52d98abc",
+      "phase": "main",
+      "task": "fashion_mnist",
+      "optimizer": "momentum",
+      "seed": 2,
+      "updates": 300,
+      "source": "results/member2/experiments_20261012T122713Z_fd94e6c4/raw/main_fashion_mnist_momentum_s2_h300_52d98abc",
+      "sha256": {
+        "summary.json": "14de20796acabd92c831962cc0fd2ab2a4c52cd7297bc3f2d4f362d8333f3ec1",
+        "config.json": "eb2f24d76a5ca242ae547a11e5eef6f3c94257701f769e302c74d76aebb0ca19",
+        "metrics.jsonl": "a154dbeafbcdb28a9562044066fbadbd7a904f5c0debbee4a4fe1b8f3e63dc54",
+        "environment.json": "c4b336b9316420a3d0936b9b9c75ec2e8fb3d20b6cbae7067ec0dfda26b8ddd7"
+      }
+    },
+    {
+      "directory": "raw/main_fashion_mnist_momentum_s3_h300_17e67786",
+      "phase": "main",
+      "task": "fashion_mnist",
+      "optimizer": "momentum",
+      "seed": 3,
+      "updates": 300,
+      "source": "results/member2/experiments_20261012T122713Z_fd94e6c4/raw/main_fashion_mnist_momentum_s3_h300_17e67786",
+      "sha256": {
+        "summary.json": "0fb66f536943ac92314ba9f13a0d00bdb7427fc58b98f8ec22cda1d4b984bc41",
+        "config.json": "fe38507b7637dbfcb715e871a2799b258918fb024ab517ecfbe363a07813e064",
+        "metrics.jsonl": "1a3722b34783378300dc0fd63c6cd97c492c2009b0d9135549fa2022aff6fe22",
+        "environment.json": "c4b336b9316420a3d0936b9b9c75ec2e8fb3d20b6cbae7067ec0dfda26b8ddd7"
+      }
+    },
+    {
+      "directory": "raw/main_fashion_mnist_schedule_free_sgd_s1_h300_aa043720",
+      "phase": "main",
+      "task": "fashion_mnist",
+      "optimizer": "schedule_free_sgd",
+      "seed": 1,
+      "updates": 300,
+      "source": "results/member2/experiments_20261012T122713Z_fd94e6c4/raw/main_fashion_mnist_schedule_free_sgd_s1_h300_aa043720",
+      "sha256": {
+        "summary.json": "48ac504c84da38e146ac2449f458b87ffc223218b2a3a322113c9c88dba7c9b6",
+        "config.json": "cebd3dd64b492f93e7b27edb1b445cc90f64c7b3ddf4cbbea7f168bb18a9f4fe",
+        "metrics.jsonl": "fc4169ee78c3e917cc182c3980dd47920f6336f2e22f0fe8a2f52d1797583fac",
+        "environment.json": "c4b336b9316420a3d0936b9b9c75ec2e8fb3d20b6cbae7067ec0dfda26b8ddd7"
+      }
+    },
+    {
+      "directory": "raw/main_fashion_mnist_schedule_free_sgd_s2_h300_bcd1b4c4",
+      "phase": "main",
+      "task": "fashion_mnist",
+      "optimizer": "schedule_free_sgd",
+      "seed": 2,
+      "updates": 300,
+      "source": "results/member2/experiments_20261012T122713Z_fd94e6c4/raw/main_fashion_mnist_schedule_free_sgd_s2_h300_bcd1b4c4",
+      "sha256": {
+        "summary.json": "4b8c19acd1e18a54c164507133f4eadea4e877d0fe251c3fccddd8ba5c158f5f",
+        "config.json": "433239d239519e4c8c9a831d427abaae201a525d9458fdff8897a78bfbaec363",
+        "metrics.jsonl": "78a963805b3c72284b99965009d60859670d7a2e46cc73893b673cab3ee3eb78",
+        "environment.json": "c4b336b9316420a3d0936b9b9c75ec2e8fb3d20b6cbae7067ec0dfda26b8ddd7"
+      }
+    },
+    {
+      "directory": "raw/main_fashion_mnist_schedule_free_sgd_s3_h300_cae99c11",
+      "phase": "main",
+      "task": "fashion_mnist",
+      "optimizer": "schedule_free_sgd",
+      "seed": 3,
+      "updates": 300,
+      "source": "results/member2/experiments_20261012T122713Z_fd94e6c4/raw/main_fashion_mnist_schedule_free_sgd_s3_h300_cae99c11",
+      "sha256": {
+        "summary.json": "c1cd8b4e192bc89ecf3c852183e10496f694ae3d89420659afd62c2ffc7d6e2d",
+        "config.json": "66c24467f2cae89390c3edd1718adf078ebc229e3f2346e90789bf096f48cc61",
+        "metrics.jsonl": "fa7d7480b6cd1537f1545a6ba999dfdc5c0ccd627382f2858d3faca1ec76ac83",
+        "environment.json": "c4b336b9316420a3d0936b9b9c75ec2e8fb3d20b6cbae7067ec0dfda26b8ddd7"
+      }
+    },
+    {
+      "directory": "raw/main_tiny_shakespeare_momentum_s1_h300_455531ba",
+      "phase": "main",
+      "task": "tiny_shakespeare",
+      "optimizer": "momentum",
+      "seed": 1,
+      "updates": 300,
+      "source": "results/member2/experiments_20261012T122713Z_fd94e6c4/raw/main_tiny_shakespeare_momentum_s1_h300_455531ba",
+      "sha256": {
+        "summary.json": "76510eb4e50fbdc096eb8baf2485e219a9c2752ad4abf63128a1c19f1e8c7ecb",
+        "config.json": "7b29037791ee1b4b1d01ac6f119e991d8d1a8afe90b4ccf6e3e30615430364be",
+        "metrics.jsonl": "fb85b85eae46614f48f252f3986ecc8b0f8a22e0657403b1acdf6a83cbaf125c",
+        "environment.json": "c4b336b9316420a3d0936b9b9c75ec2e8fb3d20b6cbae7067ec0dfda26b8ddd7"
+      }
+    },
+    {
+      "directory": "raw/main_tiny_shakespeare_momentum_s2_h300_f7b7e372",
+      "phase": "main",
+      "task": "tiny_shakespeare",
+      "optimizer": "momentum",
+      "seed": 2,
+      "updates": 300,
+      "source": "results/member2/experiments_20261012T122713Z_fd94e6c4/raw/main_tiny_shakespeare_momentum_s2_h300_f7b7e372",
+      "sha256": {
+        "summary.json": "13aca2c21b62e05fc92a25a8e9d9fc21184b83dd41533c759f00e9aaa86d9055",
+        "config.json": "33f8427c53ca0d2679e3c7a84afe90f05c32758875d82a5d8bed236d7a8aa9a7",
+        "metrics.jsonl": "8161bb054fe7f325bf41700831f501e87b2fa7d017affb6a06da0c50b6700b40",
+        "environment.json": "c4b336b9316420a3d0936b9b9c75ec2e8fb3d20b6cbae7067ec0dfda26b8ddd7"
+      }
+    },
+    {
+      "directory": "raw/main_tiny_shakespeare_momentum_s3_h300_b92d7605",
+      "phase": "main",
+      "task": "tiny_shakespeare",
+      "optimizer": "momentum",
+      "seed": 3,
+      "updates": 300,
+      "source": "results/member2/experiments_20261012T122713Z_fd94e6c4/raw/main_tiny_shakespeare_momentum_s3_h300_b92d7605",
+      "sha256": {
+        "summary.json": "ec6fa2a2c65b72f43e961995e29d15427fb0c1c9f353eb9d29dab3148abd5238",
+        "config.json": "76187380bf54c3b3b0516465285aea333a12f3fe7ec7622f51696628b51c0d2b",
+        "metrics.jsonl": "27d6fd5ad4ebb80089ace0b189c335900a6b3db392b11ee8ea305dec93eed0c0",
+        "environment.json": "c4b336b9316420a3d0936b9b9c75ec2e8fb3d20b6cbae7067ec0dfda26b8ddd7"
+      }
+    },
+    {
+      "directory": "raw/main_tiny_shakespeare_schedule_free_sgd_s1_h300_d81567ee",
+      "phase": "main",
+      "task": "tiny_shakespeare",
+      "optimizer": "schedule_free_sgd",
+      "seed": 1,
+      "updates": 300,
+      "source": "results/member2/experiments_20261012T122713Z_fd94e6c4/raw/main_tiny_shakespeare_schedule_free_sgd_s1_h300_d81567ee",
+      "sha256": {
+        "summary.json": "d70f72fb23bd31aa08d2674e1fb37983fc533482f39805ea4453adde74c1fd28",
+        "config.json": "4ec6c6bf637b6c536beb9dec25499e17fc507cd4e5f75d551185c69b291fc8ba",
+        "metrics.jsonl": "2e0c9e0e3c6f9517c06be36b6277d26040f9f29341519fe3fc2158db16aa3d21",
+        "environment.json": "c4b336b9316420a3d0936b9b9c75ec2e8fb3d20b6cbae7067ec0dfda26b8ddd7"
+      }
+    },
+    {
+      "directory": "raw/main_tiny_shakespeare_schedule_free_sgd_s2_h300_d65b2c60",
+      "phase": "main",
+      "task": "tiny_shakespeare",
+      "optimizer": "schedule_free_sgd",
+      "seed": 2,
+      "updates": 300,
+      "source": "results/member2/experiments_20261012T122713Z_fd94e6c4/raw/main_tiny_shakespeare_schedule_free_sgd_s2_h300_d65b2c60",
+      "sha256": {
+        "summary.json": "4584709f316c9fe5037c81d2eae00cdc26e9b7a9a30acdd030bd060aba09bc30",
+        "config.json": "4a7d5e0de652299ef68422276f80a87cb9e709757f2344ee29546c31efd61304",
+        "metrics.jsonl": "29e6398387c7e677db6aef07dd15f7a131b2922a70b81ab4c1fa4799e4475936",
+        "environment.json": "c4b336b9316420a3d0936b9b9c75ec2e8fb3d20b6cbae7067ec0dfda26b8ddd7"
+      }
+    },
+    {
+      "directory": "raw/main_tiny_shakespeare_schedule_free_sgd_s3_h300_30d3be99",
+      "phase": "main",
+      "task": "tiny_shakespeare",
+      "optimizer": "schedule_free_sgd",
+      "seed": 3,
+      "updates": 300,
+      "source": "results/member2/experiments_20261012T122713Z_fd94e6c4/raw/main_tiny_shakespeare_schedule_free_sgd_s3_h300_30d3be99",
+      "sha256": {
+        "summary.json": "8c73622c27afe5e95d5151041b6e4d09a0cc76a762014d812fb89ca34e1fa47e",
+        "config.json": "73add42f694e13e5c573ff97690bfc124bb1339792354820eb50f9e08939168f",
+        "metrics.jsonl": "0f5158d92cb18c9257748f7a2900007ec0b61dfb40e523efda7ca8ab03050755",
+        "environment.json": "c4b336b9316420a3d0936b9b9c75ec2e8fb3d20b6cbae7067ec0dfda26b8ddd7"
+      }
+    }
+  ]
+}

@@ -1,0 +1,7 @@
+{"step": 0, "elapsed_s": 0.19008562492672354, "train_ce": 2.3084276020526886, "val_ce": 2.3091223602294924, "val_accuracy_pct": 8.2, "learning_rate": 0.03}
+{"step": 50, "elapsed_s": 1.0587280829204246, "train_ce": 1.759936884045601, "val_ce": 1.8291563873291015, "val_accuracy_pct": 35.2, "learning_rate": 0.02799038105676658}
+{"step": 100, "elapsed_s": 1.9396644999505952, "train_ce": 1.4616031795740128, "val_ce": 1.6176273956298828, "val_accuracy_pct": 40.3, "learning_rate": 0.0225}
+{"step": 150, "elapsed_s": 2.901335999951698, "train_ce": 1.2971091270446777, "val_ce": 1.4987930450439453, "val_accuracy_pct": 47.5, "learning_rate": 0.015}
+{"step": 200, "elapsed_s": 3.8005917499540374, "train_ce": 1.1364705264568329, "val_ce": 1.4072925109863281, "val_accuracy_pct": 49.2, "learning_rate": 0.007499999999999996}
+{"step": 250, "elapsed_s": 4.758617999963462, "train_ce": 1.0525435879826546, "val_ce": 1.3544816284179688, "val_accuracy_pct": 50.9, "learning_rate": 0.0020096189432334227}
+{"step": 300, "elapsed_s": 5.669317999971099, "train_ce": 1.0371168702840805, "val_ce": 1.3464073486328125, "val_accuracy_pct": 50.2, "learning_rate": 0.0}

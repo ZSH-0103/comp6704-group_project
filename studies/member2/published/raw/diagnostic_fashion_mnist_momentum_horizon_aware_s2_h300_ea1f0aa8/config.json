@@ -1,0 +1,23 @@
+{
+  "phase": "diagnostic",
+  "task": "fashion_mnist",
+  "optimizer": "momentum_horizon_aware",
+  "seed": 2,
+  "max_updates": 300,
+  "learning_rate": 0.1,
+  "momentum": 0.9,
+  "weight_decay": 0,
+  "warmup_steps": 0,
+  "schedule_horizon": 300,
+  "schedule_after_horizon": "hold_zero",
+  "batch_size": 64,
+  "eval_interval": 50,
+  "eval_examples": 1024,
+  "initialization_hash": "2c48e1848ccdcd0c4b0d2f034460f88755b83ef840c68d54602b6ae775e279ff",
+  "split_hash": "bf18ba99ef0e7d5332d2871fcbb85ab0cbb57dcd76c6cdf49d143804477133c0",
+  "batch_generator_seed": 100002,
+  "test_evaluations_expected": 0,
+  "protocol_hash": "b2a9be770e501cf874166a0ea6b22421fb124dbbc700eea4148c20307d735ba8",
+  "independent_implementation": false,
+  "config_hash": "ea1f0aa851d4090f84ca31ee25832e7e3e7ed305288fb182580f478eeda88bdd"
+}

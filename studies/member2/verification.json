@@ -1,0 +1,21 @@
+{
+  "published_records_verified": 45,
+  "smoke_runs_passed": 6,
+  "full_budget_replay": [
+    {
+      "optimizer": "momentum",
+      "seed": 1,
+      "curve_max_abs_difference": 0.0,
+      "test_ce_matches": true,
+      "test_accuracy_matches": true
+    },
+    {
+      "optimizer": "schedule_free_sgd",
+      "seed": 1,
+      "curve_max_abs_difference": 0.0,
+      "test_ce_matches": true,
+      "test_accuracy_matches": true
+    }
+  ],
+  "note": "Validation of packaging and runner; original published observations are unchanged. Not independent optimizer validation."
+}
