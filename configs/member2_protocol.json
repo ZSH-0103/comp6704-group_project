@@ -1,0 +1,70 @@
+{
+  "schema_version": 1,
+  "device": "cpu",
+  "torch_threads": 4,
+  "main_seeds": [
+    1,
+    2,
+    3
+  ],
+  "split_seed": 6704,
+  "tasks": {
+    "fashion_mnist": {
+      "model": "mlp",
+      "widths": [
+        784,
+        128,
+        64,
+        10
+      ],
+      "activation": "relu",
+      "train_count": 6000,
+      "validation_count": 1000,
+      "batch_size": 64,
+      "max_updates": 300,
+      "eval_interval": 50,
+      "target_val_ce": null,
+      "test_count": 1000
+    },
+    "cifar10": {
+      "model": "small_cnn",
+      "conv_channels": [
+        16,
+        32
+      ],
+      "kernel_size": 3,
+      "pool": "2x2_after_each_conv",
+      "classifier": "flatten_then_linear_10",
+      "train_count": 5000,
+      "validation_count": 1000,
+      "batch_size": 64,
+      "max_updates": 300,
+      "eval_interval": 50,
+      "target_val_ce": null,
+      "test_count": 1000,
+      "padding": 1,
+      "activation": "relu",
+      "classifier_in_features": 2048,
+      "classifier_out_features": 10
+    },
+    "tiny_shakespeare": {
+      "model": "char_gru",
+      "embedding_dim": 32,
+      "hidden_size": 64,
+      "layers": 1,
+      "sequence_length": 64,
+      "split_boundaries": [
+        892312,
+        1003851
+      ],
+      "batch_size": 32,
+      "max_updates": 300,
+      "eval_interval": 50,
+      "target_val_ce": null,
+      "output_layer": "linear_hidden_size_to_vocab_size"
+    }
+  },
+  "weight_decay": 0,
+  "status": "FROZEN",
+  "scope": "Member 2 final reproduction only; not a declaration about the group protocol"
+}

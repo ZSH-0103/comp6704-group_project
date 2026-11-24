@@ -11,10 +11,12 @@ The tasks are Fashion-MNIST (MLP), CIFAR-10 subset (CNN), Tiny Shakespeare (char
 - Member 4's complete Adam/AdEMAMix implementation, including shared data, model and training modules.
 - A runnable plan/dispatch command and portable ZIP packager.
 
-Member 3 is complete in the independently runnable [members/member3](members/member3/) module,
-including implementation checks, frozen configurations, measured logs, figures and report source.
-Member 4 runs through the shared dispatcher. Members 1 and 2 still have scaffold entries in this
-checkout; their latest external report work is not represented by those entries.
+Member 2's final Momentum/Schedule-Free reproduction is available in
+[studies/member2](studies/member2/README.md), with frozen settings, 45 measured run records,
+and figure/table export. Member 3's completed RMSProp/ADOPT-0 study is in
+[members/member3](members/member3/README.md), with implementation checks, frozen configurations,
+measured logs, figures, and report source. Member 4 runs through the shared dispatcher.
+Member 1's entry in this checkout remains a scaffold.
 
 ## Member 3 code and measured results
 
@@ -49,6 +51,7 @@ in requirements-lock.txt and each run's environment.json. A GPU is not required.
 comp6704-group_project/
   README.md
   members/member3/           completed standalone RMSProp/ADOPT-0 study
+  studies/member2/           completed Momentum/Schedule-Free reproduction
   requirements.in
   configs/shared_protocol.json
   configs/member1.json ... member4.json
@@ -88,5 +91,6 @@ The packager includes report source/PDF, configs, measured logs if later present
 docs and code; excludes raw datasets, model checkpoints, private environment files, .git and build.
 It records SHA-256 hashes in ARCHIVE_MANIFEST.json and checks archive integrity.
 It creates a local archive only, never a remote repository or commit.
-Before a final group release, integrate the remaining member modules and the final group report.
-Member 3 has its own verified ZIP builder; see its README for the module-specific command.
+Before a final group release, integrate the remaining member submissions and the final group report,
+and update their tested reproduction instructions. Member 3 has its own verified ZIP builder;
+see its README for the module-specific command.

@@ -1,0 +1,22 @@
+{
+  "final_train_ce": 0.9146185666322708,
+  "final_val_ce": 1.3087544326782226,
+  "test_accuracy_pct": 52.6,
+  "test_ce": 1.39076611328125,
+  "elapsed_s": 5.675351084093563,
+  "target_val_ce": null,
+  "target_step": null,
+  "target_time_s": null,
+  "target_reached": null,
+  "optimizer_state_bytes": 102312,
+  "test_elapsed_s": 0.10442816698923707,
+  "status": "completed",
+  "error_message": null,
+  "phase": "main",
+  "seed": 3,
+  "learning_rate": 0.3,
+  "updates": 300,
+  "final_val_accuracy_pct": 53.4,
+  "validation_replay_max_abs_error": 0.0,
+  "checkpoint": "checkpoint.pt"
+}

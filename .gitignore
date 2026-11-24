@@ -15,3 +15,9 @@ dist/
 
 # Course handout is retained locally, not published.
 docs/COMP6704_Optimization_Group_Project_2026_Fall-1.pdf
+
+# Member 2 reproduction outputs; published observations remain tracked.
+studies/member2/data/raw
+studies/member2/runs/
+studies/member2/generated/
+studies/member2/.mplconfig/

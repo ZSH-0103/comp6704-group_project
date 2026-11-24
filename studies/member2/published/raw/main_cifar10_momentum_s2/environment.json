@@ -1,0 +1,19 @@
+{
+  "python": "3.13.13",
+  "platform": "macOS-26.6-arm64-arm-64bit-Mach-O",
+  "threads": 4,
+  "device": "cpu",
+  "versions": {
+    "torch": "2.14.1",
+    "torchvision": "0.29.1",
+    "schedulefree": "1.4.1",
+    "numpy": "2.5.4"
+  },
+  "source_sha256": {
+    "scripts/finalize_cifar.py": "e62355a5e773e47d7aea4dcc50ac0e0838980e51acddb2dfe68de65121a356b3",
+    "src/common/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "src/common/data.py": "8b0bb91f49317fc797677eae1ac03eb6c76ef7bd10fb5974f75380f466512ae9",
+    "src/common/models.py": "e4e89c36ae34776dd6e9e924619f4252ea5c50a4e5f63249b0945e8c595e2c85",
+    "src/common/train.py": "3f8877dc5c7c8672898dd76b6231400134b5fa75c15138c84cd0fe6aeab96179"
+  }
+}

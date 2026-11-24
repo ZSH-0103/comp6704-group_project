@@ -1,0 +1,13 @@
+{"step": 0, "elapsed_s": 0.05724137497600168, "train_ce": 2.3025559782981873, "val_ce": 2.3077999114990235, "val_accuracy_pct": 5.1, "learning_rate": 1.0}
+{"step": 50, "elapsed_s": 0.1951302500674501, "train_ce": 0.5592769868671894, "val_ce": 0.5915415649414062, "val_accuracy_pct": 76.3, "learning_rate": 1.0}
+{"step": 100, "elapsed_s": 0.32658729096874595, "train_ce": 0.41409051790833473, "val_ce": 0.47382221603393554, "val_accuracy_pct": 82.9, "learning_rate": 1.0}
+{"step": 150, "elapsed_s": 0.4570267499657348, "train_ce": 0.3687819764018059, "val_ce": 0.4465832939147949, "val_accuracy_pct": 84.3, "learning_rate": 1.0}
+{"step": 200, "elapsed_s": 0.5899337909650058, "train_ce": 0.33921244740486145, "val_ce": 0.42299875259399417, "val_accuracy_pct": 84.8, "learning_rate": 1.0}
+{"step": 250, "elapsed_s": 0.7212374999653548, "train_ce": 0.291216678917408, "val_ce": 0.4256524353027344, "val_accuracy_pct": 84.4, "learning_rate": 1.0}
+{"step": 300, "elapsed_s": 0.8650184160796925, "train_ce": 0.27045012451708317, "val_ce": 0.43208396911621094, "val_accuracy_pct": 84.8, "learning_rate": 1.0}
+{"step": 350, "elapsed_s": 0.9961135410703719, "train_ce": 0.24906348064541817, "val_ce": 0.440017032623291, "val_accuracy_pct": 85.6, "learning_rate": 1.0}
+{"step": 400, "elapsed_s": 1.1275215829955414, "train_ce": 0.22645024955272675, "val_ce": 0.44133891105651857, "val_accuracy_pct": 85.0, "learning_rate": 1.0}
+{"step": 450, "elapsed_s": 1.2587996249785647, "train_ce": 0.20626747980713844, "val_ce": 0.4334228096008301, "val_accuracy_pct": 85.6, "learning_rate": 1.0}
+{"step": 500, "elapsed_s": 1.38958525005728, "train_ce": 0.19175990298390388, "val_ce": 0.43971119499206546, "val_accuracy_pct": 85.5, "learning_rate": 1.0}
+{"step": 550, "elapsed_s": 1.5206276250537485, "train_ce": 0.17861316539347172, "val_ce": 0.45618970680236814, "val_accuracy_pct": 85.4, "learning_rate": 1.0}
+{"step": 600, "elapsed_s": 1.6535933749983087, "train_ce": 0.1646192278712988, "val_ce": 0.4745314521789551, "val_accuracy_pct": 85.3, "learning_rate": 1.0}

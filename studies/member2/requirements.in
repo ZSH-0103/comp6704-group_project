@@ -1,0 +1,8 @@
+# Shared training dependencies; exact installed versions are in requirements-lock.txt.
+torch
+torchvision
+numpy
+matplotlib
+
+# Authors implementation, for reference/integration checks.
+schedulefree

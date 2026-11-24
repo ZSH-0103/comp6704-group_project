@@ -1,5 +1,7 @@
 {
   "member": 2,
+  "status": "FROZEN",
+  "shared_protocol": "configs/member2_protocol.json",
   "optimizers": [
     "momentum",
     "schedule_free_sgd"
@@ -9,17 +11,37 @@
     "cifar10",
     "tiny_shakespeare"
   ],
-  "shared_protocol": "configs/shared_protocol.json",
-  "hyperparameters": {
-    "momentum": null,
-    "schedule_free_sgd": null
+  "output_root": "studies/member2/runs",
+  "learning_rates": {
+    "fashion_mnist": {
+      "momentum": 0.1,
+      "schedule_free_sgd": 1.0
+    },
+    "cifar10": {
+      "momentum": 0.03,
+      "schedule_free_sgd": 0.3
+    },
+    "tiny_shakespeare": {
+      "momentum": 0.1,
+      "schedule_free_sgd": 1.0
+    }
   },
-  "learning_rate_search": {
-    "momentum": null,
-    "schedule_free_sgd": null
+  "momentum": 0.9,
+  "sf_warmup_steps": 10,
+  "eval_examples": 1024,
+  "diagnostic": {
+    "task": "fashion_mnist",
+    "planned_horizon": 300,
+    "horizons": [
+      150,
+      300,
+      600
+    ],
+    "methods": [
+      "momentum_fixed_T",
+      "momentum_horizon_aware",
+      "schedule_free_sgd"
+    ]
   },
-  "diagnostic": "training_horizon",
-  "diagnostic_levels": null,
-  "status": "DRAFT",
-  "output_root": "results/member2"
+  "implementation": "torch.optim.SGD and schedulefree.SGDScheduleFree; library implementations"
 }

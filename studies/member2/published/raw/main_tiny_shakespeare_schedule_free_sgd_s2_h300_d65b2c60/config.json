@@ -1,0 +1,23 @@
+{
+  "phase": "main",
+  "task": "tiny_shakespeare",
+  "optimizer": "schedule_free_sgd",
+  "seed": 2,
+  "max_updates": 300,
+  "learning_rate": 1.0,
+  "momentum": 0.9,
+  "weight_decay": 0,
+  "warmup_steps": 10,
+  "schedule_horizon": null,
+  "schedule_after_horizon": "constant_after_warmup",
+  "batch_size": 32,
+  "eval_interval": 50,
+  "eval_examples": 1024,
+  "initialization_hash": "98b2be06e0ae9a820d0791d224cedbc0da62d4128719bf68114f1ced5636b97d",
+  "split_hash": "afcb56c577aeafe1f641f56392e6b23f779650e1d84c2e0498e6fb1775ed7eb5",
+  "batch_generator_seed": 100002,
+  "test_evaluations_expected": 1,
+  "protocol_hash": "b2a9be770e501cf874166a0ea6b22421fb124dbbc700eea4148c20307d735ba8",
+  "independent_implementation": false,
+  "config_hash": "d65b2c60e8efcf0e6a717cceb6c9a6664698a2b09574de49d4dbe8af700400a8"
+}
