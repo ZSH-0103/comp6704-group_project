@@ -1,0 +1,10 @@
+{
+  "archive_sha256": "da5058db661d8f4896431f0dee0b11dcf97ce81fc95ecb951e5e1583f9d641cb",
+  "files": {
+    "models.py": "e4e89c36ae34776dd6e9e924619f4252ea5c50a4e5f63249b0945e8c595e2c85",
+    "README.md": "274d65a2fcfebe64a8eb5eb3452c458ea23ed7f6238f171b90071a88709e39dc",
+    "train.py": "a6278dbc4e08e1410d9f070dc8a4968353331ba41e7c3bc467b787a722763a2a",
+    "data.py": "5cd804dfe2649d5d7753126c33701028fcd5cf4e5c3a6a75b6ebf76e50556961"
+  },
+  "note": "Original supplied sources retained for provenance; imported Python code was inspected before use."
+}

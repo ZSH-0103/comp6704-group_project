@@ -11,8 +11,20 @@ The tasks are Fashion-MNIST (MLP), CIFAR-10 subset (CNN), Tiny Shakespeare (char
 - Member 4's complete Adam/AdEMAMix implementation, including shared data, model and training modules.
 - A runnable plan/dispatch command and portable ZIP packager.
 
-Member 2 final Momentum/Schedule-Free reproduction is available in [studies/member2](studies/member2/README.md), with frozen settings, 45 measured run records and figure/table export. Members 1 and 3 are not integrated into this main branch yet. Member 4 can run the implementation check,
-tuning, main experiment, diagnostic and result aggregation phases through the shared dispatcher.
+Member 2's final Momentum/Schedule-Free reproduction is available in
+[studies/member2](studies/member2/README.md), with frozen settings, 45 measured run records,
+and figure/table export. Member 3's completed RMSProp/ADOPT-0 study is in
+[members/member3](members/member3/README.md), with implementation checks, frozen configurations,
+measured logs, figures, and report source. Member 4 runs through the shared dispatcher.
+Member 1's entry in this checkout remains a scaffold.
+
+## Member 3 code and measured results
+
+Read [Member 3 reproduction instructions](members/member3/README.md),
+[results](members/member3/results/member3/tables/), and
+[report integration notes](members/member3/docs/MEMBER3_HANDOFF.md).
+Use its own runner from `members/member3/`; the root Member 3 dispatcher remains a scaffold.
+The module preserves its recorded 300-call protocol and does not replace Member 4 shared settings.
 
 ## Start
 
@@ -38,6 +50,8 @@ in requirements-lock.txt and each run's environment.json. A GPU is not required.
 ```text
 comp6704-group_project/
   README.md
+  members/member3/           completed standalone RMSProp/ADOPT-0 study
+  studies/member2/           completed Momentum/Schedule-Free reproduction
   requirements.in
   configs/shared_protocol.json
   configs/member1.json ... member4.json
@@ -77,4 +91,6 @@ The packager includes report source/PDF, configs, measured logs if later present
 docs and code; excludes raw datasets, model checkpoints, private environment files, .git and build.
 It records SHA-256 hashes in ARCHIVE_MANIFEST.json and checks archive integrity.
 It creates a local archive only, never a remote repository or commit.
-Before a final release, integrate the remaining member submissions and update their tested reproduction instructions.
+Before a final group release, integrate the remaining member submissions and the final group report,
+and update their tested reproduction instructions. Member 3 has its own verified ZIP builder;
+see its README for the module-specific command.

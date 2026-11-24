@@ -1,0 +1,11 @@
+{
+  "boundaries": [
+    892312,
+    1003851
+  ],
+  "sequence_length": 64,
+  "sha256": "86c4e6aa9db7c042ec79f339dcb96d42b0075e16b8fc2e86bf0ca57e2dc565ed",
+  "split_hash": "afcb56c577aeafe1f641f56392e6b23f779650e1d84c2e0498e6fb1775ed7eb5",
+  "task": "tiny_shakespeare",
+  "vocab": "\n !$&',-.3:;?ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz"
+}

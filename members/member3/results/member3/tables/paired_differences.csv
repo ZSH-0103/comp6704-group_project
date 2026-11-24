@@ -1,0 +1,10 @@
+task,metric,direction,n,mean,sd
+fashion_mnist,final_val_ce,ADOPT0 minus RMSProp,3,0.041847498575846374,0.027796446751039205
+fashion_mnist,test_accuracy_pct,ADOPT0 minus RMSProp,3,-1.7333333333333343,0.757187779440031
+fashion_mnist,train_validation_time_s,ADOPT0 minus RMSProp,3,0.022107444625968736,0.017548472383671927
+cifar10,final_val_ce,ADOPT0 minus RMSProp,3,0.01593581899007157,0.03302109975444576
+cifar10,test_accuracy_pct,ADOPT0 minus RMSProp,3,-0.13333333333333522,0.6506407098647733
+cifar10,train_validation_time_s,ADOPT0 minus RMSProp,3,0.09903577800529699,0.09156393631796554
+tiny_shakespeare,final_val_ce,ADOPT0 minus RMSProp,3,0.1519642472267151,0.017069302648173988
+tiny_shakespeare,test_ce,ADOPT0 minus RMSProp,3,0.05800721049308777,0.015622209109325125
+tiny_shakespeare,train_validation_time_s,ADOPT0 minus RMSProp,3,0.051500903093256056,0.02530615977102636

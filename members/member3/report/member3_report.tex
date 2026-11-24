@@ -1,0 +1,52 @@
+\documentclass{article}
+\usepackage[preprint]{neurips_2025}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{amsmath,amssymb,booktabs,tabularx,graphicx,xcolor,float,placeins,hyperref}
+\hypersetup{colorlinks=true,linkcolor=blue,urlcolor=blue,citecolor=blue}
+\makeatletter
+\renewcommand{\@noticestring}{COMP6704 --- Member 3 evidence package; not the complete group submission.}
+\makeatother
+\newcommand{\owner}[1]{\textcolor{blue!55!black}{\textbf{(#1)}}}
+\title{RMSProp and Momentum-Free ADOPT:\\Controlled CPU Experiments for COMP6704}
+\author{Group Member 3\\Name and student ID: to be supplied before submission}
+\begin{document}
+\maketitle
+\begin{abstract}
+We compare independently implemented RMSProp and ADOPT with $\beta_1=0$ on Fashion-MNIST,
+CIFAR-10 and Tiny Shakespeare using the shared Member 4 architecture and budget specification.
+Validation-only tuning precedes 18 main CPU runs. Under 300 gradient calls, RMSProp performs
+better on Fashion and text, while CIFAR results are close. A 240-run unconstrained synthetic
+diagnostic shows that previous-moment normalization reduces asymmetric-noise bias at
+$\beta_2=.9$, with little gap at $.999$. We report implementation checks, paired seeds,
+uncertainty and limitations rather than infer a universal optimizer ranking.
+Group repository: \url{https://github.com/ZSH-0103/comp6704-group_project}.
+This local Member 3 package has not been published there by this task.
+\end{abstract}
+\section{Problem and methodology}
+We study unconstrained empirical-risk minimization
+$\min_{\theta\in\mathbb R^d}N^{-1}\sum_{i=1}^N\ell(h_\theta(x_i),y_i)$.
+The research question is whether a normalization change that addresses stochastic bias
+also helps at a fixed, small training budget. Sections below are ready-to-merge Member 3
+contributions; their numbering in the full group report is 2.4, 3.1--3.2, 4.3 and 5.1.
+\input{sections/section2_methodology_member3}
+\section{Experimental setup}
+\input{sections/section3_datasets_models_member3}
+\section{Results}
+\input{sections/section4_experiments_member3}
+\section{Discussion}
+\input{sections/section5_discussion_member3}
+\paragraph{Reproduction.}
+See the package README, frozen configurations, data manifests, per-run logs and
+\texttt{scripts/export\_results.py}. All reported table entries are generated from measured
+logs and rounded only for display; mean $\pm$ SD denotes sample standard deviation, not a
+confidence interval. The package includes a hash-verified ZIP and the four editable section files.
+\begin{figure}[H]\centering
+\includegraphics[width=\linewidth]{figures/member3_diagnostic.pdf}
+\caption{Additional Member 3 mechanism view. Left: mean parameter trajectory over 20 seeds at
+$\beta_2=.9$; zero is optimal. Right: tail-average objective gap and sample SD over 20 seeds.
+The current-moment control retains the ADOPT initialization, epsilon convention and clipping.}
+\end{figure}
+\bibliographystyle{plainnat}
+\bibliography{references}
+\end{document}

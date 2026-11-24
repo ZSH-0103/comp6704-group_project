@@ -1,0 +1,52 @@
+\subsection{RMSProp and momentum-free ADOPT}\label{sec:method-m3}
+\owner{Member 3}
+For $g_t=\nabla\ell(\theta_{t-1};\xi_t)$, our non-centered, momentum-free RMSProp uses
+\begin{equation}
+ v_t=\beta_2v_{t-1}+(1-\beta_2)g_t^{\odot2},\qquad
+ \theta_t=\theta_{t-1}-\alpha\frac{g_t}{\sqrt{v_t}+\epsilon},\quad v_0=0.
+\end{equation}
+The current gradient affects both the numerator and its normalizer. With asymmetric noise,
+this dependence can change the expected update direction even when $g_t$ is unbiased
+\citep{taniguchi2024adopt}; RMSProp's original motivation is coordinate-wise gradient scaling
+\citep{hintonrmsprop}.
+
+We implement the $\beta_1=0$ specialization of ADOPT, denoted ADOPT-0, following the
+paper's Section 3.1 and its released implementation \citep{taniguchi2024adopt}.
+This is a setting of ADOPT, not a newly named published algorithm.
+The first gradient call sets $v_0=g_0^{\odot2}$ without moving $\theta$.
+Subsequent calls $t=1,2,\ldots$ use
+\begin{equation}\label{eq:m3-adopt}
+ u_t=\operatorname{clip}\!\left(\frac{g_t}{\max(\sqrt{v_{t-1}},\epsilon)},-t^{1/4},t^{1/4}\right),\quad
+ \theta_t=\theta_{t-1}-\alpha u_t,\quad
+ v_t=\beta_2v_{t-1}+(1-\beta_2)g_t^{\odot2}.
+\end{equation}
+All operations are coordinate-wise. The denominator is determined by the past before drawing
+the current sample; clipping is the practical reference-code choice. It can itself introduce
+bias, so we also test an unclipped version and a current-moment version with the same
+initialization, clipping and $\epsilon$ convention. We set $\beta_2=0.999$ and $\epsilon=10^{-8}$
+for both main methods. These differ from official ADOPT defaults ($\beta_2=0.9999$,
+$\epsilon=10^{-6}$); neither method uses momentum, weight decay, or a learning-rate schedule.
+
+\paragraph{Theory and cost.}
+The ADOPT analysis assumes a lower-bounded differentiable objective, an unbiased stochastic
+gradient, Lipschitz-continuous gradient and a uniformly bounded gradient second moment.
+Its Theorem 4.1 gives an $O(T^{-1/2})$ bound on
+$\min_{t\leq T}(\mathbb E\|\nabla f(\theta_{t-1})\|^{4/3})^{3/2}$ with an appropriate
+$\alpha=\Theta(T^{-1/2})$, without a restrictive lower bound on $\beta_2$.
+That result is not a guarantee for every step size, the clipped practical variant, or our
+ReLU networks. Both implementations require $O(d)$ arithmetic and one $d$-element
+second-moment buffer. We omit the redundant first-moment buffer when $\beta_1=0$;
+this storage figure describes our specialization, not the full reference optimizer.
+Fixed-gradient checks agree with PyTorch RMSProp and pinned official ADOPT at
+$10^{-12}$ relative/absolute tolerance in float64; save/load and unchanged training-loop
+semantics are also checked.
+
+\paragraph{Unconstrained diagnostic.}
+We use $f(\theta)=\log\cosh\theta$ on $\mathbb R$, with optimum $\theta^*=0$, and
+$g=\tanh\theta+\xi$, where $\Pr(\xi=-1)=0.9$ and $\Pr(\xi=9)=0.1$.
+Then $\mathbb E[g\mid\theta]=f'(\theta)$, $\operatorname{Var}(g\mid\theta)=9$,
+$\mathbb E[g^2\mid\theta]\leq10$, and $f$ is 1-smooth and lower-bounded.
+This avoids importing the paper's constrained toy problem into an unconstrained study.
+We fix $\theta_0=2$, $\alpha=0.01$, 10,000 gradient calls, $\beta_2\in\{0.9,0.99,0.999\}$,
+and 20 paired noise seeds (101--120). The primary diagnostic metric is mean objective gap
+over the last 1,000 calls. It tests finite-budget behavior, not an asymptotic rate.

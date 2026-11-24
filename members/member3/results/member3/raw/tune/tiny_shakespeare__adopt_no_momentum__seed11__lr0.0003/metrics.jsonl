@@ -1,0 +1,3 @@
+{"step": 0, "elapsed_s": 0.15681758406572044, "train_ce": 4.177394688129425, "val_ce": 4.166680812835693, "val_accuracy_pct": null, "learning_rate": 0.0003}
+{"step": 50, "elapsed_s": 0.8834818750619888, "train_ce": 3.3709981441497803, "val_ce": 3.401879996061325, "val_accuracy_pct": null, "learning_rate": 0.0003}
+{"step": 100, "elapsed_s": 1.6088426670758054, "train_ce": 3.162004739046097, "val_ce": 3.1790956258773804, "val_accuracy_pct": null, "learning_rate": 0.0003}
