@@ -1,0 +1,61 @@
+diagnostic_id,condition,optimizer,metric_name,metric_unit,n,mean,sd,config_hash
+member1_quadratic_v1,k1_a1,sgd,final_objective_gap,objective units,3,0.0,0.0,855f7779ef86
+member1_quadratic_v1,k1_a1,sgd,final_relative_gap,fraction of initial gap,3,0.0,0.0,855f7779ef86
+member1_quadratic_v1,k1_a1,sgd,target_reached_rate,fraction of all runs,3,1.0,0.0,855f7779ef86
+member1_quadratic_v1,k1_a1,sgd,completed_rate,fraction of all runs,3,1.0,0.0,855f7779ef86
+member1_quadratic_v1,k1_a1,sgd,target_steps_reached_only,updates; conditional on reaching,3,1.0,0.0,855f7779ef86
+member1_quadratic_v1,k1_a1,sgd,target_time_s_reached_only,seconds; conditional on reaching,3,3.347233359818347e-05,1.2412113454434528e-05,855f7779ef86
+member1_quadratic_v1,k1_a1,dog,final_objective_gap,objective units,3,1.8752668286588798e-50,3.065451832639612e-60,855f7779ef86
+member1_quadratic_v1,k1_a1,dog,final_relative_gap,fraction of initial gap,3,3.750533657317759e-50,6.130901312367021e-60,855f7779ef86
+member1_quadratic_v1,k1_a1,dog,target_reached_rate,fraction of all runs,3,1.0,0.0,855f7779ef86
+member1_quadratic_v1,k1_a1,dog,completed_rate,fraction of all runs,3,1.0,0.0,855f7779ef86
+member1_quadratic_v1,k1_a1,dog,target_steps_reached_only,updates; conditional on reaching,3,125.0,0.0,855f7779ef86
+member1_quadratic_v1,k1_a1,dog,target_time_s_reached_only,seconds; conditional on reaching,3,0.002922444333914124,4.782709972766754e-05,855f7779ef86
+member1_quadratic_v1,k10_a1,sgd,final_objective_gap,objective units,3,8.458554588251418e-90,6.274533243025012e-90,855f7779ef86
+member1_quadratic_v1,k10_a1,sgd,final_relative_gap,fraction of initial gap,3,4.376933526287948e-90,3.0494208565689355e-90,855f7779ef86
+member1_quadratic_v1,k10_a1,sgd,target_reached_rate,fraction of all runs,3,1.0,0.0,855f7779ef86
+member1_quadratic_v1,k10_a1,sgd,completed_rate,fraction of all runs,3,1.0,0.0,855f7779ef86
+member1_quadratic_v1,k10_a1,sgd,target_steps_reached_only,updates; conditional on reaching,3,27.333333333333332,1.1547005383792515,855f7779ef86
+member1_quadratic_v1,k10_a1,sgd,target_time_s_reached_only,seconds; conditional on reaching,3,0.0004915693328560641,1.7424101404707125e-05,855f7779ef86
+member1_quadratic_v1,k10_a1,dog,final_objective_gap,objective units,3,9.88450845794189e-13,1.1397247501475144e-12,855f7779ef86
+member1_quadratic_v1,k10_a1,dog,final_relative_gap,fraction of initial gap,3,4.840677865736067e-13,5.342337805557151e-13,855f7779ef86
+member1_quadratic_v1,k10_a1,dog,target_reached_rate,fraction of all runs,3,1.0,0.0,855f7779ef86
+member1_quadratic_v1,k10_a1,dog,completed_rate,fraction of all runs,3,1.0,0.0,855f7779ef86
+member1_quadratic_v1,k10_a1,dog,target_steps_reached_only,updates; conditional on reaching,3,256.6666666666667,7.094598884597588,855f7779ef86
+member1_quadratic_v1,k10_a1,dog,target_time_s_reached_only,seconds; conditional on reaching,3,0.0057970000004085405,0.00025348126003609564,855f7779ef86
+member1_quadratic_v1,k100_a1,sgd,final_objective_gap,objective units,3,4.530487316420145e-12,2.49239490042994e-12,855f7779ef86
+member1_quadratic_v1,k100_a1,sgd,final_relative_gap,fraction of initial gap,3,4.0502851150213073e-13,2.0068052501832905e-13,855f7779ef86
+member1_quadratic_v1,k100_a1,sgd,target_reached_rate,fraction of all runs,3,1.0,0.0,855f7779ef86
+member1_quadratic_v1,k100_a1,sgd,completed_rate,fraction of all runs,3,1.0,0.0,855f7779ef86
+member1_quadratic_v1,k100_a1,sgd,target_steps_reached_only,updates; conditional on reaching,3,179.33333333333334,3.2145502536643185,855f7779ef86
+member1_quadratic_v1,k100_a1,sgd,target_time_s_reached_only,seconds; conditional on reaching,3,0.00304040299912837,6.207741515946352e-05,855f7779ef86
+member1_quadratic_v1,k100_a1,dog,final_objective_gap,objective units,3,0.00400172145240604,0.001055478282397476,855f7779ef86
+member1_quadratic_v1,k100_a1,dog,final_relative_gap,fraction of initial gap,3,0.0003706086332478322,0.00013561077310990645,855f7779ef86
+member1_quadratic_v1,k100_a1,dog,target_reached_rate,fraction of all runs,3,0.0,0.0,855f7779ef86
+member1_quadratic_v1,k100_a1,dog,completed_rate,fraction of all runs,3,1.0,0.0,855f7779ef86
+member1_quadratic_v1,k100_a1,dog,target_steps_reached_only,updates; conditional on reaching,0,,,855f7779ef86
+member1_quadratic_v1,k100_a1,dog,target_time_s_reached_only,seconds; conditional on reaching,0,,,855f7779ef86
+member1_quadratic_v1,k10_a0.1,sgd,final_objective_gap,objective units,3,8.458554588250804e-91,6.274533243024605e-91,855f7779ef86
+member1_quadratic_v1,k10_a0.1,sgd,final_relative_gap,fraction of initial gap,3,4.376933526287628e-90,3.049420856568736e-90,855f7779ef86
+member1_quadratic_v1,k10_a0.1,sgd,target_reached_rate,fraction of all runs,3,1.0,0.0,855f7779ef86
+member1_quadratic_v1,k10_a0.1,sgd,completed_rate,fraction of all runs,3,1.0,0.0,855f7779ef86
+member1_quadratic_v1,k10_a0.1,sgd,target_steps_reached_only,updates; conditional on reaching,3,27.333333333333332,1.1547005383792515,855f7779ef86
+member1_quadratic_v1,k10_a0.1,sgd,target_time_s_reached_only,seconds; conditional on reaching,3,0.0004897500002698507,4.097483950679408e-05,855f7779ef86
+member1_quadratic_v1,k10_a0.1,dog,final_objective_gap,objective units,3,9.884509241547203e-14,1.139724832742428e-13,855f7779ef86
+member1_quadratic_v1,k10_a0.1,dog,final_relative_gap,fraction of initial gap,3,4.840678251509843e-13,5.342338190777959e-13,855f7779ef86
+member1_quadratic_v1,k10_a0.1,dog,target_reached_rate,fraction of all runs,3,1.0,0.0,855f7779ef86
+member1_quadratic_v1,k10_a0.1,dog,completed_rate,fraction of all runs,3,1.0,0.0,855f7779ef86
+member1_quadratic_v1,k10_a0.1,dog,target_steps_reached_only,updates; conditional on reaching,3,256.6666666666667,7.094598884597588,855f7779ef86
+member1_quadratic_v1,k10_a0.1,dog,target_time_s_reached_only,seconds; conditional on reaching,3,0.005949389000306837,0.0003238343646434515,855f7779ef86
+member1_quadratic_v1,k10_a10,sgd,final_objective_gap,objective units,3,8.458554588250814e-89,6.2745332430245536e-89,855f7779ef86
+member1_quadratic_v1,k10_a10,sgd,final_relative_gap,fraction of initial gap,3,4.376933526287638e-90,3.049420856568716e-90,855f7779ef86
+member1_quadratic_v1,k10_a10,sgd,target_reached_rate,fraction of all runs,3,1.0,0.0,855f7779ef86
+member1_quadratic_v1,k10_a10,sgd,completed_rate,fraction of all runs,3,1.0,0.0,855f7779ef86
+member1_quadratic_v1,k10_a10,sgd,target_steps_reached_only,updates; conditional on reaching,3,27.333333333333332,1.1547005383792515,855f7779ef86
+member1_quadratic_v1,k10_a10,sgd,target_time_s_reached_only,seconds; conditional on reaching,3,0.0004835136666467103,3.8509214543649434e-05,855f7779ef86
+member1_quadratic_v1,k10_a10,dog,final_objective_gap,objective units,3,9.884508449923406e-12,1.1397247492720132e-11,855f7779ef86
+member1_quadratic_v1,k10_a10,dog,final_relative_gap,fraction of initial gap,3,4.840677861795766e-13,5.342337801467464e-13,855f7779ef86
+member1_quadratic_v1,k10_a10,dog,target_reached_rate,fraction of all runs,3,1.0,0.0,855f7779ef86
+member1_quadratic_v1,k10_a10,dog,completed_rate,fraction of all runs,3,1.0,0.0,855f7779ef86
+member1_quadratic_v1,k10_a10,dog,target_steps_reached_only,updates; conditional on reaching,3,256.6666666666667,7.094598884597588,855f7779ef86
+member1_quadratic_v1,k10_a10,dog,target_time_s_reached_only,seconds; conditional on reaching,3,0.0059256666657650685,7.868015007572496e-05,855f7779ef86

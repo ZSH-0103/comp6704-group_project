@@ -1,0 +1,8 @@
+{
+  "runs": 30,
+  "tuning_trials": 45,
+  "unique_run_directories": 75,
+  "paired_initialization_and_hessian_hashes": "passed",
+  "json_finite_check": "passed",
+  "dog_scale_max_absolute_relative_gap_curve_difference": 1.003980898417467e-08
+}

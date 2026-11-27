@@ -1,0 +1,16 @@
+trial_id,task,optimizer,seed,hyperparameters_json,validation_ce,status,elapsed_s,selected
+m1_tune_fashion_mnist_sgd_s11_24a2742b13e2_fa141924,fashion_mnist,sgd,11,"{""lr"": 0.003}",1.1203642082214356,completed,4.490305834002356,False
+m1_tune_fashion_mnist_sgd_s11_e329770d9213_e450e483,fashion_mnist,sgd,11,"{""lr"": 0.01}",0.6163305892944336,completed,4.554703666999558,False
+m1_tune_fashion_mnist_sgd_s11_65ac9ebf6b37_cba28f45,fashion_mnist,sgd,11,"{""lr"": 0.03}",0.4527593173980713,completed,4.471006374998979,False
+m1_tune_fashion_mnist_sgd_s11_55965198395c_5de392cc,fashion_mnist,sgd,11,"{""lr"": 0.1}",0.3596075172424316,completed,4.482310707997385,False
+m1_tune_fashion_mnist_sgd_s11_407002353963_be07ce25,fashion_mnist,sgd,11,"{""lr"": 0.3}",0.3251853542327881,completed,4.556871291999414,True
+m1_tune_cifar10_sgd_s11_06a18e83a7f4_0c203bc6,cifar10,sgd,11,"{""lr"": 0.003}",1.9640644454956055,completed,70.00891099999717,False
+m1_tune_cifar10_sgd_s11_71ba6d36bd7d_1ec4b42a,cifar10,sgd,11,"{""lr"": 0.01}",1.5674203338623047,completed,102.56531733299926,False
+m1_tune_cifar10_sgd_s11_2969987df7b2_8a2570c0,cifar10,sgd,11,"{""lr"": 0.03}",1.3120893821716308,completed,92.17162233300041,False
+m1_tune_cifar10_sgd_s11_aa2bc41303bc_75253c12,cifar10,sgd,11,"{""lr"": 0.1}",1.248798568725586,completed,101.54296341600275,True
+m1_tune_cifar10_sgd_s11_b3e4d928bbc4_5a0a004e,cifar10,sgd,11,"{""lr"": 0.3}",1.533818069458008,completed,101.48894399999699,False
+m1_tune_tiny_shakespeare_sgd_s11_57adc8aef397_d900460d,tiny_shakespeare,sgd,11,"{""lr"": 0.01}",2.780425550195845,completed,53.450361000002886,False
+m1_tune_tiny_shakespeare_sgd_s11_c1d8bdbaa280_44732ead,tiny_shakespeare,sgd,11,"{""lr"": 0.03}",2.458308442178194,completed,53.106023792002816,False
+m1_tune_tiny_shakespeare_sgd_s11_795257f07eeb_e1990b4f,tiny_shakespeare,sgd,11,"{""lr"": 0.1}",2.1430695880841717,completed,52.79573345899553,False
+m1_tune_tiny_shakespeare_sgd_s11_f703a490c955_6523a024,tiny_shakespeare,sgd,11,"{""lr"": 0.3}",1.9358576228232662,completed,52.25797966699611,False
+m1_tune_tiny_shakespeare_sgd_s11_de79f338989d_b0b1b544,tiny_shakespeare,sgd,11,"{""lr"": 1.0}",1.7773223793739292,completed,51.97699629099952,True

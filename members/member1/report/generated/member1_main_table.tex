@@ -1,0 +1,14 @@
+% Generated from measured main_results.csv; do not edit numbers manually.
+\begin{table}[H]\centering\footnotesize
+\setlength{\tabcolsep}{3pt}
+\caption{M1-MAIN (Member 1): mean $\pm$ sample SD over seeds 1--3; all runs completed. Train/validation are CE; test quality is accuracy (\%) for images and CE (nats/character) for Text. Time includes training and scheduled evaluation, excluding final test and tuning.}
+\label{tab:m1-main}
+\begin{tabular}{llrrrrr}\toprule
+Task & Method & Train CE & Val CE & Test quality & Time (s) & $n$\\\midrule
+Fashion & SGD & $0.321\pm0.137$ & $0.397\pm0.130$ & $84.15\pm2.67$ & $8.01\pm0.06$ & 3/3\\
+Fashion & DoG & $0.250\pm0.008$ & $0.325\pm0.001$ & $85.46\pm0.34$ & $8.65\pm0.10$ & 3/3\\
+CIFAR & SGD & $0.631\pm0.027$ & $1.281\pm0.008$ & $58.45\pm0.65$ & $97.75\pm0.88$ & 3/3\\
+CIFAR & DoG & $0.830\pm0.023$ & $1.243\pm0.016$ & $57.93\pm0.78$ & $96.54\pm0.31$ & 3/3\\
+Text & SGD & $1.651\pm0.003$ & $1.777\pm0.004$ & $1.8852\pm0.0112$ & $53.99\pm1.13$ & 3/3\\
+Text & DoG & $1.590\pm0.006$ & $1.725\pm0.008$ & $1.8989\pm0.0069$ & $53.79\pm0.13$ & 3/3\\
+\bottomrule\end{tabular}\end{table}

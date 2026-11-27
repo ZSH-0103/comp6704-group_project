@@ -1,0 +1,88 @@
+{
+  "model": "mlp",
+  "widths": [
+    784,
+    128,
+    64,
+    10
+  ],
+  "activation": "relu",
+  "train_count": 256,
+  "validation_count": 128,
+  "batch_size": 16,
+  "max_updates": 20,
+  "eval_interval": 10,
+  "target_val_ce": null,
+  "status": "SMOKE_ONLY_NOT_FROZEN",
+  "seed": 11,
+  "threads": 1,
+  "eval_batch_size": 32,
+  "train_eval_count": 64,
+  "timeout_s": 120,
+  "sgd_lr": 0.01,
+  "dog": {
+    "reps_rel": 1e-06,
+    "eps": 1e-08
+  },
+  "averaging": {
+    "kind": "polynomial",
+    "gamma": 8
+  },
+  "evaluation_point": "averaged",
+  "evaluate_raw_also": true,
+  "evaluate_test": false,
+  "image_transform": "uint8_to_float32_0_1_no_augmentation",
+  "conv_padding": 1,
+  "sequence_length": 64,
+  "train_fraction": 0.8,
+  "validation_fraction": 0.1,
+  "text_stride": 64,
+  "note": "CPU wiring check only. Learning rates, subset sizes, averaging policy and budgets are not selected for main experiments.",
+  "repo_root": "/Users/siyueyao/year2sem1/Optimization/comp6704-optimizer-study",
+  "task": "fashion_mnist",
+  "split_seed": 6704,
+  "vocab_size": null,
+  "model_hash": "cea55c7674b1eec7a1bc01bc8eb06141fb78896b3aba3dae3edd950bac2eae6a",
+  "initialization_hash": "2503cc2d23ebe809aafdf869b7bc049d9201a2109bf7edfeeb4ee6f95306f8f7",
+  "model_spec": {
+    "kind": "mlp",
+    "widths": [
+      784,
+      128,
+      64,
+      10
+    ],
+    "activation": "relu",
+    "dtype": "float32",
+    "dropout": 0.0,
+    "batch_norm": false,
+    "initializer": "PyTorch defaults, seeded"
+  },
+  "parameter_count": 109386,
+  "output_root": "/Users/siyueyao/year2sem1/Optimization/comp6704-optimizer-study/results/member1",
+  "member": 1,
+  "phase": "smoke",
+  "optimizer": "sgd",
+  "optimizer_hyperparameters": {
+    "lr": 0.01
+  },
+  "shared_status": "DRAFT_REQUIRES_CPU_PILOT",
+  "member_status": "DRAFT",
+  "schedule": "constant SGD; adaptive DoG",
+  "source_hashes": {
+    "src/common/models.py": "ed218534dadb4422375d96f4f4466e12b88ac852d4a6524b322e102a44d51c73",
+    "src/common/checks.py": "57541c84b837ebbbbc5703175461af998a8fc2a297f4e45e2efa0eb2944592b2",
+    "src/common/__init__.py": "b68ee7861e42403d88e7dbb55766091d466715c36156d88bbf034a5e11f48792",
+    "src/common/utils.py": "85d1866166e3209dd8b0ea7a11e0e6195118d69e3085f42c0c88abcc201e1197",
+    "src/common/train.py": "0c30957a5ffad8e0eda570a13fddf222b4b39b1b700bb33398fa1b4dc0c85099",
+    "src/common/data.py": "49785046168a30c953e7778475e07d777309980dfeef95727af755266bfdfc8e",
+    "src/members/member1_smoke.py": "85d83c776ae20dad5b060afb9a280639bb9a5fb59145ca9c9997781f5ef21386",
+    "src/members/member1_optimizers.py": "98d5d5d90dfd746b7eb5d04c31782a35e87f09ec641db53517cb6d7a169e1094"
+  },
+  "split_hash": "8add16c5d6fd3e1f656a78fc88dbc268f0a17f4c44bd54075325d9de9fa85cd2",
+  "dataset_hash": "fec544b1b76e9d3d083ed6c8170c39178fda2a2619d2663ed28d40003e8fa51e",
+  "manifest": "data/manifests/fashion_mnist_8add16c5d6fd3e1f.json",
+  "train_ce_scope": "fixed training subset, evaluation mode",
+  "config_hash": "7ce98b703c7516bb9f3c4f592ae2f11672f3b9778c2d11f711594a3b09f6b372",
+  "run_id": "m1_smoke_fashion_mnist_sgd_s11_7ce98b703c75_84c1e7be"
+}

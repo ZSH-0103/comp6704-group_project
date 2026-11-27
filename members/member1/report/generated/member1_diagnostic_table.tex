@@ -1,0 +1,12 @@
+% Generated from measured diagnostic_results.csv.
+\begin{table}[H]\centering\footnotesize
+\caption{M1-DIAG (Member 1): final relative gap $f(x_{500})/f(x_0)$, mean $\pm$ sample SD across three starting directions. Only DoG at $\kappa=100$ failed to reach $10^{-6}$; every run completed.}
+\label{tab:m1-diag}
+\begin{tabular}{rrlll}\toprule
+$\kappa$ & $a$ & Tuned SGD & DoG & DoG reached\\\midrule
+1 & 1 & $0\pm0$ & $3.75\,10^{-50}\pm 6.13\,10^{-60}$ & 3/3\\
+10 & 1 & $(4.38\pm3.05)\,10^{-90}$ & $(4.84\pm5.34)\,10^{-13}$ & 3/3\\
+100 & 1 & $(4.05\pm2.01)\,10^{-13}$ & $(3.71\pm1.36)\,10^{-4}$ & 0/3\\
+10 & 0.1 & $(4.38\pm3.05)\,10^{-90}$ & $(4.84\pm5.34)\,10^{-13}$ & 3/3\\
+10 & 10 & $(4.38\pm3.05)\,10^{-90}$ & $(4.84\pm5.34)\,10^{-13}$ & 3/3\\
+\bottomrule\end{tabular}\end{table}

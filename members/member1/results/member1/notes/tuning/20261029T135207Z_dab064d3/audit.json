@@ -1,0 +1,15 @@
+{
+  "status": "passed",
+  "runs": 18,
+  "sgd_trials": 15,
+  "dog_runs": 3,
+  "main_runs": 0,
+  "failures": 0,
+  "approved_split_hashes_verified": true,
+  "all_candidates_paired": true,
+  "selection_rule_verified": true,
+  "only_seed": 11,
+  "test_evaluation": false,
+  "finite_losses": true,
+  "shared_config_unchanged": true
+}

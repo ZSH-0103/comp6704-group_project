@@ -1,0 +1,67 @@
+{
+  "protocol": {
+    "status": "FROZEN",
+    "experiment": "member1_quadratic_v1",
+    "dimension": 20,
+    "rotation_seed": 6704,
+    "initial_norm": 1.0,
+    "seeds": [
+      1,
+      2,
+      3
+    ],
+    "tuning_seed": 11,
+    "max_updates": 500,
+    "target_relative_gap": 1e-06,
+    "divergence_relative_gap": 1000000000000.0,
+    "condition_numbers": [
+      1,
+      10,
+      100
+    ],
+    "objective_scales": [
+      0.1,
+      1,
+      10
+    ],
+    "reference_condition_number": 10,
+    "reference_scale": 1,
+    "sgd_lr_times_L": [
+      0.05,
+      0.1,
+      0.25,
+      0.5,
+      1.0,
+      1.5,
+      1.8,
+      1.95,
+      2.1
+    ],
+    "sgd_selection": "minimum final relative gap among completed trials; ties use smaller lr",
+    "dog": {
+      "reps_rel": 1e-06,
+      "eps": 1e-08
+    },
+    "oracle": "exact_gradient",
+    "spectrum": "geometric from 1 to kappa; fixed orthogonal eigenvectors",
+    "evaluation": "raw iterate at every update; no averaging or early stopping",
+    "dtype": "float64",
+    "device": "cpu",
+    "threads": 1
+  },
+  "batch": "20261029T085102Z_a0a3a0d1",
+  "task": "quadratic",
+  "condition": "k100_a1",
+  "kappa": 100,
+  "scale": 1,
+  "seed": 11,
+  "optimizer": "sgd",
+  "phase": "diagnostic_tune",
+  "lr": 0.005,
+  "model_hash": "0af93b7c2298",
+  "initialization_hash": "a400b7a828a3",
+  "dataset_hash": null,
+  "split_hash": null,
+  "schedule": "constant SGD; adaptive DoG",
+  "implementation_sha256": "98d5d5d90dfd746b7eb5d04c31782a35e87f09ec641db53517cb6d7a169e1094"
+}

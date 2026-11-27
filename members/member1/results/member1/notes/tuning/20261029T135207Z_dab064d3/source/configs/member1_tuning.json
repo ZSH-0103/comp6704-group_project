@@ -1,0 +1,20 @@
+{
+  "status": "PREDECLARED_VALIDATION_SEARCH_NOT_FROZEN",
+  "seed": 11,
+  "selection": "minimum final-budget averaged validation CE among completed runs; ties choose smaller lr",
+  "sgd_learning_rates": {
+    "fashion_mnist": [0.003, 0.01, 0.03, 0.1, 0.3],
+    "cifar10": [0.003, 0.01, 0.03, 0.1, 0.3],
+    "tiny_shakespeare": [0.01, 0.03, 0.1, 0.3, 1.0]
+  },
+  "budgets": {
+    "fashion_mnist": {"max_updates": 2000, "eval_interval": 100},
+    "cifar10": {"max_updates": 3000, "eval_interval": 100},
+    "tiny_shakespeare": {"max_updates": 5000, "eval_interval": 100}
+  },
+  "dog": {"reps_rel": 1e-6, "eps": 1e-8},
+  "test_evaluation": false,
+  "budget_scope": "User-authorized tuning budgets; shared formal main budgets remain pending",
+  "boundary_rule": "Flag boundary winner for team discussion; do not automatically exceed five candidates",
+  "comparison_scope": "Reuse the selected SGD tuning trajectory against one fixed-default DoG trajectory; seed 11 only, not main results"
+}

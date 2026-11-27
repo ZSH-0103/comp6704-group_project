@@ -1,0 +1,16 @@
+test_autograd_and_closure (src.members.member1_checks.OptimizerChecks.test_autograd_and_closure) ... ok
+test_checkpoint_before_first_step (src.members.member1_checks.OptimizerChecks.test_checkpoint_before_first_step) ... ok
+test_checkpoint_roundtrip (src.members.member1_checks.OptimizerChecks.test_checkpoint_roundtrip) ... ok
+test_dog_first_two_steps_hand_calculation (src.members.member1_checks.OptimizerChecks.test_dog_first_two_steps_hand_calculation) ... ok
+test_dog_matches_official (src.members.member1_checks.OptimizerChecks.test_dog_matches_official) ... ok
+test_dog_scalar_oracle_and_radius_history (src.members.member1_checks.OptimizerChecks.test_dog_scalar_oracle_and_radius_history) ... ok
+test_global_norm_independent_of_tensor_partition (src.members.member1_checks.OptimizerChecks.test_global_norm_independent_of_tensor_partition) ... ok
+test_reject_invalid_inputs (src.members.member1_checks.OptimizerChecks.test_reject_invalid_inputs) ... ok
+test_sgd_hand_calculation (src.members.member1_checks.OptimizerChecks.test_sgd_hand_calculation) ... ok
+test_sgd_matches_pytorch (src.members.member1_checks.OptimizerChecks.test_sgd_matches_pytorch) ... ok
+test_zero_tiny_and_missing_gradients (src.members.member1_checks.OptimizerChecks.test_zero_tiny_and_missing_gradients) ... ok
+
+----------------------------------------------------------------------
+Ran 11 tests in 0.581s
+
+OK

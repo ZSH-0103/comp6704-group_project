@@ -1,0 +1,13 @@
+{
+  "main_rows_verified": 6,
+  "main_raw_runs_verified": 18,
+  "diagnostic_conditions": 5,
+  "diagnostic_metric": "final_relative_gap",
+  "main_batch": "20261029T175507Z_b0c52926",
+  "quadratic_batch": "20261029T085102Z_a0a3a0d1",
+  "quadratic_raw_runs_verified": 30,
+  "frozen_training_sources_unchanged": true,
+  "pdf_pages": 13,
+  "unresolved_references": false,
+  "overfull_boxes": false
+}

@@ -1,0 +1,34 @@
+{
+  "fashion_mnist": {
+    "url": "https://raw.githubusercontent.com/zalandoresearch/fashion-mnist/master/data/fashion/",
+    "source_md5": [
+      [
+        "train-images-idx3-ubyte.gz",
+        "8d4fb7e6c68d591d4c3dfef9ec88bf0d"
+      ],
+      [
+        "train-labels-idx1-ubyte.gz",
+        "25c81989df183df01b3e8a0aad5dffbe"
+      ],
+      [
+        "t10k-images-idx3-ubyte.gz",
+        "bef4ecab320f06d8554ea6380940ec79"
+      ],
+      [
+        "t10k-labels-idx1-ubyte.gz",
+        "bb300cfdad3c16e7a12a480ee83cd310"
+      ]
+    ]
+  },
+  "cifar10": {
+    "url": "https://huggingface.co/datasets/MIT-OL-AI-D/cifar-10-python/resolve/a48007227f9e2cd0af96175f4afb5ac4965e261b/cifar-10-python.tar.gz",
+    "original_url": "https://www.cs.toronto.edu/~kriz/cifar-10-python.tar.gz",
+    "source_md5": "c58f30108f718f92721af3b95e74349a",
+    "sha256": "6d958be074577803d12ecdefd02955f39262c83c16fe9348329d7fe0b5c001ce"
+  },
+  "tiny_shakespeare": {
+    "url": "https://raw.githubusercontent.com/karpathy/char-rnn/6f9487a6fe5b420b7ca9afb0d7c078e37c1d1b4e/data/tinyshakespeare/input.txt",
+    "commit": "6f9487a6fe5b420b7ca9afb0d7c078e37c1d1b4e",
+    "sha256": "86c4e6aa9db7c042ec79f339dcb96d42b0075e16b8fc2e86bf0ca57e2dc565ed"
+  }
+}

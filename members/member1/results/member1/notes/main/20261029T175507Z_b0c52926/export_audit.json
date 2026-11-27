@@ -1,0 +1,101 @@
+{
+  "status": "passed",
+  "expected_runs": 18,
+  "n_completed": 18,
+  "n_rows": 6,
+  "runs": [
+    {
+      "run_id": "m1_main_fashion_mnist_sgd_s1_c5f60463fbec_d6bccce2",
+      "status": "completed",
+      "target_reached": true
+    },
+    {
+      "run_id": "m1_main_fashion_mnist_dog_s1_a57ab8c8fceb_97fe088b",
+      "status": "completed",
+      "target_reached": true
+    },
+    {
+      "run_id": "m1_main_fashion_mnist_sgd_s2_4df37f97c7d4_94f4b4a3",
+      "status": "completed",
+      "target_reached": true
+    },
+    {
+      "run_id": "m1_main_fashion_mnist_dog_s2_aff4979900fd_10be53f2",
+      "status": "completed",
+      "target_reached": true
+    },
+    {
+      "run_id": "m1_main_fashion_mnist_sgd_s3_2af0800d4827_c631a781",
+      "status": "completed",
+      "target_reached": true
+    },
+    {
+      "run_id": "m1_main_fashion_mnist_dog_s3_bcc6d3c87325_d06f04d1",
+      "status": "completed",
+      "target_reached": true
+    },
+    {
+      "run_id": "m1_main_cifar10_sgd_s1_4fed0915abd1_20fdef20",
+      "status": "completed",
+      "target_reached": true
+    },
+    {
+      "run_id": "m1_main_cifar10_dog_s1_7dcdf8d2eff4_4a25328f",
+      "status": "completed",
+      "target_reached": true
+    },
+    {
+      "run_id": "m1_main_cifar10_sgd_s2_d8f18dcd05d4_857da72e",
+      "status": "completed",
+      "target_reached": true
+    },
+    {
+      "run_id": "m1_main_cifar10_dog_s2_5396e2dec932_6cfb7b41",
+      "status": "completed",
+      "target_reached": true
+    },
+    {
+      "run_id": "m1_main_cifar10_sgd_s3_48ae8756c2bd_e0fd8f28",
+      "status": "completed",
+      "target_reached": true
+    },
+    {
+      "run_id": "m1_main_cifar10_dog_s3_086c00579c84_f7655d7c",
+      "status": "completed",
+      "target_reached": true
+    },
+    {
+      "run_id": "m1_main_tiny_shakespeare_sgd_s1_f4f10cdb96eb_50939c44",
+      "status": "completed",
+      "target_reached": true
+    },
+    {
+      "run_id": "m1_main_tiny_shakespeare_dog_s1_1ff4121c5ec9_3f79e7dd",
+      "status": "completed",
+      "target_reached": true
+    },
+    {
+      "run_id": "m1_main_tiny_shakespeare_sgd_s2_c559885dc4c9_6d9c7733",
+      "status": "completed",
+      "target_reached": true
+    },
+    {
+      "run_id": "m1_main_tiny_shakespeare_dog_s2_b17e93148510_43464da5",
+      "status": "completed",
+      "target_reached": true
+    },
+    {
+      "run_id": "m1_main_tiny_shakespeare_sgd_s3_7e16e3b785a8_0e346fb5",
+      "status": "completed",
+      "target_reached": true
+    },
+    {
+      "run_id": "m1_main_tiny_shakespeare_dog_s3_4e25df17be75_0e53fe6b",
+      "status": "completed",
+      "target_reached": true
+    }
+  ],
+  "export_source_sha256": "006b8e87a08869c08f6ed14d50df22e9324aa5d3c0ff99e85f2089b72e27c441",
+  "idempotent_main_command_verified": true,
+  "no_additional_test_evaluations_on_completed_batch": true
+}

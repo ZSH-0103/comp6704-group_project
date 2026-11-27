@@ -1,0 +1,15 @@
+{
+  "status": "passed",
+  "runs": 6,
+  "evaluation_steps": [
+    0,
+    10,
+    20
+  ],
+  "finite_metrics": true,
+  "matched_initial_losses": true,
+  "paired_hashes_verified": true,
+  "test_evaluation_disabled": true,
+  "main_protocols_remain_draft": true,
+  "offline_checks": "7 shared unit checks passed via python -m src.common.checks"
+}

@@ -1,0 +1,28 @@
+{
+  "status": "RECOMMENDATION_NOT_FROZEN",
+  "based_on_batch": "20261029T134226Z_6bdb672b",
+  "shared_protocol_unchanged": true,
+  "tasks": {
+    "fashion_mnist": {
+      "max_updates": 2000,
+      "eval_interval": 100,
+      "approx_epochs": 12.738853503184714
+    },
+    "cifar10": {
+      "max_updates": 3000,
+      "eval_interval": 100,
+      "approx_epochs": 19.10828025477707
+    },
+    "tiny_shakespeare": {
+      "max_updates": 5000,
+      "eval_interval": 100,
+      "approx_epochs": 5.73394495412844
+    }
+  },
+  "limitations": [
+    "one seed",
+    "SGD lr=0.01 not tuned",
+    "no observed plateau in all methods",
+    "other members must supply pilot costs before shared freeze"
+  ]
+}

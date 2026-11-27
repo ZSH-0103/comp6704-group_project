@@ -1,0 +1,14 @@
+{
+  "status": "passed",
+  "runs": 6,
+  "shared_protocol_exact_match": true,
+  "approved_splits_verified": true,
+  "paired_initial_losses_and_order": true,
+  "updates": 500,
+  "seed": 11,
+  "threads": 1,
+  "averaging_gamma": 8,
+  "test_not_evaluated": true,
+  "finite_losses": true,
+  "all_weights_changed": true
+}

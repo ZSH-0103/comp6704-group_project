@@ -1,0 +1,23 @@
+{
+  "validated_at_utc": "2026-11-18T06:58:09.975429+00:00",
+  "environment": "Existing project Python 3.13.1 environment; separate temporary ZIP extraction",
+  "dependency_install_from_package_index_tested": false,
+  "unit_checks": {
+    "optimizer": 11,
+    "shared_pipeline": 8,
+    "quadratic": 4,
+    "all_passed": true
+  },
+  "formal_runs_verified": 18,
+  "paired_initialization_order_split_model_checks": 9,
+  "frozen_source_hashes_match": true,
+  "quadratic_comparison_runs_present": 30,
+  "quadratic_tuning_trials_present": 45,
+  "saved_result_exports_match_five_original_csvs": true,
+  "compact_report_assets_regenerated": true,
+  "formal_main_completion_guard_passed": true,
+  "standalone_repackaging_passed": true,
+  "source_code_and_formal_settings": "Copied without changes",
+  "datasets_venv_checkpoints_excluded": true,
+  "credential_pattern_scan_matches": 0
+}

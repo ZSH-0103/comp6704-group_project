@@ -1,0 +1,55 @@
+{
+  "run_id": "check_20261029T083924Z_0d2d669b",
+  "timestamp_utc": "2026-10-29T08:39:24.008211+00:00",
+  "status": "passed",
+  "tests_run": 11,
+  "failures": 0,
+  "errors": 0,
+  "max_abs_errors": {
+    "resume_initial": 0.0,
+    "resume_SGD_torch.float32": 0.0,
+    "resume_SGD_torch.float64": 0.0,
+    "resume_DoG_torch.float32": 0.0,
+    "resume_DoG_torch.float64": 0.0,
+    "dog_hand": 0.0,
+    "dog_official_torch.float64": 0.0,
+    "dog_official_torch.float32": 0.0,
+    "dog_scalar_oracle": 4.440892098500626e-16,
+    "global_partition": 0.0,
+    "nonfinite_rejected_without_update": 0.0,
+    "sgd_hand": 1.1102230246251565e-16,
+    "sgd_pytorch": 0.0,
+    "zero_gradient": 0.0,
+    "missing_gradient": 0.0
+  },
+  "environment": {
+    "python": "3.13.1 (main, Dec  3 2024, 17:59:52) [Clang 16.0.0 (clang-1600.0.26.4)]",
+    "executable": "/Users/siyueyao/year2sem1/Optimization/comp6704-optimizer-study/.venv/bin/python",
+    "platform": "macOS-27.0.1-arm64-arm-64bit-Mach-O",
+    "device": "cpu",
+    "threads": 1,
+    "torch": "2.15.0",
+    "numpy": "2.5.4"
+  },
+  "reference": {
+    "distribution": "dog-optimizer",
+    "version": "1.0.3",
+    "source_sha256": "c58fefc427dd4b844a46aa1e07ab7c4476b91b796cca12d34cd97b658b2faead",
+    "url": "https://github.com/formll/dog"
+  },
+  "implementation_sha256": {
+    "member1_checks.py": "33fec021efbef6c4a43e500eb094a0fabcf2a14d2f09080b1c1a6398de7d19da",
+    "member1_optimizers.py": "e374a698132d9526e9b22748ba478b051755a31cd7919f56eee0ff7915b4a755"
+  },
+  "tolerances": {
+    "float64": {
+      "atol": 1e-12,
+      "rtol": 1e-12
+    },
+    "official_float32": {
+      "atol": 2e-06,
+      "rtol": 2e-06
+    },
+    "checkpoint_continuation": "bitwise equality"
+  }
+}

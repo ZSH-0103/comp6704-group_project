@@ -1,0 +1,182 @@
+{
+  "schema_version": 2,
+  "status": "FROZEN",
+  "device": "cpu",
+  "weight_decay": 0,
+  "main_seeds": [
+    1,
+    2,
+    3
+  ],
+  "tuning_seed": 11,
+  "split_seed": 6704,
+  "same_initialization_and_data_order_within_pair": true,
+  "batch_norm": false,
+  "dropout": 0,
+  "loss": "cross_entropy_natural_log",
+  "time_scope": "training_and_scheduled_eval_excluding_data_preparation",
+  "tasks": {
+    "fashion_mnist": {
+      "model": "mlp",
+      "widths": [
+        784,
+        128,
+        64,
+        10
+      ],
+      "activation": "relu",
+      "train_count": 10000,
+      "validation_count": 2000,
+      "batch_size": 64,
+      "max_updates": 2000,
+      "eval_interval": 100,
+      "target_val_ce": 0.5,
+      "train_eval_count": 512,
+      "test_count": 10000,
+      "image_transform": "uint8_to_float32_0_1_no_augmentation",
+      "normalization": null,
+      "augmentation": null,
+      "approved_split_hash": "4a0c7aa6c32b5386e856b61cc502e0f7b2ae2bab5506d7c8dfa427321245d4d5",
+      "approved_split_manifest": "data/manifests/fashion_mnist_4a0c7aa6c32b5386.json"
+    },
+    "cifar10": {
+      "model": "small_cnn",
+      "conv_channels": [
+        16,
+        32
+      ],
+      "kernel_size": 3,
+      "pool": "2x2_after_each_conv",
+      "classifier": "flatten_then_linear_10",
+      "train_count": 10000,
+      "validation_count": 2000,
+      "batch_size": 64,
+      "max_updates": 3000,
+      "eval_interval": 100,
+      "target_val_ce": 1.5,
+      "train_eval_count": 512,
+      "test_count": 10000,
+      "image_transform": "uint8_to_float32_0_1_no_augmentation",
+      "normalization": null,
+      "augmentation": null,
+      "conv_padding": 1,
+      "approved_split_hash": "bae365ad5373f8c97857b5b52eae817bd874f6f4bee0d9d84472cebd10cde94d",
+      "approved_split_manifest": "data/manifests/cifar10_bae365ad5373f8c9.json"
+    },
+    "tiny_shakespeare": {
+      "model": "char_gru",
+      "embedding_dim": 32,
+      "hidden_size": 64,
+      "layers": 1,
+      "sequence_length": 64,
+      "split_boundaries": "derived as floor(N*0.8), floor(N*0.9); saved in manifest",
+      "batch_size": 16,
+      "max_updates": 5000,
+      "eval_interval": 100,
+      "target_val_ce": 2.0,
+      "train_eval_count": 256,
+      "train_count": null,
+      "validation_count": null,
+      "count_policy": "all windows in respective chronological segments; null means full split, not unset",
+      "text_stride": 64,
+      "train_fraction": 0.8,
+      "validation_fraction": 0.1,
+      "test_fraction": 0.1,
+      "vocabulary": "training_segment_only",
+      "unknown_token_id": 0,
+      "approved_split_hash": "bb3609a725277a0eb3bc66b0164a6723be533af313ebcb12c806bb858e46ac6b",
+      "approved_split_manifest": "data/manifests/tiny_shakespeare_bb3609a725277a0e.json"
+    }
+  },
+  "freeze_required": [],
+  "note": "Frozen shared task protocol. Each member still requires its own FROZEN configuration and explicit evaluation policy before main. elapsed_s excludes final test evaluation; test_elapsed_s is separate.",
+  "protocol_version": "shared-v1.1-frozen",
+  "dtype": "float32",
+  "threads": 1,
+  "deterministic_algorithms": true,
+  "pilot": {
+    "seed": 11,
+    "max_updates": 500,
+    "eval_interval": 100,
+    "timeout_s": 1800,
+    "evaluate_test": false
+  },
+  "smoke": {
+    "seed": 11,
+    "max_updates": 20,
+    "eval_interval": 10,
+    "batch_size": 16,
+    "eval_batch_size": 32,
+    "train_count": 256,
+    "validation_count": 128,
+    "train_eval_count": 64,
+    "timeout_s": 120,
+    "evaluate_test": false
+  },
+  "tuning": {
+    "seed": 11,
+    "selection_metric": "validation_ce",
+    "selection_rule": "minimum final-budget validation CE",
+    "max_candidates_per_task_per_optimizer": 5,
+    "all_trials_and_failures_logged": true,
+    "test_evaluation": false,
+    "expansion_rule": "document reason and agree before expanding search"
+  },
+  "evaluation": {
+    "checkpoint": "final_budget",
+    "validation_scope": "complete configured validation split",
+    "test_scope": "complete official image test set / complete chronological text test windows",
+    "training_scope": "fixed train_eval subset",
+    "test_phase": "main_only_after_protocol_and_member_freeze",
+    "raw_validation_also_when_averaged": true,
+    "batch_sampling": "seeded shuffled epochs, retain short final batch",
+    "eval_batch_size_images": 128,
+    "eval_batch_size_text": 32,
+    "final_test_timing": "excluded from elapsed_s; recorded in test_elapsed_s"
+  },
+  "evaluation_policies": {
+    "1": {
+      "evaluation_point": "averaged",
+      "averaging": {
+        "kind": "polynomial",
+        "gamma": 8
+      },
+      "evaluate_raw_also": true
+    },
+    "2": {
+      "status": "MEMBER_MUST_DECLARE",
+      "note": "Schedule-Free must use optimizer eval/train hooks and its intended evaluation parameters; no automatic external averaging."
+    },
+    "3": {
+      "status": "MEMBER_MUST_DECLARE"
+    },
+    "4": {
+      "status": "MEMBER_MUST_DECLARE"
+    }
+  },
+  "ownership": {
+    "data_models_manifests": "Member 3",
+    "training_protocol": "Member 1",
+    "optimizer_evaluation_transitions": "Member 2",
+    "metrics_timing_environment": "Member 4"
+  },
+  "reporting": {
+    "main_seeds": [
+      1,
+      2,
+      3
+    ],
+    "uncertainty": "sample SD, ddof=1; missing for n<2",
+    "failures": "retain and report completed and reached counts",
+    "unreached_target": "null steps/time plus reached=false",
+    "timing_comparison": "within same machine only",
+    "optimizer_state_bytes": "persistent tensor state; averaging memory reported separately"
+  },
+  "freeze_scope": "Shared data/models/budgets/metrics and Member 1 evaluation policy. Members 2\u20134 must separately finalize their evaluation policies and hyperparameters.",
+  "freeze_authorization": "User confirmed group agreement on budgets, five-candidate search limit and thresholds before main test evaluation.",
+  "member_specific_pending": {
+    "2": "Finalize evaluation policy, hyperparameters and individual FROZEN config before main",
+    "3": "Finalize evaluation policy, hyperparameters and individual FROZEN config before main",
+    "4": "Finalize evaluation policy, hyperparameters and individual FROZEN config before main"
+  }
+}

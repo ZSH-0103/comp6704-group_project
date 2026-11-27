@@ -1,0 +1,7 @@
+task,optimizer,n_expected,n_completed,n_target_reached,target_val_ce,target_steps_mean_reached,target_time_s_mean_reached,optimizer_state_bytes,tuning_trials,tuning_elapsed_s
+fashion_mnist,sgd,3,3,3,0.5,300,1.3020439583318268,0,5,22.555197875997692
+fashion_mnist,dog,3,3,3,0.5,433.3333333333333,1.9931403753337993,437544,0,0
+cifar10,sgd,3,3,3,1.5,666.6666666666666,22.077576138333825,0,5,467.7777580819966
+cifar10,dog,3,3,3,1.5,1433.3333333333333,46.565409666664586,102312,0,0
+tiny_shakespeare,sgd,3,3,3,2.0,1100,12.135090750334106,0,5,263.58709420899686
+tiny_shakespeare,dog,3,3,3,2.0,566.6666666666666,6.401804777667469,100872,0,0

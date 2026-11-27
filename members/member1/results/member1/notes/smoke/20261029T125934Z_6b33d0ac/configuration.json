@@ -1,0 +1,220 @@
+{
+  "smoke": {
+    "status": "SMOKE_ONLY_NOT_FROZEN",
+    "seed": 11,
+    "threads": 1,
+    "batch_size": 16,
+    "eval_batch_size": 32,
+    "max_updates": 20,
+    "eval_interval": 10,
+    "train_count": 256,
+    "validation_count": 128,
+    "train_eval_count": 64,
+    "timeout_s": 120,
+    "sgd_lr": 0.01,
+    "dog": {
+      "reps_rel": 1e-06,
+      "eps": 1e-08
+    },
+    "averaging": {
+      "kind": "polynomial",
+      "gamma": 8
+    },
+    "evaluation_point": "averaged",
+    "evaluate_raw_also": true,
+    "evaluate_test": false,
+    "target_val_ce": null,
+    "image_transform": "uint8_to_float32_0_1_no_augmentation",
+    "conv_padding": 1,
+    "sequence_length": 64,
+    "train_fraction": 0.8,
+    "validation_fraction": 0.1,
+    "text_stride": 64,
+    "note": "CPU wiring check only. Learning rates, subset sizes, averaging policy and budgets are not selected for main experiments."
+  },
+  "shared": {
+    "schema_version": 1,
+    "status": "DRAFT_REQUIRES_CPU_PILOT",
+    "device": "cpu",
+    "weight_decay": 0,
+    "main_seeds": [
+      1,
+      2,
+      3
+    ],
+    "tuning_seed": 11,
+    "split_seed": 6704,
+    "same_initialization_and_data_order_within_pair": true,
+    "batch_norm": false,
+    "dropout": 0,
+    "loss": "cross_entropy_natural_log",
+    "time_scope": "training_and_scheduled_eval_excluding_data_preparation",
+    "tasks": {
+      "fashion_mnist": {
+        "model": "mlp",
+        "widths": [
+          784,
+          128,
+          64,
+          10
+        ],
+        "activation": "relu",
+        "train_count": null,
+        "validation_count": null,
+        "batch_size": null,
+        "max_updates": null,
+        "eval_interval": null,
+        "target_val_ce": null
+      },
+      "cifar10": {
+        "model": "small_cnn",
+        "conv_channels": [
+          16,
+          32
+        ],
+        "kernel_size": 3,
+        "pool": "2x2_after_each_conv",
+        "classifier": "flatten_then_linear_10",
+        "train_count_proposal": 10000,
+        "train_count": null,
+        "validation_count": null,
+        "batch_size": null,
+        "max_updates": null,
+        "eval_interval": null,
+        "target_val_ce": null
+      },
+      "tiny_shakespeare": {
+        "model": "char_gru",
+        "embedding_dim": 32,
+        "hidden_size": 64,
+        "layers": 1,
+        "sequence_length_proposal": 64,
+        "sequence_length": null,
+        "train_fraction_proposal": 0.8,
+        "validation_fraction_proposal": 0.1,
+        "split_boundaries": null,
+        "batch_size": null,
+        "max_updates": null,
+        "eval_interval": null,
+        "target_val_ce": null
+      }
+    },
+    "freeze_required": [
+      "dataset checksums and split indices",
+      "complete model configuration and initialization",
+      "CPU pilot and shared budgets",
+      "validation tuning policy and target thresholds"
+    ],
+    "note": "Architectures and seeds are draft implementation defaults, not measured optimal settings. Freeze before main runs."
+  },
+  "member": {
+    "member": 1,
+    "optimizers": [
+      "sgd",
+      "dog"
+    ],
+    "tasks": [
+      "fashion_mnist",
+      "tiny_shakespeare"
+    ],
+    "shared_protocol": "configs/shared_protocol.json",
+    "hyperparameters": {
+      "sgd": null,
+      "dog": null
+    },
+    "learning_rate_search": {
+      "sgd": null,
+      "dog": null
+    },
+    "diagnostic": "conditioning_scale",
+    "quadratic_protocol": "configs/member1_quadratic.json",
+    "diagnostic_levels": null,
+    "status": "DRAFT",
+    "output_root": "results/member1",
+    "shared": {
+      "schema_version": 1,
+      "status": "DRAFT_REQUIRES_CPU_PILOT",
+      "device": "cpu",
+      "weight_decay": 0,
+      "main_seeds": [
+        1,
+        2,
+        3
+      ],
+      "tuning_seed": 11,
+      "split_seed": 6704,
+      "same_initialization_and_data_order_within_pair": true,
+      "batch_norm": false,
+      "dropout": 0,
+      "loss": "cross_entropy_natural_log",
+      "time_scope": "training_and_scheduled_eval_excluding_data_preparation",
+      "tasks": {
+        "fashion_mnist": {
+          "model": "mlp",
+          "widths": [
+            784,
+            128,
+            64,
+            10
+          ],
+          "activation": "relu",
+          "train_count": null,
+          "validation_count": null,
+          "batch_size": null,
+          "max_updates": null,
+          "eval_interval": null,
+          "target_val_ce": null
+        },
+        "cifar10": {
+          "model": "small_cnn",
+          "conv_channels": [
+            16,
+            32
+          ],
+          "kernel_size": 3,
+          "pool": "2x2_after_each_conv",
+          "classifier": "flatten_then_linear_10",
+          "train_count_proposal": 10000,
+          "train_count": null,
+          "validation_count": null,
+          "batch_size": null,
+          "max_updates": null,
+          "eval_interval": null,
+          "target_val_ce": null
+        },
+        "tiny_shakespeare": {
+          "model": "char_gru",
+          "embedding_dim": 32,
+          "hidden_size": 64,
+          "layers": 1,
+          "sequence_length_proposal": 64,
+          "sequence_length": null,
+          "train_fraction_proposal": 0.8,
+          "validation_fraction_proposal": 0.1,
+          "split_boundaries": null,
+          "batch_size": null,
+          "max_updates": null,
+          "eval_interval": null,
+          "target_val_ce": null
+        }
+      },
+      "freeze_required": [
+        "dataset checksums and split indices",
+        "complete model configuration and initialization",
+        "CPU pilot and shared budgets",
+        "validation tuning policy and target thresholds"
+      ],
+      "note": "Architectures and seeds are draft implementation defaults, not measured optimal settings. Freeze before main runs."
+    }
+  },
+  "source_hashes": {
+    "src/common/models.py": "ed218534dadb4422375d96f4f4466e12b88ac852d4a6524b322e102a44d51c73",
+    "src/common/checks.py": "57541c84b837ebbbbc5703175461af998a8fc2a297f4e45e2efa0eb2944592b2",
+    "src/common/__init__.py": "b68ee7861e42403d88e7dbb55766091d466715c36156d88bbf034a5e11f48792",
+    "src/common/utils.py": "85d1866166e3209dd8b0ea7a11e0e6195118d69e3085f42c0c88abcc201e1197",
+    "src/common/train.py": "0c30957a5ffad8e0eda570a13fddf222b4b39b1b700bb33398fa1b4dc0c85099",
+    "src/common/data.py": "cd730b8ab7af0e96bc866c9261cf15b5f92f22d161b67e565e42221975d9c297",
+    "src/members/member1_smoke.py": "85d83c776ae20dad5b060afb9a280639bb9a5fb59145ca9c9997781f5ef21386",
+    "src/members/member1_optimizers.py": "98d5d5d90dfd746b7eb5d04c31782a35e87f09ec641db53517cb6d7a169e1094"
+  }
+}

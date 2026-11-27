@@ -1,0 +1,98 @@
+{
+  "model": "small_cnn",
+  "conv_channels": [
+    16,
+    32
+  ],
+  "kernel_size": 3,
+  "pool": "2x2_after_each_conv",
+  "classifier": "flatten_then_linear_10",
+  "train_count": 10000,
+  "validation_count": 2000,
+  "batch_size": 64,
+  "max_updates": 500,
+  "eval_interval": 100,
+  "target_val_ce": null,
+  "train_eval_count": 512,
+  "test_count": 10000,
+  "image_transform": "uint8_to_float32_0_1_no_augmentation",
+  "normalization": null,
+  "augmentation": null,
+  "conv_padding": 1,
+  "approved_split_hash": "bae365ad5373f8c97857b5b52eae817bd874f6f4bee0d9d84472cebd10cde94d",
+  "approved_split_manifest": "data/manifests/cifar10_bae365ad5373f8c9.json",
+  "seed": 11,
+  "timeout_s": 1800,
+  "evaluate_test": false,
+  "evaluation_point": "averaged",
+  "averaging": {
+    "kind": "polynomial",
+    "gamma": 8
+  },
+  "evaluate_raw_also": true,
+  "eval_batch_size": 128,
+  "repo_root": "/Users/siyueyao/year2sem1/Optimization/comp6704-optimizer-study",
+  "task": "cifar10",
+  "phase": "pilot",
+  "member": 1,
+  "shared_status": "AGREED_REQUIRES_CPU_PILOT",
+  "member_status": "DRAFT",
+  "protocol_version": "shared-v1.0",
+  "protocol_hash": "ca363de2b31b1bfe02d63c43a2fe7477ef3f53a754e0c85558c8224ec995a3db",
+  "split_seed": 6704,
+  "threads": 1,
+  "deterministic_algorithms": true,
+  "weight_decay": 0,
+  "checkpoint_selection": "final_budget",
+  "vocab_size": null,
+  "model_hash": "90a48f869ea52caaa351172059d90df887f7d77060a09a0c2689e9ff248aa142",
+  "initialization_hash": "cae33f6aaad55ea986d40d95463cd948026c676225a64f60c6b15d53f45dd042",
+  "model_spec": {
+    "kind": "cnn",
+    "channels": [
+      3,
+      16,
+      32
+    ],
+    "kernel": 3,
+    "padding": 1,
+    "pooling": "2x2_after_each_conv",
+    "input": [
+      3,
+      32,
+      32
+    ],
+    "classifier": [
+      2048,
+      10
+    ],
+    "dtype": "float32",
+    "dropout": 0.0,
+    "batch_norm": false,
+    "initializer": "PyTorch defaults, seeded"
+  },
+  "parameter_count": 25578,
+  "optimizer": "sgd",
+  "optimizer_hyperparameters": {
+    "lr": 0.01
+  },
+  "optimizer_factory": "src.members.member1_optimizers:SGD",
+  "output_root": "/Users/siyueyao/year2sem1/Optimization/comp6704-optimizer-study/results/member1",
+  "schedule": "optimizer-defined; no external scheduler",
+  "source_hashes": {
+    "src/common/models.py": "ed218534dadb4422375d96f4f4466e12b88ac852d4a6524b322e102a44d51c73",
+    "src/common/checks.py": "d5185db2e79d6611db8961d14e7588d9136fe57b444caf7f1ad2582b6380489c",
+    "src/common/protocol.py": "1bd12bf8d6fa7d4846ab66b95ec3faf018724d42a897c857482f46da4c32115d",
+    "src/common/__init__.py": "b68ee7861e42403d88e7dbb55766091d466715c36156d88bbf034a5e11f48792",
+    "src/common/utils.py": "85d1866166e3209dd8b0ea7a11e0e6195118d69e3085f42c0c88abcc201e1197",
+    "src/common/train.py": "0c30957a5ffad8e0eda570a13fddf222b4b39b1b700bb33398fa1b4dc0c85099",
+    "src/common/data.py": "d70411885d03e95e19d893692310f3f8d6768f080e88c71d0d66eae3d4e946f7"
+  },
+  "optimizer_source_hash": "98d5d5d90dfd746b7eb5d04c31782a35e87f09ec641db53517cb6d7a169e1094",
+  "split_hash": "bae365ad5373f8c97857b5b52eae817bd874f6f4bee0d9d84472cebd10cde94d",
+  "dataset_hash": "4a68f11c03952e92c3d38c55e8936e984629feedcff61ce5519ae5b2cc6aca54",
+  "manifest": "data/manifests/cifar10_bae365ad5373f8c9.json",
+  "train_ce_scope": "fixed training subset, evaluation mode",
+  "config_hash": "86e454b91de639d385aef93d4fe1fabf4a849291812912251e5e8281d5145a92",
+  "run_id": "m1_pilot_cifar10_sgd_s11_86e454b91de6_fb187de5"
+}
