@@ -4,6 +4,7 @@ import importlib
 import json
 from pathlib import Path
 import sys
+import subprocess
 
 ROOT = Path(__file__).resolve().parents[1]
 
@@ -13,6 +14,17 @@ def main():
     p.add_argument('--phase', choices=['plan', 'check', 'smoke', 'tune', 'main', 'diagnostic', 'export'], default='plan')
     p.add_argument('--dry-run', action='store_true')
     args = p.parse_args()
+    
+    if args.member == 1:
+        member_root = ROOT / "members" / "member1"
+        return subprocess.call(
+            [
+                sys.executable,
+                str(member_root / "scripts" / "run_member.py"),
+                *sys.argv[1:],
+            ],
+            cwd=member_root,
+        )
     config = json.loads((ROOT / f'configs/member{args.member}.json').read_text())
     shared = json.loads((ROOT / config['shared_protocol']).read_text())
     config['shared'] = shared

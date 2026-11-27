@@ -16,7 +16,33 @@ Member 2's final Momentum/Schedule-Free reproduction is available in
 and figure/table export. Member 3's completed RMSProp/ADOPT-0 study is in
 [members/member3](members/member3/README.md), with implementation checks, frozen configurations,
 measured logs, figures, and report source. Member 4 runs through the shared dispatcher.
-Member 1's entry in this checkout remains a scaffold.
+Member 1's completed SGD/DoG study is available in
+[members/member1](members/member1/README.md), including independent optimizers,
+frozen configurations, 18 formal runs, quadratic experiments, and reproducible
+tables and figures.
+
+## Member 1 code and measured results
+
+Read [Member 1 reproduction instructions](members/member1/README.md).
+Formal results are in
+[main_results.csv](members/member1/results/member1/tables/main_results.csv).
+
+Install Member 1's recorded dependencies in a Python environment:
+
+```sh
+python -m pip install -r members/member1/requirements-lock.txt
+```
+
+Run from the repository root:
+
+```sh
+python scripts/run_member.py --member 1 --phase check
+python scripts/run_member.py --member 1 --phase main
+python scripts/run_member.py --member 1 --phase export
+```
+
+The main command recognizes the supplied completed batch. Export rebuilds
+its tables and figures from saved logs.
 
 ## Member 3 code and measured results
 
@@ -50,6 +76,7 @@ in requirements-lock.txt and each run's environment.json. A GPU is not required.
 ```text
 comp6704-group_project/
   README.md
+  members/member1/           completed SGD/DoG study and experiment evidence
   members/member3/           completed standalone RMSProp/ADOPT-0 study
   studies/member2/           completed Momentum/Schedule-Free reproduction
   requirements.in

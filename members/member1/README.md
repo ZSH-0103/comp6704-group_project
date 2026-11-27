@@ -7,33 +7,25 @@ CIFAR-10 with a small CNN, and Tiny Shakespeare with a character GRU.
 All 18 formal runs completed. The quadratic study contains 30 comparison runs and 45
 SGD tuning trials, including five recorded divergent tuning trials.
 
-## Upload to GitHub / 上传说明
+## Location and commands
 
-解压 ZIP 后上传本文件所在文件夹中的内容，保留 `src/`、`configs/`、`data/`、
-`results/`、`scripts/`、`docs/` 和 `report/` 的相对位置。
-ZIP 用于传输。GitHub 仓库里应能直接看到 Python 文件和 README。
+This study is located at `members/member1/` in the group repository.
 
-如果上传到已有的小组仓库，可将整个文件夹放在 `member1/` 下，并从该目录运行命令，
-这样便于保留你这一部分的完整配置、公共模块和证据。
-
-If using GitHub's file uploader, open the destination repository and use **Add file →
-Upload files**, then drag in the extracted contents. Files can be uploaded in batches while
-keeping their directory paths. Commit the upload after reviewing the listed files.
-
-For a new empty GitHub repository, another option is to run these commands from this folder.
-Replace `YOUR_REPOSITORY_URL` with your actual repository address before the push.
+For the installation, verification and plotting commands below, first enter
+this directory from the repository root:
 
 ```sh
-git init
-git add .
-git commit -m "Add Member 1 SGD and DoG implementation and experiment evidence"
-git branch -M main
-git remote add origin YOUR_REPOSITORY_URL
-git push -u origin main
+cd members/member1
 ```
 
-The commands above assume a new empty remote repository. For a populated group repository,
-copy this folder into a checkout of that repository and follow the group's branch workflow.
+The root runner also forwards Member 1 experiment commands to this module:
+
+```sh
+python scripts/run_member.py --member 1 --phase check
+python scripts/run_member.py --member 1 --phase export
+```
+
+Run these two root-runner commands from the repository root.
 
 ## Install
 
@@ -112,11 +104,11 @@ which batch supplies each result. `docs/FROZEN_SETTINGS_MEMBER1.md` explains the
 
 ## Frozen formal configuration
 
-| Task | Train / validation | Batch | Updates | Target val. CE | SGD rate |
-| --- | --- | ---: | ---: | ---: | ---: |
-| Fashion-MNIST | 10,000 / 2,000 images | 64 | 2,000 | 0.5 | 0.3 |
-| CIFAR-10 | 10,000 / 2,000 images | 64 | 3,000 | 1.5 | 0.1 |
-| Tiny Shakespeare | 13,942 / 1,742 windows | 16 | 5,000 | 2.0 | 1.0 |
+| Task             | Train / validation     | Batch | Updates | Target val. CE | SGD rate |
+| ---------------- | ---------------------- | ----: | ------: | -------------: | -------: |
+| Fashion-MNIST    | 10,000 / 2,000 images  |    64 |   2,000 |            0.5 |      0.3 |
+| CIFAR-10         | 10,000 / 2,000 images  |    64 |   3,000 |            1.5 |      0.1 |
+| Tiny Shakespeare | 13,942 / 1,742 windows |    16 |   5,000 |            2.0 |      1.0 |
 
 - Formal seeds 1, 2 and 3, tuning seed 11, split seed 6704.
 - CPU float32 and one computation thread. Validation is evaluated every 100 updates.
@@ -138,10 +130,10 @@ Its nine-candidate curvature-aware SGD search is separate from the neural search
 Mean ± sample SD over three formal seeds. Image quality is test accuracy in percent,
 and text quality is test CE in nats per character.
 
-| Task | SGD test quality | DoG test quality |
-| --- | ---: | ---: |
-| Fashion-MNIST | 84.15 ± 2.67 | 85.46 ± 0.34 |
-| CIFAR-10 | 58.45 ± 0.65 | 57.93 ± 0.78 |
+| Task             | SGD test quality | DoG test quality |
+| ---------------- | ---------------: | ---------------: |
+| Fashion-MNIST    |    84.15 ± 2.67 |    85.46 ± 0.34 |
+| CIFAR-10         |    58.45 ± 0.65 |    57.93 ± 0.78 |
 | Tiny Shakespeare | 1.8852 ± 0.0112 | 1.8989 ± 0.0069 |
 
 Full precision, validation/training losses, timings and completion counts are in
